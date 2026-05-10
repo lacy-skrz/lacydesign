@@ -65,12 +65,28 @@
 }
 
 .cred-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
   font-size: var(--text-sm);
   font-weight: 600;
   padding: 0.35rem 0.875rem;
   border-radius: 100px;
   letter-spacing: 0.02em;
 }
+
+/* Icon inside chip */
+.cred-tag svg {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
 .cred-tag--sage    { background: var(--sage-light);       color: var(--sage-dark); }
 .cred-tag--indigo  { background: var(--indigo-light);     color: var(--indigo); }
 .cred-tag--terra   { background: var(--terracotta-light); color: var(--terracotta); }
