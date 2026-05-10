@@ -86,8 +86,16 @@
 
 .cred-tag--sage    { background: var(--sage-light);       color: var(--sage-dark); }
 .cred-tag--indigo  { background: var(--indigo-light);     color: var(--indigo); }
-.cred-tag--terra   { background: var(--terracotta-light); color: var(--terracotta); }
+.cred-tag--terra   { background: var(--terracotta-light); color: #9A5040; } /* darkened from #A05A4A: 4.95:1 on #F5EAE7 */
 .cred-tag--neutral { background: rgba(28,28,28,0.07);     color: var(--text-primary); }
+
+/* CTA strip btn-primary — dark background needs lighter sage for contrast */
+.cta-strip .btn-primary {
+  background: var(--sage);
+}
+.cta-strip .btn-primary:hover {
+  background: var(--sage-dark);
+}
 
 /* =============================================
    ABOUT PAGE — CTA Strip
