@@ -237,7 +237,7 @@ img, svg { display: block; max-width: 100%; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--sage-dark);        /* darker green = better contrast on light bg */
+  background: var(--sage);
   color: #fff;
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -248,10 +248,6 @@ img, svg { display: block; max-width: 100%; }
   cursor: pointer;
   min-height: 44px;
 }
-/* On dark backgrounds use lighter sage */
-.on-dark .btn-primary,
-.cta-strip .btn-primary,
-[data-bg="dark"] .btn-primary { background: var(--sage); }
 
 .btn-primary:hover { background: #3A5B3E; color: #fff; }
 .btn-primary:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
