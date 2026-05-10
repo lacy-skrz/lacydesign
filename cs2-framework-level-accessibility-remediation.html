@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UX Case Study: Framework-Level Accessibility Remediation — Rebuilding the Foundation: Turning Accessibility Into Infrastructure. 30+ components remediated across an enterprise K–12 platform." />
+  <title>Framework-Level Accessibility Remediation — Lacy, Lead UX Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name" aria-label="Lacy — go to home page">Lacy</a>
+
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Open navigation menu"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <line x1="2" y1="5"  x2="18" y2="5"/>
+          <line x1="2" y1="10" x2="18" y2="10"/>
+          <line x1="2" y1="15" x2="18" y2="15"/>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/your-linkedin"
+            class="nav-external"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile (opens in a new tab)"
+          >LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header class="cs-hero">
+      <div class="cs-hero-blob cs-hero-blob--1" aria-hidden="true"></div>
+      <div class="cs-hero-inner">
+        <p class="cs-hero-eyebrow">UX Case Study · Enterprise K–12 Platform</p>
+        <h1 class="cs-hero-title">Framework-Level Accessibility Remediation</h1>
+        <p class="cs-hero-subtitle">Rebuilding the Foundation: Turning Accessibility Into Infrastructure</p>
+        <dl class="cs-hero-meta">
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Focus</dt>
+            <dd class="cs-meta-value">Framework-Level Accessibility</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Scope</dt>
+            <dd class="cs-meta-value">30+ Components Remediated</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Year</dt>
+            <dd class="cs-meta-value">2024</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- METRICS BAR -->
+    <section class="cs-metrics" aria-label="Hero metrics">
+      <div class="cs-metrics-inner">
+        <div class="cs-metric">
+          <p class="cs-metric-value">30+</p>
+          <p class="cs-metric-label">Framework-level components remediated with cascading downstream impact</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">10</p>
+          <p class="cs-metric-label">High-impact screens improved, prioritized by student and parent usage data</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">Desktop · Mobile · Kiosk</p>
+          <p class="cs-metric-label">Consistent accessibility across all platforms and form factors</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">Inputs · Nav · Tables · Validation</p>
+          <p class="cs-metric-label">End-to-end component coverage across all core categories</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body">
+
+      <!-- 01 OVERVIEW -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="overview-heading">
+        <p class="cs-section-eyebrow">01 — Overview</p>
+        <h2 class="cs-section-heading" id="overview-heading">When the Problem Was Bigger Than the Screens</h2>
+        <p class="cs-section-subheading">Recognizing an architectural failure, not a surface problem</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Starting Point</h3>
+          <p>When I joined the frontend framework initiative, accessibility was not functioning as a layer of quality within the product. It was largely absent from the foundation entirely.</p>
+          <p>The platform supported a large K–12 ecosystem used daily by students, parents, teachers, and administrators across desktop, mobile, and kiosk experiences. But beneath the visual interface, core accessibility fundamentals were inconsistent or missing altogether.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">What Was Broken</h3>
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Accessibility failures by area">
+            <thead>
+              <tr>
+                <th scope="col">Area</th>
+                <th scope="col">Failure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Screen Readers</th>
+                <td>Struggled to interpret navigation — no semantic structure to parse</td>
+              </tr>
+              <tr>
+                <th scope="row">Form Controls</th>
+                <td>Lacked accessible names — inputs were invisible to assistive technology</td>
+              </tr>
+              <tr>
+                <th scope="row">Interactive Elements</th>
+                <td>Relied heavily on non-semantic HTML — ARIA absent or incorrect</td>
+              </tr>
+              <tr>
+                <th scope="row">Keyboard Navigation</th>
+                <td>Users could not consistently move through core workflows</td>
+              </tr>
+              <tr>
+                <th scope="row">Data Tables</th>
+                <td>Lacked structure and context — screen readers read as flat text</td>
+              </tr>
+              <tr>
+                <th scope="row">Validation Messaging</th>
+                <td>Error messages visually present but inaccessible to assistive technology</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Critical Insight</h3>
+          <p>At the time, many accessibility conversations focused on fixing individual screens after issues were discovered. Through testing and analysis, I realized the root issue existed much deeper within the frontend framework itself.</p>
+          <div class="cs-callout">
+            <p>This was not a collection of isolated bugs. It was an architectural problem. Continuing screen-by-screen would trap the organization in an endless remediation cycle.</p>
+          </div>
+          <p>This project became an opportunity to fundamentally shift how accessibility was implemented across the entire product ecosystem — rebuilding the underlying design and development infrastructure so accessibility could scale systematically.</p>
+        </div>
+      </section>
+
+      <!-- 02 EMPATHIZE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="empathize-heading">
+        <p class="cs-section-eyebrow">02 — Empathize</p>
+        <h2 class="cs-section-heading" id="empathize-heading">Experiencing the Product Through Assistive Technology</h2>
+        <p class="cs-section-subheading">Feeling the failure before diagnosing it</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Immersive Testing</h3>
+          <p>Before defining solutions, I immersed myself in the product experience as users with disabilities would encounter it. The goal was not to audit from a distance — it was to feel the friction firsthand.</p>
+        </div>
+
+        <ul class="cs-card-grid" aria-label="Immersive testing methods">
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Screen Reader Testing</p>
+            <p>NVDA and VoiceOver — evaluating semantic interpretation</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Keyboard-Only Navigation</p>
+            <p>Tab, shift-tab, arrow keys — no mouse at any point</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Zoom &amp; Magnification</p>
+            <p>200–400% zoom — layout, reflow, readability</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Contrast Analysis</p>
+            <p>All interactive states — default, hover, focus, error</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Voice Control Evaluation</p>
+            <p>Command discoverability across navigation and forms</p>
+          </li>
+        </ul>
+
+        <div class="cs-prose">
+          <p>Simple workflows became exhausting. Navigation lacked structure. Screen readers announced incomplete or misleading information. Keyboard focus disappeared unpredictably. Error messages were visually present but inaccessible to assistive technology.</p>
+          <p>The deeper I tested, the more apparent it became that accessibility issues were not isolated defects. They were recurring architectural patterns replicated across the system.</p>
+          <p>To build shared understanding, I facilitated collaborative testing sessions with engineers and designers — asking them to navigate core workflows using only keyboard input and screen reader feedback. The reaction was immediate: accessibility stopped feeling abstract and became operationally urgent.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Accessibility Persona</h3>
+        <div class="cs-persona" aria-label="Accessibility persona: Jordan">
+          <div class="cs-persona-header">
+            <div class="cs-persona-avatar" aria-hidden="true">J</div>
+            <div>
+              <p class="cs-persona-name">Jordan</p>
+              <p class="cs-persona-role">High School Student · Age 16 · Chromebook · Keyboard-only</p>
+            </div>
+          </div>
+          <div class="cs-persona-body">
+            <div class="cs-persona-col">
+              <p class="cs-persona-col-label">Goals</p>
+              <ul>
+                <li>Complete school tasks independently</li>
+                <li>Navigate the portal without losing orientation</li>
+                <li>Keep pace with peers despite injury</li>
+              </ul>
+            </div>
+            <div class="cs-persona-col">
+              <p class="cs-persona-col-label">Frustrations</p>
+              <ul>
+                <li>Focus disappears — must restart from the top</li>
+                <li>Dropdowns unreachable by keyboard</li>
+                <li>Error messages shown but never announced</li>
+              </ul>
+            </div>
+            <div class="cs-persona-col">
+              <p class="cs-persona-col-label">Behaviors</p>
+              <ul>
+                <li>Tabs slowly, listens for focus cues</li>
+                <li>Zooms in to identify interactive elements</li>
+                <li>Avoids broken areas; asks peers for help</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs-persona-quote">
+            <blockquote>"If I lose focus on the page, I lose track of where I am completely."</blockquote>
+          </div>
+        </div>
+
+        <h3 class="cs-sub-heading">Accessibility Audit Snapshot</h3>
+        <ul class="cs-audit-list" aria-label="Accessibility audit findings">
+          <li class="cs-audit-item">
+            <span class="cs-audit-severity cs-audit-severity--critical">Critical</span>
+            <div class="cs-audit-body">
+              <p class="cs-audit-component">Dropdown Menus</p>
+              <p class="cs-audit-detail">Keyboard inaccessible — no focus entry point. Users unable to complete selections independently.</p>
+            </div>
+          </li>
+          <li class="cs-audit-item">
+            <span class="cs-audit-severity cs-audit-severity--high">High</span>
+            <div class="cs-audit-body">
+              <p class="cs-audit-component">Data Tables</p>
+              <p class="cs-audit-detail">Missing semantic headers — no row/column relationships. Screen reader reads as flat, unstructured text.</p>
+            </div>
+          </li>
+          <li class="cs-audit-item">
+            <span class="cs-audit-severity cs-audit-severity--critical">Critical</span>
+            <div class="cs-audit-body">
+              <p class="cs-audit-component">Validation Errors</p>
+              <p class="cs-audit-detail">Errors not announced to assistive technology. Users unaware of submission failures or required fields.</p>
+            </div>
+          </li>
+          <li class="cs-audit-item">
+            <span class="cs-audit-severity cs-audit-severity--high">High</span>
+            <div class="cs-audit-body">
+              <p class="cs-audit-component">Buttons</p>
+              <p class="cs-audit-detail">Missing accessible names — icon-only with no label. Ambiguous interaction — user cannot predict outcome.</p>
+            </div>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Atomic Accessibility Research Framework</h3>
+        <div class="cs-prose">
+          <p>Rather than presenting disconnected violations, I structured findings through a layered progression — transforming accessibility from subjective observations into actionable product decisions grounded in user impact.</p>
+        </div>
+
+        <ol class="cs-atomic-flow" aria-label="Atomic accessibility research framework steps">
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Experiment</p>
+            <p class="cs-atomic-step-title">We tested…</p>
+            <p>Keyboard, screen reader, zoom, voice control</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Fact</p>
+            <p class="cs-atomic-step-title">We observed…</p>
+            <p>Users unable to navigate dropdowns or complete forms</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Insight</p>
+            <p class="cs-atomic-step-title">This suggests…</p>
+            <p>Navigation and form structure lack semantic predictability</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Recommendation</p>
+            <p class="cs-atomic-step-title">We should…</p>
+            <p>Rebuild using semantic HTML and standardized naming patterns</p>
+          </li>
+        </ol>
+
+        <h3 class="cs-sub-heading">Research Examples</h3>
+        <ol class="cs-atomic-examples" aria-label="Atomic research examples">
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">Screen reader testing on forms</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">Inputs announced without context — 0 accessible names on key forms</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Users cannot confidently complete workflows or understand field purpose</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Standardize accessible naming conventions across all form components</span>
+            </div>
+          </li>
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">Keyboard testing on navigation</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">Focus order inconsistent — users land on unexpected elements</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Users lose spatial orientation and cannot predict navigation flow</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Rebuild focus management logic at the framework level</span>
+            </div>
+          </li>
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">Zoom testing at 200%</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">Layout breaks — content clips or reflows off-screen</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Content entirely inaccessible for low-vision users</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Refactor responsive structure to support 200–400% zoom</span>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 03 DEFINE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="define-heading">
+        <p class="cs-section-eyebrow">03 — Define</p>
+        <h2 class="cs-section-heading" id="define-heading">Identifying the Systemic Root Cause</h2>
+        <p class="cs-section-subheading">Moving from screen evaluation to framework mapping</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">From Screens to Systems</h3>
+          <p>Once testing patterns became clear, I shifted from evaluating individual screens to mapping the underlying framework architecture. This shift was not academic — it was necessary. Fixing symptoms without addressing structure would guarantee recurrence.</p>
+          <p>I identified over 30 reusable components requiring remediation, alongside 10 high-impact public-facing screens prioritized based on usage data from students and parents.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Component Categories</h3>
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Component categories requiring remediation">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Scope</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Inputs &amp; Form Controls</th>
+                <td>Labels, accessible names, error associations, field groupings</td>
+              </tr>
+              <tr>
+                <th scope="row">Buttons &amp; Interactive Elements</th>
+                <td>Accessible names, focus states, pressed/hover states</td>
+              </tr>
+              <tr>
+                <th scope="row">Navigation Systems</th>
+                <td>Landmark structure, focus order, skip links, semantic hierarchy</td>
+              </tr>
+              <tr>
+                <th scope="row">Data Tables</th>
+                <td>Column/row headers, captions, cell relationships</td>
+              </tr>
+              <tr>
+                <th scope="row">Validation Patterns</th>
+                <td>Error announcement, live regions, field association</td>
+              </tr>
+              <tr>
+                <th scope="row">Structural Hierarchy</th>
+                <td>Heading levels, landmark regions, reading order</td>
+              </tr>
+              <tr>
+                <th scope="row">Modal Interactions</th>
+                <td>Focus trapping, dismiss behavior, return focus</td>
+              </tr>
+              <tr>
+                <th scope="row">Interaction States</th>
+                <td>Focus, hover, pressed, disabled — all visible and accessible</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="cs-sub-heading">Core Framework Issues</h3>
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Core framework-level accessibility issues">
+            <thead>
+              <tr>
+                <th scope="col">Issue</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Non-Semantic HTML</th>
+                <td>Framework generated div-based UI by default — no native roles</td>
+              </tr>
+              <tr>
+                <th scope="row">Missing Accessible Names</th>
+                <td>Components rendered without labels — invisible to screen readers</td>
+              </tr>
+              <tr>
+                <th scope="row">Inconsistent ARIA Usage</th>
+                <td>ARIA applied without semantic HTML base — creating false confidence</td>
+              </tr>
+              <tr>
+                <th scope="row">Poorly Structured Tables</th>
+                <td>Data relationships absent — screen readers could not interpret grid</td>
+              </tr>
+              <tr>
+                <th scope="row">Unpredictable Focus Management</th>
+                <td>Focus order disconnected from visual layout and user expectation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cs-callout">
+          <p>The framework itself was generating inaccessible experiences by default. The goal was no longer remediation — it was changing the foundation that produced accessibility outcomes across the entire product.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Component Prioritization Matrix</h3>
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Component prioritization by frequency and user impact">
+            <thead>
+              <tr>
+                <th scope="col">Priority</th>
+                <th scope="col">Component</th>
+                <th scope="col">Frequency</th>
+                <th scope="col">User Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cs-priority cs-priority--p1">P1</span></td>
+                <th scope="row">Inputs &amp; Form Controls</th>
+                <td>Very High</td>
+                <td>Critical</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--p1">P1</span></td>
+                <th scope="row">Navigation Systems</th>
+                <td>Very High</td>
+                <td>Critical</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--p1">P1</span></td>
+                <th scope="row">Data Tables</th>
+                <td>High</td>
+                <td>High</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--p2">P2</span></td>
+                <th scope="row">Modals</th>
+                <td>Medium</td>
+                <td>High</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--p3">P3</span></td>
+                <th scope="row">Tooltips</th>
+                <td>Medium</td>
+                <td>Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 04 IDEATE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="ideate-heading">
+        <p class="cs-section-eyebrow">04 — Ideate</p>
+        <h2 class="cs-section-heading" id="ideate-heading">Negotiating Between Ideal Accessibility and Technical Reality</h2>
+        <p class="cs-section-subheading">Collaborative problem-solving across design and engineering</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Collaboration Challenge</h3>
+          <p>This phase became deeply collaborative. While ideal accessibility solutions often existed theoretically, implementation constraints within the framework required constant negotiation between design intent, engineering feasibility, and product timelines.</p>
+          <p>I partnered closely with engineers to explore multiple implementation approaches, moving between native HTML replacements, ARIA enhancements, framework-level abstractions, and progressive remediation strategies.</p>
+          <p>Some engineers initially resisted large-scale framework changes due to the perceived scope and technical debt involved. To build alignment, I focused on demonstrating how systemic fixes would ultimately reduce long-term remediation effort and improve product consistency overall.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Engineering Trade-Off Matrix</h3>
+        <ul class="cs-tradeoff-list" aria-label="Engineering trade-off approaches">
+          <li class="cs-tradeoff-item">
+            <div class="cs-tradeoff-header">
+              <span class="cs-tradeoff-badge cs-tradeoff-badge--preferred">Preferred</span>
+              <span class="cs-tradeoff-name">Native HTML Replacements</span>
+            </div>
+            <div class="cs-tradeoff-body">
+              <p class="cs-tradeoff-row"><span class="cs-tradeoff-pro">+</span> Strong, robust accessibility support — screen reader and keyboard native</p>
+              <p class="cs-tradeoff-row"><span class="cs-tradeoff-con">−</span> Requires full component refactor — higher initial engineering cost</p>
+            </div>
+          </li>
+          <li class="cs-tradeoff-item">
+            <div class="cs-tradeoff-header">
+              <span class="cs-tradeoff-badge cs-tradeoff-badge--supplemental">Supplemental only</span>
+              <span class="cs-tradeoff-name">ARIA Enhancement</span>
+            </div>
+            <div class="cs-tradeoff-body">
+              <p class="cs-tradeoff-row"><span class="cs-tradeoff-pro">+</span> Faster initial implementation — lower barrier to adoption</p>
+              <p class="cs-tradeoff-row"><span class="cs-tradeoff-con">−</span> Less robust — ARIA without semantic base creates fragile patterns</p>
+            </div>
+          </li>
+          <li class="cs-tradeoff-item">
+            <div class="cs-tradeoff-header">
+              <span class="cs-tradeoff-badge cs-tradeoff-badge--rejected">Rejected</span>
+              <span class="cs-tradeoff-name">One-Off Screen Fixes</span>
+            </div>
+            <div class="cs-tradeoff-body">
+              <p class="cs-tradeoff-row"><span class="cs-tradeoff-pro">+</span> Faster short-term delivery — visible quick wins</p>
+              <p class="cs-tradeoff-row"><span class="cs-tradeoff-con">−</span> Entirely unsustainable — same issues recur with every new component</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Design Token Strategy</h3>
+          <p>This phase also established design tokens as central to the solution strategy. Rather than manually correcting contrast and interaction inconsistencies across products repeatedly, scalable token systems were developed governing color contrast, focus states, hover states, pressed states, and interaction visibility.</p>
+          <div class="cs-callout">
+            <p>Accessibility shifted from something manually enforced into something structurally embedded within the design system itself.</p>
+          </div>
+        </div>
+
+        <h3 class="cs-sub-heading">Framework Architecture</h3>
+        <ol class="cs-cascade" aria-label="Framework architecture — how accessibility cascades through the system">
+          <li class="cs-cascade-step">
+            <p class="cs-cascade-value">Design Tokens</p>
+            <p class="cs-cascade-label">Color, focus, states</p>
+          </li>
+          <li class="cs-cascade-step">
+            <p class="cs-cascade-value">Components</p>
+            <p class="cs-cascade-label">30+ remediated</p>
+          </li>
+          <li class="cs-cascade-step">
+            <p class="cs-cascade-value">Templates</p>
+            <p class="cs-cascade-label">Reusable layouts</p>
+          </li>
+          <li class="cs-cascade-step">
+            <p class="cs-cascade-value">Product Experiences</p>
+            <p class="cs-cascade-label">Scalable at system level</p>
+          </li>
+        </ol>
+        <div class="cs-prose">
+          <p>Accessibility decisions made at the token level cascade automatically through components, templates, and product experiences — removing the need for manual enforcement at every layer.</p>
+        </div>
+      </section>
+
+      <!-- 05 PROTOTYPE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="prototype-heading">
+        <p class="cs-section-eyebrow">05 — Prototype</p>
+        <h2 class="cs-section-heading" id="prototype-heading">Demonstrating Accessibility Through Functional Proof</h2>
+        <p class="cs-section-subheading">Making the invisible visible through working examples</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Bridging Intent and Implementation</h3>
+          <p>One persistent challenge throughout the project was translating accessibility recommendations into implementation confidence. Engineers needed to experience correct accessibility behavior directly — not interpret abstract documentation alone.</p>
+          <p>To bridge this gap, I created functional HTML prototypes demonstrating correct semantic structure, keyboard interaction behavior, screen reader announcements, focus management patterns, and accessible validation behavior.</p>
+          <p>These prototypes became critical collaboration tools because they removed ambiguity from the implementation conversation entirely.</p>
+
+          <h3 class="cs-sub-heading">Improving Design Handoff</h3>
+          <p>In parallel, I worked closely with designers to improve accessibility annotation practices during handoff — creating a stronger connection between design intent and implementation quality.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Accessibility Design Handoff Checklist</h3>
+        <ul class="cs-checklist" aria-label="Accessibility design handoff checklist">
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Inputs</span> — Accessible labels defined for all form controls</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Focus States</span> — Clearly documented for all interactive components</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Error Handling</span> — Screen reader behavior and live region specified</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Navigation</span> — Keyboard expectations and focus order documented</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Interaction States</span> — Hover, pressed, focus, and disabled all included</span>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Leadership Recognition</h3>
+        <div class="cs-blockquote">
+          <blockquote>
+            "Lead-level ownership through systems thinking, accessibility expertise, and cross-project consistency. Contributions extended beyond remediation and into organizational systems thinking — defining accessible interaction state tokens, supporting scalable design system implementation, and driving cross-project accessibility consistency."
+          </blockquote>
+          <cite>— UX Leadership, reflecting cross-functional impact and systems-level accessibility contribution</cite>
+        </div>
+      </section>
+
+      <!-- 06 TEST -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="test-heading">
+        <p class="cs-section-eyebrow">06 — Test</p>
+        <h2 class="cs-section-heading" id="test-heading">Embedding Accessibility Into Quality Operations</h2>
+        <p class="cs-section-subheading">From ad-hoc checking to structured validation</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Integrating Into QA Workflows</h3>
+          <p>As remediation efforts matured, accessibility validation became integrated directly into QA processes. Previously, accessibility was inconsistently tested or deferred until late-stage review — creating regression risk and rework cycles.</p>
+          <p>I collaborated with QA teams to establish structured validation criteria and repeatable testing workflows that could run alongside standard sprint ceremonies.</p>
+        </div>
+
+        <ul class="cs-card-grid" aria-label="QA testing methods">
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Keyboard Testing</p>
+            <p>Validate all interactive elements without mouse — every sprint</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Screen Reader Validation</p>
+            <p>Accurate semantic announcements across all component states</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Zoom Testing</p>
+            <p>Functional and readable at 200% magnification</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Contrast Verification</p>
+            <p>WCAG-compliant ratios across default, hover, focus, error states</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Focus Management Checks</p>
+            <p>Visible, logical, predictable focus for all interactions</p>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Accessibility QA Framework</h3>
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Accessibility QA pass criteria">
+            <thead>
+              <tr>
+                <th scope="col">Criterion</th>
+                <th scope="col">Pass Standard</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Keyboard Navigation</th>
+                <td>Fully operable without mouse — no traps, no lost focus</td>
+                <td><span class="cs-pass">Pass Criteria</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Screen Reader Support</th>
+                <td>Accurate, complete semantic announcements in all states</td>
+                <td><span class="cs-pass">Pass Criteria</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Focus Visibility</th>
+                <td>Clear, persistent visual indication — WCAG 2.4.11 compliant</td>
+                <td><span class="cs-pass">Pass Criteria</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Contrast</th>
+                <td>4.5:1 text, 3:1 UI — verified across all interactive states</td>
+                <td><span class="cs-pass">Pass Criteria</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Zoom Support</th>
+                <td>Fully functional and legible at 200% magnification</td>
+                <td><span class="cs-pass">Pass Criteria</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cs-prose">
+          <p>Accessibility became integrated into definition-of-done criteria across teams — dramatically reducing recurring regressions and improving long-term sustainability.</p>
+        </div>
+      </section>
+
+      <!-- 07 OUTCOMES -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="outcomes-heading">
+        <p class="cs-section-eyebrow">07 — Outcomes &amp; Key Learnings</p>
+        <h2 class="cs-section-heading" id="outcomes-heading">Transforming Accessibility From Remediation to Infrastructure</h2>
+        <p class="cs-section-subheading">The foundation became the product</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Summary of Impact</h3>
+          <p>By the conclusion of the initiative, the product had evolved from a fragmented accessibility experience into a functional and scalable accessibility foundation. Perhaps most importantly, accessibility stopped being treated as an isolated compliance layer — it became part of the product architecture itself.</p>
+        </div>
+
+        <ul class="cs-checklist" aria-label="Summary of outcomes">
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">30+ framework components remediated</span> — Cascading downstream improvement across thousands of product screens</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">10 high-impact screens improved</span> — Prioritized by real usage data from students and parents</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Accessibility integrated into QA</span> — Validation criteria embedded in definition of done — every sprint</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Design token infrastructure</span> — Scalable accessibility built into the system — not enforced manually</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Cross-functional adoption</span> — Design, Engineering, QA, and Product aligned on shared standards</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Direct user feedback loops</span> — Integrated into design evaluation — closing the research-to-delivery gap</span>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Continuous Improvement Loop</h3>
+        <ol class="cs-loop" aria-label="Continuous improvement loop">
+          <li class="cs-loop-step"><p class="cs-loop-label">User Feedback</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">UX Evaluation</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Framework Updates</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">QA Validation</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Product Release</p></li>
+        </ol>
+        <div class="cs-prose">
+          <p>Each cycle of the loop strengthens the foundation — user feedback drives UX evaluation, framework updates are validated through QA, and improvements ship into the live product. The system is self-reinforcing.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Key Learnings</h3>
+        <ul class="cs-learnings" aria-label="Key learnings">
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Fix the factory, not just the output</strong> — Screen-by-screen remediation is unsustainable at enterprise scale. The only durable path is changing the system that generates the product.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Make engineers feel the failure</strong> — Asking engineers to navigate with keyboard and screen reader changed conversations faster than any audit document could. Empathy is an engineering tool.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Design tokens are an accessibility infrastructure</strong> — Embedding contrast, focus, and interaction state requirements into tokens removed the need for manual enforcement at every component level.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Prototypes replace ambiguity</strong> — Functional HTML prototypes resolved implementation debates in minutes that documentation had failed to resolve in weeks.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Sustainability requires integration</strong> — Accessibility becomes sustainable only when it is embedded into the systems that create products — sprint gates, definition of done, and QA criteria — not applied afterward as correction work.</p>
+          </li>
+        </ul>
+
+        <div class="cs-closing" aria-label="Closing statement">
+          <p>Accessibility becomes sustainable when it is embedded into the systems that create products — not applied afterward as correction work.</p>
+        </div>
+      </section>
+
+    </div><!-- /cs-body -->
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip" aria-labelledby="cta-heading">
+      <div class="cta-blob" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-headline" id="cta-heading">
+            See more work.<br><em>Read the other case studies.</em>
+          </h2>
+        </div>
+        <div class="cta-actions">
+          <a href="index.html#work" class="btn-primary">
+            View all projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
+          </a>
+          <a href="mailto:hello@lacydesigns.com" class="btn-ghost" aria-label="Send an email to Lacy">
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-id">
+        <p class="footer-name">Lacy</p>
+        <p class="footer-title">Lead UX Designer</p>
+      </div>
+      <ul class="footer-links">
+        <li><span class="footer-connect-label" aria-hidden="true">Let's connect</span></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/your-linkedin"
+            class="footer-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile (opens in a new tab)"
+          >
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hello@lacydesigns.com" class="footer-link" aria-label="Send an email to Lacy">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+
+</body>
+</html>

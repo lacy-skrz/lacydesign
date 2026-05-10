@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UX Case Study: Texas School District / Forms Project — Designing Under Pressure: Transforming Complexity Into Clarity for 40,000+ students." />
+  <title>Texas School District / Forms Project — Lacy, Lead UX Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name" aria-label="Lacy — go to home page">Lacy</a>
+
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Open navigation menu"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <line x1="2" y1="5"  x2="18" y2="5"/>
+          <line x1="2" y1="10" x2="18" y2="10"/>
+          <line x1="2" y1="15" x2="18" y2="15"/>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/your-linkedin"
+            class="nav-external"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile (opens in a new tab)"
+          >LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header class="cs-hero">
+      <div class="cs-hero-blob cs-hero-blob--1" aria-hidden="true"></div>
+      <div class="cs-hero-inner">
+        <p class="cs-hero-eyebrow">UX Case Study · Enterprise K–12 Platform</p>
+        <h1 class="cs-hero-title">Texas School District / Forms Project</h1>
+        <p class="cs-hero-subtitle">Designing Under Pressure: Transforming Complexity Into Clarity</p>
+        <dl class="cs-hero-meta">
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">District Size</dt>
+            <dd class="cs-meta-value">40,000+ Students</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Project Type</dt>
+            <dd class="cs-meta-value">Condition-of-Sale</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Year</dt>
+            <dd class="cs-meta-value">2024</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- METRICS BAR -->
+    <section class="cs-metrics" aria-label="Hero metrics">
+      <div class="cs-metrics-inner">
+        <div class="cs-metric">
+          <p class="cs-metric-value">40,000+</p>
+          <p class="cs-metric-label">Students — one of the largest K–12 districts in Texas</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">Condition-of-Sale</p>
+          <p class="cs-metric-label">Deal contingent on solving the forms problem</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">10–15 → 4–6</p>
+          <p class="cs-metric-label">Form steps reduced through dynamic contextual scoping</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">End-to-End</p>
+          <p class="cs-metric-label">Full design leadership — research through delivery</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body">
+
+      <!-- 01 OVERVIEW -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="overview-heading">
+        <p class="cs-section-eyebrow">01 — Overview</p>
+        <h2 class="cs-section-heading" id="overview-heading">When UX Became the Difference Between Winning and Losing</h2>
+        <p class="cs-section-subheading">A condition-of-sale design challenge at enterprise scale</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Business Context</h3>
+          <p>A large Texas school district serving more than 40,000 students was evaluating the platform. One requirement had quickly become a critical condition of sale: the district needed a scalable way to manage highly complex online forms across schools, age groups, and family workflows.</p>
+          <p>The existing experience created significant operational friction. Forms were static, repetitive, and surfaced irrelevant questions to users. Administrators struggled with complexity. Families encountered unnecessary cognitive load. If the problem could not be solved effectively, the deal itself was at risk.</p>
+
+          <h3 class="cs-sub-heading">The Double Challenge</h3>
+          <p>What made this project especially meaningful was that the challenge extended beyond interface design. The team itself had relatively low UX maturity, limited exposure to research-driven workflows, and little experience integrating UX into product strategy early in the process.</p>
+          <div class="cs-callout">
+            <p>This project became two things simultaneously: a complex product design initiative, and a UX maturity transformation effort — delivered under real business pressure.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 EMPATHIZE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="empathize-heading">
+        <p class="cs-section-eyebrow">02 — Empathize</p>
+        <h2 class="cs-section-heading" id="empathize-heading">Beginning With Listening Instead of Solutions</h2>
+        <p class="cs-section-subheading">90 days of immersive discovery before a single wireframe</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Listening Tour</h3>
+          <p>Rather than jumping directly into wireframes or requirements, I started with a structured listening tour. Over approximately 90 days, I immersed myself in the full ecosystem surrounding the product — not only what users were struggling with, but why the organization had arrived at this point operationally.</p>
+        </div>
+
+        <ul class="cs-card-grid" aria-label="Discovery methods">
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Stakeholder Interviews</p>
+            <p>Understand district priorities, pain points, and operational constraints</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Sales Conversations</p>
+            <p>Map the condition-of-sale requirements and business risk clearly</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Customer Support Observations</p>
+            <p>Identify where form complexity generated the most tickets and friction</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">User Workflow Discussions</p>
+            <p>Follow actual enrollment journeys from family submission to admin processing</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Internal Product Alignment</p>
+            <p>Calibrate UX direction against engineering feasibility and roadmap reality</p>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Key Discovery Themes</h3>
+        <ul class="cs-theme-list" aria-label="Key discovery themes">
+          <li class="cs-theme-item">
+            <div class="cs-theme-dot" aria-hidden="true"></div>
+            <p><span class="cs-theme-title">Irrelevant form steps — </span>Users forced through questions that didn't apply to their situation</p>
+          </li>
+          <li class="cs-theme-item">
+            <div class="cs-theme-dot" aria-hidden="true"></div>
+            <p><span class="cs-theme-title">Workflow variation — </span>District processes varied significantly across schools and student types</p>
+          </li>
+          <li class="cs-theme-item">
+            <div class="cs-theme-dot" aria-hidden="true"></div>
+            <p><span class="cs-theme-title">Manual administration — </span>Admin tasks were heavily manual with no scalable automation in place</p>
+          </li>
+          <li class="cs-theme-item">
+            <div class="cs-theme-dot" aria-hidden="true"></div>
+            <p><span class="cs-theme-title">Unnecessary repetition — </span>Families re-entered data that the system already held</p>
+          </li>
+          <li class="cs-theme-item">
+            <div class="cs-theme-dot" aria-hidden="true"></div>
+            <p><span class="cs-theme-title">Accumulated complexity — </span>Years of layered requirements had compounded into an unmanageable experience</p>
+          </li>
+        </ul>
+
+        <div class="cs-callout">
+          <p>Complexity was not caused by a single feature failure. It had accumulated gradually through years of layered requirements and reactive product decisions.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Stakeholder Ecosystem</h3>
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Stakeholder ecosystem by priority and need">
+            <thead>
+              <tr>
+                <th scope="col">Priority</th>
+                <th scope="col">Stakeholder</th>
+                <th scope="col">Primary Need</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cs-priority cs-priority--high">High</span></td>
+                <th scope="row">District Administrators</th>
+                <td>Efficient enrollment workflows — reduced manual burden</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--high">High</span></td>
+                <th scope="row">Families</th>
+                <td>Simplified, relevant form completion — less cognitive effort</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--high">High</span></td>
+                <th scope="row">Sales Teams</th>
+                <td>Condition-of-sale success — deal closure depends on this feature</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--high">High</span></td>
+                <th scope="row">Product Managers</th>
+                <td>Feasible implementation scope — technically achievable solution</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--high">High</span></td>
+                <th scope="row">Engineering</th>
+                <td>Clear conditional logic requirements — unambiguous design specs</td>
+              </tr>
+              <tr>
+                <td><span class="cs-priority cs-priority--medium">Medium</span></td>
+                <th scope="row">Customer Support</th>
+                <td>Reduced confusion and inbound support tickets</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="cs-sub-heading">User Persona</h3>
+        <div class="cs-persona" aria-label="User persona: Lisa">
+          <div class="cs-persona-header">
+            <div class="cs-persona-avatar" aria-hidden="true">L</div>
+            <div>
+              <p class="cs-persona-name">Lisa</p>
+              <p class="cs-persona-role">District Enrollment Administrator · K–12 District · 40,000+ Students</p>
+            </div>
+          </div>
+          <div class="cs-persona-body">
+            <div class="cs-persona-col">
+              <p class="cs-persona-col-label">Goals</p>
+              <ul>
+                <li>Reduce manual processing and support burden</li>
+                <li>Manage enrollment across schools efficiently</li>
+                <li>Have forms adapt to district-specific rules</li>
+              </ul>
+            </div>
+            <div class="cs-persona-col">
+              <p class="cs-persona-col-label">Frustrations</p>
+              <ul>
+                <li>Static forms surface irrelevant questions</li>
+                <li>Duplicate workflows waste team time</li>
+                <li>No way to bulk-manage student transfers</li>
+              </ul>
+            </div>
+            <div class="cs-persona-col">
+              <p class="cs-persona-col-label">Behaviors</p>
+              <ul>
+                <li>Escalates admin friction to product teams</li>
+                <li>Builds manual workarounds to fill gaps</li>
+                <li>Tracks support tickets caused by form errors</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs-persona-quote">
+            <blockquote>"The more confusing the forms are, the more support requests we receive."</blockquote>
+          </div>
+        </div>
+
+        <h3 class="cs-sub-heading">Atomic UX Research Framework</h3>
+        <div class="cs-prose">
+          <p>As discovery findings accumulated, I used the Atomic UX Research framework to organize observations into actionable product direction — helping stakeholders move beyond isolated user comments toward structured decision-making grounded in patterns and operational impact.</p>
+        </div>
+
+        <ol class="cs-atomic-flow" aria-label="Atomic UX research framework steps">
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Experiment</p>
+            <p class="cs-atomic-step-title">We tested…</p>
+            <p>Stakeholder interviews across districts</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Fact</p>
+            <p class="cs-atomic-step-title">We observed…</p>
+            <p>Districts manage forms differently by age group and school</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Insight</p>
+            <p class="cs-atomic-step-title">This suggests…</p>
+            <p>Static forms cannot scale across varied district operations</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Recommendation</p>
+            <p class="cs-atomic-step-title">We should…</p>
+            <p>Introduce dynamic scoping logic driven by student data</p>
+          </li>
+        </ol>
+
+        <h3 class="cs-sub-heading">Research Examples</h3>
+        <ol class="cs-atomic-examples" aria-label="Atomic research examples">
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">Stakeholder interviews across districts</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">Districts manage forms differently by age group and school</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Static forms cannot scale across varied district operations</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Introduce dynamic scoping logic driven by student data</span>
+            </div>
+          </li>
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">User testing on live form flows</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">Families skipped irrelevant sections or abandoned flows</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Cognitive overload reducing completion confidence</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Reduce visible steps contextually based on user profile</span>
+            </div>
+          </li>
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">Support ticket analysis</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">Duplicate forms significantly increased administrative effort</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Existing workflows create compounding operational inefficiency</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Build bulk move functionality for family transfer scenarios</span>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 03 DEFINE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="define-heading">
+        <p class="cs-section-eyebrow">03 — Define</p>
+        <h2 class="cs-section-heading" id="define-heading">Identifying the Real Problem Beneath the Interface</h2>
+        <p class="cs-section-subheading">From surface friction to structural complexity</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Real Problem</h3>
+          <p>The issue was not simply that forms were difficult to use. The deeper issue was that the system treated every user as if they needed the same experience — regardless of age, school, student type, enrollment scenario, or district rules.</p>
+          <div class="cs-callout">
+            <p>Users were forced through irrelevant workflows because the system lacked contextual intelligence. The opportunity was designing a dynamic experience that adapts to each user's specific conditions.</p>
+          </div>
+          <p>At the same time, an organizational challenge ran alongside the product problem. Because UX maturity was still developing, I intentionally structured collaboration sessions to introduce whiteboarding practices, journey mapping, collaborative ideation, research synthesis, and prototype validation.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Current vs Future State</h3>
+        <div class="cs-state-grid" aria-label="Current state versus future state comparison">
+          <div class="cs-state-col cs-state-col--before">
+            <p class="cs-state-col-header">Current State</p>
+            <ul>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Static forms — same path for every user</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Irrelevant questions surfaced to all users</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Manual administration workflows</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> High cognitive load — too many steps</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Reactive support burden from confused users</li>
+            </ul>
+          </div>
+          <div class="cs-state-col cs-state-col--after">
+            <p class="cs-state-col-header">Future State</p>
+            <ul>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Dynamic contextual flows — personalized per student</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Only relevant questions shown based on context</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Streamlined processes with bulk management tools</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Simplified experience — 4–6 contextual steps</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Reduced confusion — fewer inbound support tickets</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 IDEATE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="ideate-heading">
+        <p class="cs-section-eyebrow">04 — Ideate</p>
+        <h2 class="cs-section-heading" id="ideate-heading">Simplifying Complexity Through Contextual Logic</h2>
+        <p class="cs-section-subheading">Making complexity invisible to users</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Systems Thinking Approach</h3>
+          <p>This phase focused heavily on systems thinking. Rather than designing isolated screens, I explored how the platform could use existing student and district data to dynamically shape form experiences in real time.</p>
+          <p>I facilitated collaborative whiteboarding sessions with stakeholders, product, and engineering to map potential logic flows and identify operational edge cases. Contextual variables included student grade level, enrollment type, school-specific requirements, family structure, and existing system records.</p>
+          <div class="cs-callout">
+            <p>The goal was not simply reducing steps visually. The goal was making complexity invisible to users — balancing district flexibility, family simplicity, and platform scalability.</p>
+          </div>
+        </div>
+
+        <h3 class="cs-sub-heading">Conditional Logic Diagram</h3>
+        <div class="cs-logic-diagram" aria-label="Conditional logic flow for dynamic form scoping">
+          <div class="cs-logic-row">
+            <span class="cs-logic-label">Step 1</span>
+            <div class="cs-logic-content"><strong>User Opens Form</strong></div>
+          </div>
+          <div class="cs-logic-row">
+            <span class="cs-logic-label">Step 2</span>
+            <div class="cs-logic-content"><strong>System Evaluates Student Data</strong> — Grade · Enrollment type · School</div>
+          </div>
+          <div class="cs-logic-row">
+            <span class="cs-logic-label">Step 3</span>
+            <div class="cs-logic-content">
+              <strong>Grade Level?</strong>
+              <div class="cs-logic-branches">
+                <div class="cs-logic-branch">
+                  <p class="cs-logic-branch-label">Elementary</p>
+                  <p>Elementary Workflow</p>
+                </div>
+                <div class="cs-logic-branch">
+                  <p class="cs-logic-branch-label">High School</p>
+                  <p>Secondary Workflow</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cs-logic-row">
+            <span class="cs-logic-label">Result</span>
+            <div class="cs-logic-content">
+              <strong>Display Only Relevant Questions</strong><br>
+              <span class="cs-logic-result">Reduced Completion Time + Lower Cognitive Load</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="cs-sub-heading">Whiteboarding &amp; Collaboration Methods</h3>
+        <ul class="cs-card-grid" aria-label="Collaboration and ideation methods">
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Journey Mapping</p>
+            <p>Understand enrollment friction across family and admin touchpoints</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Whiteboarding Sessions</p>
+            <p>Explore conditional logic structures and edge case scenarios</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Stakeholder Workshops</p>
+            <p>Align district operational needs with platform capability</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Prototype Walkthroughs</p>
+            <p>Validate understanding before committing to build direction</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Research Synthesis</p>
+            <p>Prioritize user pain points by frequency and operational severity</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 05 PROTOTYPE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="prototype-heading">
+        <p class="cs-section-eyebrow">05 — Prototype</p>
+        <h2 class="cs-section-heading" id="prototype-heading">Making Complexity Feel Effortless</h2>
+        <p class="cs-section-subheading">Interactive prototypes as alignment and communication tools</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">What the Prototypes Demonstrated</h3>
+          <p>Once the logic structure was defined, I translated flows into interactive prototypes. Because stakeholders had varying levels of UX familiarity, interactive prototypes became critical communication tools — allowing teams to experience the solution rather than interpret static documentation.</p>
+        </div>
+
+        <ul class="cs-checklist" aria-label="Prototype features demonstrated">
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Dynamic Form Branching</span> — Forms adapt in real time based on evaluated student and district data</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Reduced Step Counts</span> — Irrelevant sections suppressed — families see only what applies to them</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Simplified Navigation</span> — Clear progression cues reduce disorientation and abandonment</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Context-Aware Progression</span> — Each step informed by the previous — no redundant re-entry</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Administrative Workflows</span> — Bulk move functionality built into the prototype for validation</span>
+          </li>
+        </ul>
+
+        <div class="cs-prose">
+          <p>Accessibility was integrated throughout — not treated as a separate track. Keyboard accessibility, semantic hierarchy, clear error handling, and reduced cognitive load were embedded directly into prototype decisions.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Prototype Impact Comparison</h3>
+        <div class="cs-compare-grid" aria-label="Prototype before and after comparison">
+          <div class="cs-compare-col cs-compare-col--before">
+            <p class="cs-compare-col-header">Before</p>
+            <ul>
+              <li>10–15 potential form steps</li>
+              <li>Static, one-size-fits-all flow</li>
+              <li>Repetitive form fields</li>
+              <li>High user confusion</li>
+            </ul>
+          </div>
+          <div class="cs-compare-col cs-compare-col--after">
+            <p class="cs-compare-col-header">After</p>
+            <ul>
+              <li>4–6 contextual steps</li>
+              <li>Adaptive workflow per user profile</li>
+              <li>Personalized, pre-populated experience</li>
+              <li>Clear, predictable progression</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="cs-sub-heading">Leadership Recognition</h3>
+        <div class="cs-blockquote">
+          <blockquote>
+            "By embedding UX into the workflow rather than operating separately from it, the team became more engaged in user research, iterative design thinking, cross-functional collaboration, and validation before implementation. The result was not only a successful product outcome, but a stronger organizational understanding of how UX contributes strategically to product development."
+          </blockquote>
+          <cite>— Reflected in UX leadership feedback on cross-functional impact and organizational UX maturity contribution</cite>
+        </div>
+
+        <h3 class="cs-sub-heading">UX Maturity Shift</h3>
+        <div class="cs-maturity-shift" aria-label="UX maturity shift before and after">
+          <div class="cs-maturity-col cs-maturity-col--before">
+            <p class="cs-maturity-col-header">Before</p>
+            <ul>
+              <li>Reactive requests</li>
+              <li>Limited UX involvement</li>
+              <li>Solutions before research</li>
+            </ul>
+          </div>
+          <p class="cs-maturity-arrow" aria-hidden="true">→</p>
+          <div class="cs-maturity-col cs-maturity-col--after">
+            <p class="cs-maturity-col-header">After</p>
+            <ul>
+              <li>Research-driven collaboration</li>
+              <li>Embedded UX process</li>
+              <li>Validation before implementation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 TEST -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="test-heading">
+        <p class="cs-section-eyebrow">06 — Test</p>
+        <h2 class="cs-section-heading" id="test-heading">Iterating Through Validation and Feedback</h2>
+        <p class="cs-section-subheading">Pausing, refining, and retesting over forcing solutions forward</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">What Testing Revealed</h3>
+          <p>Usability testing revealed important gaps that had not surfaced during earlier stakeholder discussions. Certain workflows still created confusion. Some assumptions about district processes needed refinement. Additional edge cases emerged around family structures and enrollment variations.</p>
+          <div class="cs-callout">
+            <p>Rather than forcing the original solution forward, we paused, iterated, and retested. That willingness to continuously refine the experience became critical to the project's success.</p>
+          </div>
+        </div>
+
+        <h3 class="cs-sub-heading">Testing Methods Used</h3>
+        <ul class="cs-card-grid" aria-label="Testing methods">
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Stakeholder Walkthroughs</p>
+            <p>Validate logic flows against real district operational needs</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Usability Testing Sessions</p>
+            <p>Observe families navigating prototype tasks independently</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Prototype Validation</p>
+            <p>Confirm conditional logic behaved correctly across scenarios</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Workflow Reviews</p>
+            <p>Check administrative bulk-move flows with admin participants</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Accessibility Evaluation</p>
+            <p>Verify keyboard navigation, screen reader support, and contrast</p>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Usability Findings Snapshot</h3>
+        <ul class="cs-findings-list" aria-label="Usability findings and actions taken">
+          <li class="cs-finding">
+            <div class="cs-finding-header">
+              <p class="cs-finding-title">Users skipped form sections accidentally</p>
+            </div>
+            <div class="cs-finding-body">
+              <div class="cs-finding-row">
+                <span class="cs-finding-row-label">Impact</span>
+                <span>High confusion — completion confidence dropped</span>
+              </div>
+              <div class="cs-finding-row">
+                <span class="cs-finding-row-label">Action</span>
+                <span>Added contextual progress indicators and step labeling</span>
+              </div>
+            </div>
+          </li>
+          <li class="cs-finding">
+            <div class="cs-finding-header">
+              <p class="cs-finding-title">District workflows varied more widely than anticipated</p>
+            </div>
+            <div class="cs-finding-body">
+              <div class="cs-finding-row">
+                <span class="cs-finding-row-label">Impact</span>
+                <span>Scalability concerns — original logic too rigid</span>
+              </div>
+              <div class="cs-finding-row">
+                <span class="cs-finding-row-label">Action</span>
+                <span>Expanded conditional logic to support additional enrollment variables</span>
+              </div>
+            </div>
+          </li>
+          <li class="cs-finding">
+            <div class="cs-finding-header">
+              <p class="cs-finding-title">Families misunderstood key terminology</p>
+            </div>
+            <div class="cs-finding-body">
+              <div class="cs-finding-row">
+                <span class="cs-finding-row-label">Impact</span>
+                <span>Increased inbound support burden from confused users</span>
+              </div>
+              <div class="cs-finding-row">
+                <span class="cs-finding-row-label">Action</span>
+                <span>Simplified content language; replaced jargon with plain-language labels</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 07 OUTCOMES -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="outcomes-heading">
+        <p class="cs-section-eyebrow">07 — Outcomes &amp; Key Learnings</p>
+        <h2 class="cs-section-heading" id="outcomes-heading">Designing Systems That Reduce Complexity at Scale</h2>
+        <p class="cs-section-subheading">Condition-of-sale delivered — and more</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Summary of Impact</h3>
+          <p>The project successfully delivered the condition-of-sale requirement while also improving internal collaboration and UX maturity across teams. Most importantly, the project demonstrated that UX leadership is not only about producing strong deliverables — it is about creating clarity within complexity.</p>
+        </div>
+
+        <ul class="cs-checklist" aria-label="Summary of outcomes">
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Dynamic online forms scoping implemented</span> — Condition-of-sale requirement met — deal successfully progressed</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Reduced cognitive load for families</span> — 10–15 steps collapsed to 4–6 context-aware steps</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Streamlined admin workflows</span> — Bulk move functionality reduced manual processing overhead</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">UX embedded into team processes</span> — Research-driven collaboration became the operational norm</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Accessibility integrated throughout</span> — Not a separate track — woven into every prototype decision</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Cross-functional collaboration improved</span> — Design, engineering, product, and sales aligned around user outcomes</span>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Continuous UX Loop</h3>
+        <ol class="cs-loop" aria-label="Continuous UX loop">
+          <li class="cs-loop-step"><p class="cs-loop-label">Research</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Whiteboarding</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Prototype</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Testing</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Iteration</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Delivery</p></li>
+        </ol>
+
+        <h3 class="cs-sub-heading">Key Learnings</h3>
+        <ul class="cs-learnings" aria-label="Key learnings">
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Listen before you design</strong> — The 90-day discovery investment prevented months of redesign. Understanding the system that generates problems is always faster than fixing the problems themselves.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Conditional logic is a UX tool, not just an engineering one</strong> — Designing the decision rules that shape what users see is as important as designing the screens themselves.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Elevating team capability is part of the deliverable</strong> — Embedding UX process into a team that hadn't yet operationalized it created lasting organizational improvement that outlasted the project.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Business pressure and UX rigor are not opposites</strong> — The condition-of-sale urgency made research more important, not less. Understanding the problem precisely was what made the solution fast.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Strong UX leadership is measured by the systems it leaves behind</strong> — Not just the interfaces delivered, but the collaboration patterns, shared language, and organizational behaviors that persist because UX became part of how the team works.</p>
+          </li>
+        </ul>
+
+        <div class="cs-closing" aria-label="Closing statement">
+          <p>Strong UX leadership is not measured only by the interfaces delivered. It is measured by the systems, collaboration patterns, and organizational behaviors that improve because UX became part of how the team works.</p>
+        </div>
+      </section>
+
+    </div><!-- /cs-body -->
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip" aria-labelledby="cta-heading">
+      <div class="cta-blob" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-headline" id="cta-heading">
+            See more work.<br><em>Read the other case studies.</em>
+          </h2>
+        </div>
+        <div class="cta-actions">
+          <a href="index.html#work" class="btn-primary">
+            View all projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
+          </a>
+          <a href="mailto:hello@lacydesigns.com" class="btn-ghost" aria-label="Send an email to Lacy">
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-id">
+        <p class="footer-name">Lacy</p>
+        <p class="footer-title">Lead UX Designer</p>
+      </div>
+      <ul class="footer-links">
+        <li><span class="footer-connect-label" aria-hidden="true">Let's connect</span></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/your-linkedin"
+            class="footer-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile (opens in a new tab)"
+          >
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hello@lacydesigns.com" class="footer-link" aria-label="Send an email to Lacy">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+
+</body>
+</html>

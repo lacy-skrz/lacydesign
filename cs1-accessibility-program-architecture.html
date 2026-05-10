@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UX Case Study: Accessibility Program Architecture — From Silence to System. Building an enterprise-wide accessibility program for a K–12 platform from the ground up." />
+  <title>Accessibility Program Architecture — Lacy, Lead UX Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name" aria-label="Lacy — go to home page">Lacy</a>
+
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Open navigation menu"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <line x1="2" y1="5"  x2="18" y2="5"/>
+          <line x1="2" y1="10" x2="18" y2="10"/>
+          <line x1="2" y1="15" x2="18" y2="15"/>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/your-linkedin"
+            class="nav-external"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile (opens in a new tab)"
+          >LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header class="cs-hero">
+      <div class="cs-hero-blob cs-hero-blob--1" aria-hidden="true"></div>
+      <div class="cs-hero-inner">
+        <p class="cs-hero-eyebrow">UX Case Study · Enterprise K–12 Platform</p>
+        <h1 class="cs-hero-title">Accessibility Program Architecture</h1>
+        <p class="cs-hero-subtitle">From Silence to System: Architecting Accessibility at Scale</p>
+        <dl class="cs-hero-meta">
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Program Type</dt>
+            <dd class="cs-meta-value">Accessibility Architecture</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Scope</dt>
+            <dd class="cs-meta-value">Enterprise K–12</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Year</dt>
+            <dd class="cs-meta-value">2024</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- HERO METRICS BAR -->
+    <section class="cs-metrics" aria-label="Hero metrics">
+      <div class="cs-metrics-inner">
+        <div class="cs-metric">
+          <p class="cs-metric-value">1 → 25+</p>
+          <p class="cs-metric-label">Accessibility contributors — from sole SME to cross-functional program</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">7</p>
+          <p class="cs-metric-label">Designers trained in first cohort; became internal advocates</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">UX · QA · Eng · Product</p>
+          <p class="cs-metric-label">Full cross-functional adoption across the organization</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">Program Architecture</p>
+          <p class="cs-metric-label">Systemic infrastructure, not point fixes</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body">
+
+      <!-- 01 OVERVIEW -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="overview-heading">
+        <p class="cs-section-eyebrow">01 — Overview</p>
+        <h2 class="cs-section-heading" id="overview-heading">When Responsibility Became Infrastructure</h2>
+        <p class="cs-section-subheading">The moment a practitioner becomes an architect</p>
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Origin</h3>
+          <p>In 2024, accessibility was not yet a structured initiative inside the organization. Federal regulatory pressure had increased urgency around compliance — but internally, accessibility was still treated as something reactive. Teams viewed it as a final-stage checklist item rather than a foundational part of product development.</p>
+          <p>At the time, I was the only accessibility subject matter expert across a department of more than 200 people.</p>
+          <p>I began as a practitioner — auditing interfaces, documenting issues, collaborating with developers, and validating fixes manually. But the scale of the problem exceeded what any single contributor could sustain. The product ecosystem spanned thousands of screens, multiple platforms, and highly complex workflows used by students, parents, teachers, and district administrators.</p>
+          <div class="cs-callout">
+            <p>The challenge was no longer simply fixing accessibility issues. The challenge was creating a system capable of preventing them.</p>
+          </div>
+          <h3 class="cs-sub-heading">Role &amp; Scope</h3>
+          <p>This project became the turning point where my role evolved from UX practitioner into accessibility program architect — building organizational capability, operational systems, shared standards, and long-term cultural adoption.</p>
+        </div>
+      </section>
+
+      <!-- 02 EMPATHIZE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="empathize-heading">
+        <p class="cs-section-eyebrow">02 — Empathize</p>
+        <h2 class="cs-section-heading" id="empathize-heading">Understanding the Gaps No One Could See</h2>
+        <p class="cs-section-subheading">Experiencing failure before designing solutions</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Product Accessibility Issues</h3>
+          <p>Before defining solutions, I needed to understand where the failures truly existed. I began by experiencing the product through assistive technologies — screen readers, keyboard navigation, zoom testing, and color contrast validation.</p>
+          <p>The experience was fragmented and often unusable. Forms lacked accessible names. Navigation patterns broke keyboard flow. Semantic structure was inconsistent. Critical workflows could not be completed independently by users relying on assistive technology.</p>
+
+          <h3 class="cs-sub-heading">Organizational &amp; Cultural Gaps</h3>
+          <p>I immersed myself in the organization — observing design critiques, engineering workflows, QA processes, and product discussions. What I found was not active resistance, but a widespread absence of shared understanding.</p>
+        </div>
+
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Organizational gaps by discipline">
+            <thead>
+              <tr>
+                <th scope="col">Discipline</th>
+                <th scope="col">Gap identified</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Designers</th>
+                <td>Understood visual systems but not semantic structure</td>
+              </tr>
+              <tr>
+                <th scope="row">Engineers</th>
+                <td>Implemented patterns without understanding assistive technology behavior</td>
+              </tr>
+              <tr>
+                <th scope="row">QA Teams</th>
+                <td>Lacked accessibility validation criteria entirely</td>
+              </tr>
+              <tr>
+                <th scope="row">Leadership</th>
+                <td>Viewed accessibility as compliance, not design quality</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cs-prose">
+          <p>To bridge these gaps, I facilitated accessibility exposure sessions across departments — demonstrating broken screen reader experiences live. Accessibility stopped being theoretical. It became tangible.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Atomic Accessibility Research Framework</h3>
+        <p class="cs-prose" style="max-width:680px; font-weight:300; color:var(--text-secondary); line-height:1.85; margin-bottom:1rem;">Turning testing into decisions — I adapted the Atomic Research model into an accessibility-specific framework. Rather than presenting disconnected accessibility bugs, findings were structured through four progressive layers, transforming accessibility from subjective feedback into actionable organizational decision-making.</p>
+
+        <ol class="cs-atomic-flow" aria-label="Atomic accessibility research framework steps">
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Experiment</p>
+            <p class="cs-atomic-step-title">We tested…</p>
+            <p>Screen reader, keyboard, zoom, voice control</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Fact</p>
+            <p class="cs-atomic-step-title">We observed…</p>
+            <p>Measurable interaction failures with % data</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Insight</p>
+            <p class="cs-atomic-step-title">This suggests…</p>
+            <p>User impact and behavioral implications</p>
+          </li>
+          <li class="cs-atomic-step">
+            <p class="cs-atomic-step-num">Recommendation</p>
+            <p class="cs-atomic-step-title">We should…</p>
+            <p>Clear, prioritized remediation actions</p>
+          </li>
+        </ol>
+
+        <h3 class="cs-sub-heading">Accessibility Testing Inputs</h3>
+        <ul class="cs-card-grid" aria-label="Accessibility testing inputs">
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Manual Keyboard Testing</p>
+            <p>Validate complete non-mouse navigation across all flows</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Screen Reader Testing</p>
+            <p>Evaluate semantic interpretation and announcement accuracy</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Voice Control Testing</p>
+            <p>Assess command discoverability and label clarity</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Color Contrast Validation</p>
+            <p>Ensure visual readability across all states</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Zoom / Magnification Testing</p>
+            <p>Validate responsive scaling at 200–400%</p>
+          </li>
+          <li class="cs-info-card">
+            <p class="cs-info-card-label">Automated Scanning</p>
+            <p>Detect technical violations at scale across components</p>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Atomic Research Examples</h3>
+        <ol class="cs-atomic-examples" aria-label="Atomic research examples">
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">Screen reader testing on forms</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">63% of inputs lacked accessible names</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Users cannot complete forms confidently or independently</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Standardize accessible naming patterns across all inputs</span>
+            </div>
+          </li>
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">Navigation usability testing</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">20% of users failed to locate key tasks</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Navigation hierarchy lacks sufficient clarity</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Redesign navigation structure with semantic headings</span>
+            </div>
+          </li>
+          <li class="cs-atomic-example">
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Experiment</span>
+              <span class="cs-atomic-example-val">A/B testing labels and icons</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Fact</span>
+              <span class="cs-atomic-example-val">40% increase in task engagement with icons</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Insight</span>
+              <span class="cs-atomic-example-val">Icons meaningfully improve comprehension</span>
+            </div>
+            <div class="cs-atomic-example-row">
+              <span class="cs-atomic-example-key">Recommendation</span>
+              <span class="cs-atomic-example-val">Expand icon-supported labeling across the system</span>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 03 DEFINE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="define-heading">
+        <p class="cs-section-eyebrow">03 — Define</p>
+        <h2 class="cs-section-heading" id="define-heading">Reframing Accessibility as a Systems Problem</h2>
+        <p class="cs-section-subheading">Shifting from screens to systems</p>
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Foundational Insight</h3>
+          <p>Once I understood the scale of the problem, I shifted from thinking about screens to thinking about systems. The platform contained thousands of interfaces, making one-off remediation impossible at any meaningful pace.</p>
+          <div class="cs-callout">
+            <p>If we remediate the ~60 core components, we can influence thousands of downstream experiences simultaneously.</p>
+          </div>
+          <p>I mapped the product into its underlying component architecture, categorizing issues across inputs and forms, navigation systems, data tables, validation patterns, structural hierarchy, and interactive states.</p>
+
+          <h3 class="cs-sub-heading">Component Ecosystem Map</h3>
+        </div>
+
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Component ecosystem — how remediation cascades upward">
+            <thead>
+              <tr>
+                <th scope="col">Layer</th>
+                <th scope="col">Description</th>
+                <th scope="col">Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Components (~60 core patterns)</th>
+                <td>Reusable UI building blocks</td>
+                <td>Remediation at this level cascades upward through all higher layers</td>
+              </tr>
+              <tr>
+                <th scope="row">Templates</th>
+                <td>Reusable layouts built from components</td>
+                <td>Inherit accessibility fixes automatically</td>
+              </tr>
+              <tr>
+                <th scope="row">Screens</th>
+                <td>Thousands of product views</td>
+                <td>Improved without screen-by-screen intervention</td>
+              </tr>
+              <tr>
+                <th scope="row">User Journeys</th>
+                <td>End-to-end flows</td>
+                <td>Accessible experiences delivered at scale</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="cs-sub-heading">Accessibility Responsibility Matrix</h3>
+        <div class="cs-prose">
+          <p>Alongside the component architecture, I defined the organizational infrastructure required to sustain accessibility long term. Accessibility stopped being a specialized initiative and became operational infrastructure.</p>
+        </div>
+
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Accessibility responsibility by discipline">
+            <thead>
+              <tr>
+                <th scope="col">Discipline</th>
+                <th scope="col">Responsibilities</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">UX Design</th>
+                <td>Accessibility-first component design, semantic annotation, checklist adoption</td>
+              </tr>
+              <tr>
+                <th scope="row">Engineering</th>
+                <td>Semantic implementation, ARIA patterns, keyboard interaction models</td>
+              </tr>
+              <tr>
+                <th scope="row">QA</th>
+                <td>Accessibility acceptance criteria, screen reader validation, regression testing</td>
+              </tr>
+              <tr>
+                <th scope="row">Product</th>
+                <td>Accessibility in definition of done, roadmap prioritization, SDLC integration</td>
+              </tr>
+              <tr>
+                <th scope="row">Leadership</th>
+                <td>Reporting structures, compliance accountability, culture investment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 04 IDEATE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="ideate-heading">
+        <p class="cs-section-eyebrow">04 — Ideate</p>
+        <h2 class="cs-section-heading" id="ideate-heading">Scaling Through Capability Instead of Control</h2>
+        <p class="cs-section-subheading">From dependency to distributed ownership</p>
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Strategic Shift</h3>
+          <p>Initially, I personally handled most remediation guidance. But centralizing expertise created a bottleneck. If accessibility relied solely on me, it would never scale.</p>
+          <div class="cs-callout">
+            <p>Rather than scaling output, I focused on scaling capability. The goal: build a system that teaches people to fish.</p>
+          </div>
+          <p>I designed a UX-centered accessibility training model tailored to the organization's workflows and design systems. The first cohort included seven designers who began with foundational accessibility education before participating in collaborative remediation workshops directly.</p>
+          <p>These workshops were intentionally hands-on. We reviewed live product components together, identified failures, discussed semantic intent, and explored implementation considerations collaboratively. The process revealed deeper organizational gaps — especially between design intent and engineering execution.</p>
+          <p>Those early participants became advocates themselves, accelerating broader organizational adoption.</p>
+
+          <h3 class="cs-sub-heading">Training Evolution Timeline</h3>
+        </div>
+
+        <ol class="cs-timeline" aria-label="Training evolution timeline">
+          <li class="cs-timeline-phase">
+            <p class="cs-timeline-phase-label">Phase 1</p>
+            <div class="cs-timeline-row">
+              <p class="cs-timeline-row-label">Audience</p>
+              <p class="cs-timeline-row-value">UX Designers</p>
+            </div>
+            <div class="cs-timeline-row">
+              <p class="cs-timeline-row-label">Outcome</p>
+              <p class="cs-timeline-row-value">Accessibility awareness and foundational knowledge</p>
+            </div>
+          </li>
+          <li class="cs-timeline-phase">
+            <p class="cs-timeline-phase-label">Phase 2</p>
+            <div class="cs-timeline-row">
+              <p class="cs-timeline-row-label">Audience</p>
+              <p class="cs-timeline-row-value">UX + Engineering + QA</p>
+            </div>
+            <div class="cs-timeline-row">
+              <p class="cs-timeline-row-label">Outcome</p>
+              <p class="cs-timeline-row-value">Shared standards and cross-functional language</p>
+            </div>
+          </li>
+          <li class="cs-timeline-phase">
+            <p class="cs-timeline-phase-label">Phase 3</p>
+            <div class="cs-timeline-row">
+              <p class="cs-timeline-row-label">Audience</p>
+              <p class="cs-timeline-row-value">Organization-wide</p>
+            </div>
+            <div class="cs-timeline-row">
+              <p class="cs-timeline-row-label">Outcome</p>
+              <p class="cs-timeline-row-value">Embedded accessibility culture and self-sufficiency</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 05 PROTOTYPE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="prototype-heading">
+        <p class="cs-section-eyebrow">05 — Prototype</p>
+        <h2 class="cs-section-heading" id="prototype-heading">Building the Infrastructure for Scale</h2>
+        <p class="cs-section-subheading">The program itself was the prototype</p>
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">What Was Built</h3>
+          <p>The prototype in this project was not a screen. It was the program itself — a suite of tools, systems, and documentation structures designed to outlast any single contributor.</p>
+        </div>
+
+        <ul class="cs-checklist" aria-label="Program infrastructure components">
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Accessibility Design Checklists</span> — Reframed around UX workflows, not WCAG terminology</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Annotated Figma Examples</span> — Pattern library of accessible implementations with annotations</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Accessibility Documentation Hubs</span> — Centralized shared knowledge, searchable by stage and component</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Testing Workflows</span> — Step-by-step QA processes integrated into sprint ceremonies</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Training Materials</span> — Role-specific modules for Design, Engineering, and QA</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Monthly Accessibility Newsletters</span> — Keeping accessibility visible across the organization</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Shared Remediation Standards</span> — Common language and criteria used across all disciplines</span>
+          </li>
+        </ul>
+
+        <h3 class="cs-sub-heading">Accessibility Checklist Design</h3>
+        <div class="cs-prose">
+          <p>Rather than organizing guidance around WCAG terminology, the checklist was reframed around actual UX workflows and deliverables — making accessibility a natural part of existing design behaviors rather than a layer added afterward.</p>
+        </div>
+
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Accessibility checklist by design stage">
+            <thead>
+              <tr>
+                <th scope="col">Design Stage</th>
+                <th scope="col">Checklist Focus Areas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Exploration</th>
+                <td>Content hierarchy, semantic structure, heading levels, landmark regions</td>
+              </tr>
+              <tr>
+                <th scope="row">Refinement</th>
+                <td>Interaction states, focus management, accessible naming, labels</td>
+              </tr>
+              <tr>
+                <th scope="row">Handoff</th>
+                <td>Keyboard behavior, ARIA annotations, engineering implementation notes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="cs-sub-heading">Leadership Recognition</h3>
+        <div class="cs-blockquote">
+          <blockquote>
+            "Lacy demonstrated Lead UX-level ownership by defining and driving adoption of an Accessibility Design Checklist that helps designers consistently address accessibility earlier in the UX lifecycle. She showed cross-functional influence, systems-level thinking, and long-term organizational capability building."
+          </blockquote>
+          <cite>— UX Leadership feedback, reflecting cross-functional influence and systems-level impact</cite>
+        </div>
+      </section>
+
+      <!-- 06 TEST -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="test-heading">
+        <p class="cs-section-eyebrow">06 — Test</p>
+        <h2 class="cs-section-heading" id="test-heading">Embedding Accessibility Into Everyday Delivery</h2>
+        <p class="cs-section-subheading">From program adoption to cultural standard</p>
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Behavior Change Across Teams</h3>
+          <p>As the program matured, accessibility became embedded into daily operations — not as a separate workstream but as an integrated quality standard across every discipline.</p>
+        </div>
+
+        <div class="cs-table-wrap">
+          <table class="cs-table" aria-label="Behavior changes by team">
+            <thead>
+              <tr>
+                <th scope="col">Team</th>
+                <th scope="col">Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">QA Teams</th>
+                <td>Adopted accessibility acceptance criteria as standard sprint gates</td>
+              </tr>
+              <tr>
+                <th scope="row">Designers</th>
+                <td>Began proactively identifying concerns before development began</td>
+              </tr>
+              <tr>
+                <th scope="row">Engineers</th>
+                <td>Started considering semantic implementation in early technical planning</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="cs-sub-heading">The Language Inside the Organization Changed</h3>
+        <div class="cs-language-change" aria-label="Language shift before and after">
+          <div class="cs-language-change-grid">
+            <div>
+              <p class="cs-language-col-label cs-language-col-label--before">Before</p>
+              <ul aria-label="Old language patterns">
+                <li><span class="cs-lang-x" aria-hidden="true">✕</span> "Does this look right?"</li>
+              </ul>
+            </div>
+            <div>
+              <p class="cs-language-col-label cs-language-col-label--after">After</p>
+              <ul aria-label="New language patterns">
+                <li><span class="cs-lang-check" aria-hidden="true">✓</span> "Is this keyboard navigable?"</li>
+                <li><span class="cs-lang-check" aria-hidden="true">✓</span> "Does this have an accessible name?"</li>
+                <li><span class="cs-lang-check" aria-hidden="true">✓</span> "Will a screen reader announce this correctly?"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-prose">
+          <p>That shift represented true cultural adoption. Accessibility had moved from external requirement to shared design quality standard.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Adoption Growth</h3>
+        <ol class="cs-adoption-flow" aria-label="Accessibility contributor adoption growth">
+          <li class="cs-adoption-step">
+            <p class="cs-adoption-value">1 SME</p>
+            <p class="cs-adoption-label">Program Launch</p>
+          </li>
+          <li class="cs-adoption-step">
+            <p class="cs-adoption-value">7 Designers</p>
+            <p class="cs-adoption-label">Phase 1 Training</p>
+          </li>
+          <li class="cs-adoption-step">
+            <p class="cs-adoption-value">25+ Contributors</p>
+            <p class="cs-adoption-label">Full Org Adoption</p>
+          </li>
+        </ol>
+        <div class="cs-prose">
+          <p>Growth from one isolated subject matter expert to 25+ active contributors spanning UX, Engineering, QA, and Product.</p>
+        </div>
+      </section>
+
+      <!-- 07 OUTCOMES -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="outcomes-heading">
+        <p class="cs-section-eyebrow">07 — Outcomes &amp; Key Learnings</p>
+        <h2 class="cs-section-heading" id="outcomes-heading">Designing Systems That Continue Without Me</h2>
+        <p class="cs-section-subheading">Sustainability as the true measure of impact</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Summary of Impact</h3>
+          <p>Within two years, accessibility evolved from a fragmented responsibility into a scalable organizational capability. The outcomes below represent systemic change — not individual heroics.</p>
+        </div>
+
+        <ul class="cs-checklist" aria-label="Summary of outcomes">
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Accessibility integrated into SDLC</span> — Built into sprint ceremonies, not bolted on at the end</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">25+ trained contributors</span> — Across UX, Engineering, QA, and Product functions</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Standardized remediation frameworks</span> — Consistent criteria used organization-wide</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Shared knowledge systems</span> — Documentation hubs that remain operational without ongoing maintenance</span>
+          </li>
+          <li>
+            <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
+            <span><span class="cs-checklist-item-title">Design system governance</span> — Accessibility-aware component standards embedded at the source</span>
+          </li>
+        </ul>
+
+        <div class="cs-callout">
+          <p>Most importantly, the system became sustainable. If I left tomorrow — the training, documentation, standards, and workflows would all continue.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Key Learnings</h3>
+        <ul class="cs-learnings" aria-label="Key learnings">
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Scale through systems, not heroics</strong> — One expert cannot audit, fix, and maintain an enterprise product indefinitely. Systems, standards, and shared language are the only paths to scale.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Empathy precedes adoption</strong> — Live demonstrations of broken screen reader experiences changed minds faster than compliance arguments ever could.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Reframe around workflows, not regulations</strong> — Accessibility checklists organized by design stage — not WCAG criteria — achieved adoption because they matched how designers already work.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Build advocates, not dependencies</strong> — Training early participants to become internal advocates created an organic multiplication effect that no centralized program could replicate.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Sustainability is the final deliverable</strong> — The measure of program success is not what exists while you're there — it's what continues when you're gone.</p>
+          </li>
+        </ul>
+
+        <div class="cs-closing" aria-label="Closing statement">
+          <p>Accessibility at scale is not achieved through expertise alone. It is achieved by building systems, shared language, and organizational capability that allow inclusive design to continue beyond any one individual.</p>
+        </div>
+      </section>
+
+    </div><!-- /cs-body -->
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip" aria-labelledby="cta-heading">
+      <div class="cta-blob" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <div>
+          <h2 class="cta-headline" id="cta-heading">
+            See more work.<br><em>Read the other case studies.</em>
+          </h2>
+        </div>
+        <div class="cta-actions">
+          <a href="index.html#work" class="btn-primary">
+            View all projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
+          </a>
+          <a href="mailto:hello@lacydesigns.com" class="btn-ghost" aria-label="Send an email to Lacy">
+            Get in touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-id">
+        <p class="footer-name">Lacy</p>
+        <p class="footer-title">Lead UX Designer</p>
+      </div>
+      <ul class="footer-links">
+        <li><span class="footer-connect-label" aria-hidden="true">Let's connect</span></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/your-linkedin"
+            class="footer-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile (opens in a new tab)"
+          >
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hello@lacydesigns.com" class="footer-link" aria-label="Send an email to Lacy">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+
+</body>
+</html>
