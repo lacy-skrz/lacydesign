@@ -1,0 +1,1342 @@
+/* =============================================
+   CASE STUDY — Hero
+============================================= */
+.cs-hero {
+  background: var(--near-black);
+  padding: calc(72px + 3rem) 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Per-page blob colors set via modifier class in each HTML file */
+.cs-hero-blob--1 {
+  top: -80px; right: -80px;
+  width: 360px; height: 360px;
+  opacity: 0.08;
+}
+
+.cs-hero-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+  position: relative;
+  z-index: 1;
+}
+
+.cs-hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.cs-hero-title {
+  color: #fff;
+  margin-bottom: 1rem;
+  max-width: 820px;
+}
+
+.cs-hero-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 2rem;
+}
+
+.cs-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.cs-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.cs-meta-item:last-child { border-right: none; }
+
+.cs-meta-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+.cs-meta-value {
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.4;
+}
+
+/* =============================================
+   CASE STUDY — Metrics Bar
+============================================= */
+.cs-metrics {
+  padding: 2.5rem 0;
+}
+
+.cs-metrics-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.cs-metric {
+  flex: 1 1 180px;
+  padding: 0 2rem 0 0;
+  margin-right: 2rem;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+.cs-metric:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.cs-metric-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.cs-metric-label {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.5;
+}
+
+/* =============================================
+   CASE STUDY — Body Layout
+============================================= */
+.cs-body {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+}
+
+.cs-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.cs-section:first-of-type { border-top: 1px solid var(--border); }
+
+.cs-section-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+}
+
+.cs-section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+}
+
+.cs-section-subheading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Two-column layout */
+.cs-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+/* =============================================
+   CASE STUDY — Prose
+============================================= */
+.cs-prose p {
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  max-width: 680px;
+}
+.cs-prose p:last-child { margin-bottom: 0; }
+
+.cs-prose strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cs-sub-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* =============================================
+   CASE STUDY — Callout
+   Per-page border/background colors set in HTML
+   via inline style or a theme class on .cs-body
+============================================= */
+.cs-callout {
+  border-left: 3px solid;
+  padding: 1rem 1.5rem;
+  margin: 1.75rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.cs-callout p {
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Per-page callout themes */
+.cs-callout--sage   { border-color: var(--sage);       background: var(--sage-light); }
+.cs-callout--sage p { color: var(--sage-dark); }
+
+.cs-callout--indigo   { border-color: var(--indigo);     background: var(--indigo-light); }
+.cs-callout--indigo p { color: var(--indigo); }
+
+.cs-callout--terra   { border-color: var(--terracotta); background: var(--terracotta-light); }
+.cs-callout--terra p { color: #9A5040; }
+
+/* =============================================
+   CASE STUDY — Tables
+============================================= */
+.cs-table-wrap {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-base);
+}
+
+.cs-table thead {
+  background: var(--near-black);
+}
+
+.cs-table thead th {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.78);
+  padding: 0.875rem 1.25rem;
+  text-align: left;
+}
+
+.cs-table tbody tr {
+  border-top: 1px solid var(--border);
+}
+.cs-table tbody tr:nth-child(even) {
+  background: rgba(28,28,28,0.03);
+}
+
+.cs-table tbody th,
+.cs-table tbody td {
+  padding: 0.875rem 1.25rem;
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  vertical-align: top;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.cs-table tbody th {
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* =============================================
+   CASE STUDY — Badge / Priority chips
+============================================= */
+.cs-priority {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+/* CS1 (sage) — none needed */
+/* CS2 (indigo) priority */
+.cs-priority--p1 { background: var(--indigo-light); color: var(--indigo); }
+.cs-priority--p2 { background: rgba(28,28,28,0.07); color: var(--text-primary); }
+.cs-priority--p3 { background: rgba(28,28,28,0.04); color: var(--text-muted); }
+
+/* CS3 (terra) stakeholder priority */
+.cs-priority--high   { background: var(--terracotta-light); color: #9A5040; }
+.cs-priority--medium { background: rgba(28,28,28,0.07);     color: var(--text-primary); }
+
+/* CS2 QA pass badge */
+.cs-pass {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  background: #E6F4EA;
+  color: #2D6A3F;
+}
+
+/* =============================================
+   CASE STUDY — Card Grids
+============================================= */
+.cs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.cs-card-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cs-info-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.cs-info-card-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.cs-info-card p {
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =============================================
+   CASE STUDY — Atomic Flow (4-step)
+============================================= */
+.cs-atomic-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 1.75rem 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cs-atomic-step {
+  padding: 1.25rem;
+  border-right: 1px solid var(--border);
+}
+.cs-atomic-step:last-child { border-right: none; }
+
+.cs-atomic-step-num {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.375rem;
+}
+
+.cs-atomic-step-title {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.375rem;
+}
+
+.cs-atomic-step p {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =============================================
+   CASE STUDY — Atomic Examples (3-col grid)
+============================================= */
+.cs-atomic-examples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.cs-atomic-example {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cs-atomic-example-row {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+.cs-atomic-example-row:last-child { border-bottom: none; }
+
+.cs-atomic-example-key {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 0.125rem;
+}
+
+.cs-atomic-example-val {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* =============================================
+   CASE STUDY — Persona Card
+============================================= */
+.cs-persona {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 1.75rem 0;
+  background: #fff;
+}
+
+.cs-persona-header {
+  background: var(--near-black);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cs-persona-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: #fff;
+}
+
+.cs-persona-name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: #fff;
+  line-height: 1.2;
+}
+
+.cs-persona-role {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+}
+
+.cs-persona-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+}
+
+.cs-persona-col {
+  padding: 1.25rem 1.5rem;
+  border-right: 1px solid var(--border);
+}
+.cs-persona-col:last-child { border-right: none; }
+
+.cs-persona-col-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.cs-persona-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cs-persona-col li {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.cs-persona-quote {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.cs-persona-quote blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-base);
+  line-height: 1.65;
+}
+
+/* =============================================
+   CASE STUDY — Audit Snapshot (CS2)
+============================================= */
+.cs-audit-list {
+  list-style: none;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cs-audit-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.cs-audit-severity {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border-radius: 100px;
+  text-align: center;
+}
+.cs-audit-severity--critical { background: #FDE8E8; color: #8B1A1A; }
+.cs-audit-severity--high     { background: var(--indigo-light); color: var(--indigo); }
+
+.cs-audit-component {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.cs-audit-detail {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* =============================================
+   CASE STUDY — Trade-Off Matrix (CS2)
+============================================= */
+.cs-tradeoff-list {
+  list-style: none;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cs-tradeoff-item {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cs-tradeoff-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(28,28,28,0.02);
+}
+
+.cs-tradeoff-badge {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+.cs-tradeoff-badge--preferred    { background: var(--indigo-light); color: var(--indigo); }
+.cs-tradeoff-badge--supplemental { background: rgba(28,28,28,0.07); color: var(--text-primary); }
+.cs-tradeoff-badge--rejected     { background: #FDE8E8; color: #8B1A1A; }
+
+.cs-tradeoff-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cs-tradeoff-body {
+  padding: 0.875rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.cs-tradeoff-row {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cs-tradeoff-pro { color: var(--sage-dark); font-weight: 600; flex-shrink: 0; }
+.cs-tradeoff-con { color: #8B4444;          font-weight: 600; flex-shrink: 0; }
+
+/* =============================================
+   CASE STUDY — Cascade (CS2)
+============================================= */
+.cs-cascade {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 1.75rem 0;
+}
+
+.cs-cascade-step {
+  flex: 1 1 140px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--border);
+  border-right: none;
+  background: #fff;
+}
+.cs-cascade-step:first-child { border-radius: 6px 0 0 6px; }
+.cs-cascade-step:last-child  { border-right: 1px solid var(--border); border-radius: 0 6px 6px 0; }
+
+.cs-cascade-value {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--indigo);
+  margin-bottom: 0.375rem;
+  line-height: 1.2;
+}
+
+.cs-cascade-label {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* =============================================
+   CASE STUDY — Training Timeline (CS1)
+============================================= */
+.cs-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 1.75rem 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cs-timeline-phase {
+  padding: 1.5rem;
+  border-right: 1px solid var(--border);
+}
+.cs-timeline-phase:last-child { border-right: none; }
+
+.cs-timeline-phase-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  margin-bottom: 1rem;
+}
+
+.cs-timeline-row { margin-bottom: 0.625rem; }
+
+.cs-timeline-row-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.cs-timeline-row-value {
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* =============================================
+   CASE STUDY — Adoption Flow (CS1)
+============================================= */
+.cs-adoption-flow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 1.75rem 0;
+}
+
+.cs-adoption-step {
+  flex: 1 1 160px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--border);
+  border-right: none;
+  background: #fff;
+}
+.cs-adoption-step:first-child { border-radius: 6px 0 0 6px; }
+.cs-adoption-step:last-child  { border-right: 1px solid var(--border); border-radius: 0 6px 6px 0; }
+
+.cs-adoption-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 3vw, 2rem);
+  color: var(--sage-dark);
+  margin-bottom: 0.375rem;
+}
+
+.cs-adoption-label {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* =============================================
+   CASE STUDY — Language Change Callout (CS1)
+============================================= */
+.cs-language-change {
+  margin: 1.75rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.cs-language-change-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.cs-language-col-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+}
+.cs-language-col-label--before { color: var(--text-muted); }
+.cs-language-col-label--after  { color: var(--sage-dark); }
+
+.cs-language-change ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.cs-language-change li {
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cs-lang-x     { color: #B44;           font-weight: 600; }
+.cs-lang-check { color: var(--sage-dark); font-weight: 600; }
+
+/* =============================================
+   CASE STUDY — Discovery Themes List (CS3)
+============================================= */
+.cs-theme-list {
+  list-style: none;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.cs-theme-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.cs-theme-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--terracotta-mid);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.cs-theme-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cs-theme-item p {
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =============================================
+   CASE STUDY — State Grid / Compare Grid (CS3)
+============================================= */
+.cs-state-grid,
+.cs-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.cs-state-col,
+.cs-compare-col {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cs-state-col-header,
+.cs-compare-col-header {
+  padding: 0.75rem 1.25rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cs-state-col--before .cs-state-col-header,
+.cs-compare-col--before .cs-compare-col-header {
+  background: rgba(28,28,28,0.06);
+  color: var(--text-muted);
+}
+
+.cs-state-col--after .cs-state-col-header,
+.cs-compare-col--after .cs-compare-col-header {
+  background: var(--terracotta-light);
+  color: #9A5040;
+}
+
+.cs-state-col ul,
+.cs-compare-col ul {
+  list-style: none;
+  padding: 0.75rem 0;
+}
+
+.cs-state-col li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.5rem 1.25rem;
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  border-bottom: 1px solid var(--border);
+}
+.cs-state-col li:last-child { border-bottom: none; }
+
+.cs-compare-col li {
+  padding: 0.5rem 1.25rem;
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  border-bottom: 1px solid var(--border);
+}
+.cs-compare-col li:last-child { border-bottom: none; }
+
+.cs-state-x     { color: #8B4444; font-weight: 600; flex-shrink: 0; }
+.cs-state-check { color: #9A5040; font-weight: 600; flex-shrink: 0; }
+
+/* =============================================
+   CASE STUDY — Conditional Logic Diagram (CS3)
+============================================= */
+.cs-logic-diagram {
+  margin: 1.75rem 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cs-logic-row {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--border);
+}
+.cs-logic-row:last-child { border-bottom: none; }
+
+.cs-logic-label {
+  width: 200px;
+  flex-shrink: 0;
+  padding: 1rem 1.25rem;
+  background: rgba(28,28,28,0.03);
+  border-right: 1px solid var(--border);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.cs-logic-content {
+  padding: 1rem 1.25rem;
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.cs-logic-content strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cs-logic-branches {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cs-logic-branch {
+  flex: 1 1 160px;
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--terracotta-light);
+}
+
+.cs-logic-branch-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9A5040;
+  margin-bottom: 0.25rem;
+}
+
+.cs-logic-branch p {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cs-logic-result {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: #9A5040;
+}
+
+/* =============================================
+   CASE STUDY — UX Maturity Shift (CS3)
+============================================= */
+.cs-maturity-shift {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.75rem 0;
+}
+
+.cs-maturity-col {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cs-maturity-col-header {
+  padding: 0.75rem 1.25rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cs-maturity-col--before .cs-maturity-col-header {
+  background: rgba(28,28,28,0.06);
+  color: var(--text-muted);
+}
+
+.cs-maturity-col--after .cs-maturity-col-header {
+  background: var(--terracotta-light);
+  color: #9A5040;
+}
+
+.cs-maturity-col ul {
+  list-style: none;
+  padding: 0.75rem 0;
+}
+
+.cs-maturity-col li {
+  padding: 0.5rem 1.25rem;
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  border-bottom: 1px solid var(--border);
+}
+.cs-maturity-col li:last-child { border-bottom: none; }
+
+.cs-maturity-arrow {
+  font-size: var(--text-xl);
+  color: var(--terracotta-mid);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* =============================================
+   CASE STUDY — Usability Findings (CS3)
+============================================= */
+.cs-findings-list {
+  list-style: none;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cs-finding {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cs-finding-header {
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(28,28,28,0.02);
+}
+
+.cs-finding-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cs-finding-body {
+  padding: 0.875rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cs-finding-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0.75rem;
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.cs-finding-row-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 0.15rem;
+}
+
+/* =============================================
+   CASE STUDY — Checklist
+============================================= */
+.cs-checklist {
+  list-style: none;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.cs-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.cs-checklist-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.cs-checklist-icon i { font-size: 11px; }
+
+.cs-checklist-item-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* =============================================
+   CASE STUDY — Loop (CS2 improvement / CS3 UX)
+============================================= */
+.cs-loop {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 1.75rem 0;
+}
+
+.cs-loop-step {
+  flex: 1 1 100px;
+  text-align: center;
+  padding: 1.25rem 0.75rem;
+  border: 1px solid var(--border);
+  border-right: none;
+  background: #fff;
+}
+.cs-loop-step:first-child { border-radius: 6px 0 0 6px; }
+.cs-loop-step:last-child  { border-right: 1px solid var(--border); border-radius: 0 6px 6px 0; }
+
+.cs-loop-label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* =============================================
+   CASE STUDY — Blockquote
+============================================= */
+.cs-blockquote {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--near-black);
+  border-radius: 6px;
+}
+
+.cs-blockquote blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  color: rgba(255,255,255,0.88);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.cs-blockquote cite {
+  font-size: var(--text-sm);
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+}
+
+/* =============================================
+   CASE STUDY — Key Learnings
+============================================= */
+.cs-learnings {
+  list-style: none;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cs-learnings li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.cs-learnings-arrow {
+  flex-shrink: 0;
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.cs-learnings li p {
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.cs-learnings li p strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* =============================================
+   CASE STUDY — Closing Statement
+============================================= */
+.cs-closing {
+  padding: 3.5rem 0;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cs-closing p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* =============================================
+   CASE STUDY — Responsive
+============================================= */
+@media (max-width: 900px) {
+  .cs-atomic-flow     { grid-template-columns: repeat(2, 1fr); }
+  .cs-atomic-examples { grid-template-columns: 1fr; }
+  .cs-card-grid--3    { grid-template-columns: repeat(2, 1fr); }
+  .cs-timeline        { grid-template-columns: 1fr; }
+  .cs-timeline-phase  { border-right: none; border-bottom: 1px solid var(--border); }
+  .cs-timeline-phase:last-child { border-bottom: none; }
+  .cs-persona-body    { grid-template-columns: 1fr; }
+  .cs-persona-col     { border-right: none; border-bottom: 1px solid var(--border); }
+  .cs-persona-col:last-child { border-bottom: none; }
+  .cs-maturity-shift  { grid-template-columns: 1fr; }
+  .cs-maturity-arrow  { display: none; }
+}
+
+@media (max-width: 768px) {
+  .cs-hero        { padding: calc(72px + 2rem) 0 2.5rem; }
+  .cs-hero-meta   { gap: 1rem; }
+  .cs-meta-item   { border-right: none; padding-right: 0; }
+  .cs-metrics-inner { gap: 1.5rem; }
+  .cs-metric      { border-right: none; margin-right: 0; padding-right: 0; flex: 1 1 40%; }
+  .cs-two-col     { grid-template-columns: 1fr; }
+  .cs-atomic-flow { grid-template-columns: 1fr; }
+  .cs-atomic-step { border-right: none; border-bottom: 1px solid var(--border); }
+  .cs-atomic-step:last-child { border-bottom: none; }
+  .cs-cascade     { flex-direction: column; }
+  .cs-cascade-step { width: 100%; border-right: 1px solid var(--border); border-bottom: none; border-radius: 0; }
+  .cs-cascade-step:first-child { border-radius: 6px 6px 0 0; }
+  .cs-cascade-step:last-child  { border-radius: 0 0 6px 6px; border-bottom: 1px solid var(--border); }
+  .cs-adoption-flow { flex-direction: column; }
+  .cs-adoption-step { width: 100%; border-right: 1px solid var(--border); border-bottom: none; border-radius: 0; }
+  .cs-adoption-step:first-child { border-radius: 6px 6px 0 0; }
+  .cs-adoption-step:last-child  { border-radius: 0 0 6px 6px; border-bottom: 1px solid var(--border); }
+  .cs-language-change-grid { grid-template-columns: 1fr; }
+  .cs-state-grid   { grid-template-columns: 1fr; }
+  .cs-compare-grid { grid-template-columns: 1fr; }
+  .cs-logic-label  { width: 120px; }
+  .cs-loop { flex-direction: column; }
+  .cs-loop-step { width: 100%; border-right: 1px solid var(--border); border-bottom: none; border-radius: 0; }
+  .cs-loop-step:first-child { border-radius: 6px 6px 0 0; }
+  .cs-loop-step:last-child  { border-radius: 0 0 6px 6px; border-bottom: 1px solid var(--border); }
+  .cs-audit-item  { grid-template-columns: 1fr; }
+  .cs-finding-row { grid-template-columns: 1fr; gap: 0.25rem; }
+  .cs-section     { padding: 3rem 0; }
+}
+
+@media (max-width: 480px) {
+  .cs-card-grid--3 { grid-template-columns: 1fr; }
+  .cs-logic-row    { flex-direction: column; }
+  .cs-logic-label  { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+}
+
+@media (max-width: 360px) {
+  .cs-hero   { padding: calc(72px + 1.5rem) 0 2rem; }
+  .cs-metric { flex: 1 1 100%; }
+}
