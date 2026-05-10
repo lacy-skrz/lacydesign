@@ -53,108 +53,20 @@
 
   <main id="main-content">
 
-    <!-- PAGE HERO -->
-    <header class="page-hero" aria-labelledby="page-title">
-      <div class="page-hero-blob page-hero-blob--1" aria-hidden="true"></div>
-      <div class="page-hero-blob page-hero-blob--2" aria-hidden="true"></div>
+    <!-- MINIMAL HERO — h1 only -->
+    <header class="page-hero">
       <div class="page-hero-inner">
-        <p class="page-eyebrow">About me</p>
-        <h1 class="page-title" id="page-title">
-          Design is<br><em>responsibility.</em>
-        </h1>
-        <p class="page-subtitle">
-          Lead UX Designer &middot; K–12 Ed-Tech &middot; Accessibility Strategist &middot; Mentor
-        </p>
+        <h1 class="page-title">About me</h1>
       </div>
     </header>
 
-    <!-- STORY ARC -->
-    <section class="story-arc" aria-labelledby="story-heading">
-      <div class="story-arc-inner">
-        <p class="story-arc-eyebrow" id="story-heading">The path here wasn't accidental</p>
-
-        <div class="story-stops">
-
-          <!-- Stop 1: Roots -->
-          <div class="story-stop">
-            <div class="stop-spine">
-              <div class="stop-node" style="background: var(--sage);" aria-hidden="true">01</div>
-            </div>
-            <div class="stop-content">
-              <p class="stop-label">Roots</p>
-              <h2 class="stop-heading">K–12 Ed-Tech</h2>
-              <p class="stop-desc">12 years at the intersection of content, technology, and human-centered design in education. Content strategist first — UX designer by deliberate choice.</p>
-              <ul class="stop-chips" aria-label="Skills and focus areas">
-                <li class="stop-chip stop-chip--sage">K–12 Ed-Tech</li>
-                <li class="stop-chip stop-chip--sage">Content Strategy</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Stop 2: Accessibility -->
-          <div class="story-stop">
-            <div class="stop-spine">
-              <div class="stop-node" style="background: var(--indigo);" aria-hidden="true">02</div>
-            </div>
-            <div class="stop-content">
-              <p class="stop-label">The pivot that changed everything</p>
-              <h2 class="stop-heading">Accessibility as craft</h2>
-              <p class="stop-desc">Interest began in 2019. Full professional focus after the ADA Final Rule in 2024. Two years remediating a complex enterprise K–12 application at the framework level.</p>
-              <ul class="stop-chips" aria-label="Certifications and focus areas">
-                <li class="stop-chip stop-chip--indigo">CPAAC</li>
-                <li class="stop-chip stop-chip--indigo">Trusted Tester</li>
-                <li class="stop-chip stop-chip--neutral">WCAG 2.1 AA</li>
-                <li class="stop-chip stop-chip--neutral">Enterprise Remediation</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Stop 3: Growth -->
-          <div class="story-stop">
-            <div class="stop-spine">
-              <div class="stop-node" style="background: var(--terracotta);" aria-hidden="true">03</div>
-            </div>
-            <div class="stop-content">
-              <p class="stop-label">How I'm wired</p>
-              <h2 class="stop-heading">Growth by instinct</h2>
-              <p class="stop-desc">When I notice a gap — in my skills, a system, or a team — I invest in closing it. Mentoring junior designers is one of the most energizing parts of the work.</p>
-              <ul class="stop-chips" aria-label="Certifications and skills">
-                <li class="stop-chip stop-chip--indigo">PMP</li>
-                <li class="stop-chip stop-chip--indigo">AI Fluency</li>
-                <li class="stop-chip stop-chip--indigo">EQ Leadership</li>
-                <li class="stop-chip stop-chip--terra">Design Mentorship</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Stop 4: Responsibility -->
-          <div class="story-stop">
-            <div class="stop-spine">
-              <div class="stop-node" style="background: var(--near-black);" aria-hidden="true">04</div>
-            </div>
-            <div class="stop-content">
-              <p class="stop-label">Beyond the org chart</p>
-              <h2 class="stop-heading">Responsibility beyond the org</h2>
-              <p class="stop-desc">Extending accessibility advocacy into the local community — working with a municipality on a training gap affecting how residents who rely on assistive technology receive public information.</p>
-              <ul class="stop-chips" aria-label="Community and civic work">
-                <li class="stop-chip stop-chip--terra">Civic Advocacy</li>
-                <li class="stop-chip stop-chip--terra">Community Impact</li>
-                <li class="stop-chip stop-chip--neutral">Accessibility Training</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
     <!-- PROSE SECTIONS -->
-    <article aria-label="About Lacy — full biography">
+    <article aria-label="About Lacy">
       <div class="about-content">
 
         <!-- Background -->
-        <div class="prose-section animate-on-scroll">
-          <p class="prose-label">Background</p>
+        <div class="prose-section animate-on-scroll" id="background">
+          <h2 class="prose-heading">Background</h2>
           <div class="prose-body">
             <p>K–12 has been my world for over a decade — first as a content strategist, then as a UX designer, and now as someone who thinks deeply about what it means to design for students, educators, and the systems that serve them. I didn't just stumble into education technology. I chose it, and I kept choosing it.</p>
             <ul class="cred-list" aria-label="Background highlights">
@@ -165,8 +77,8 @@
         </div>
 
         <!-- The pivot -->
-        <div class="prose-section animate-on-scroll">
-          <p class="prose-label">The pivot that changed everything</p>
+        <div class="prose-section animate-on-scroll" id="the-pivot">
+          <h2 class="prose-heading">The pivot that changed everything</h2>
           <div class="prose-body">
             <p>In 2021 I made the move from content to UX — a transition I'd been building toward for years. But the shift that truly sharpened my design craft came later, when accessible design went from being something I cared about to something I was responsible for at a structural level.</p>
             <p>The ADA Final Rule changed the landscape for everyone. For me, it crystallized something I'd been circling since 2019: that accessibility isn't a feature or a checklist. It's a design decision that ripples outward — into development cycles, into product roadmaps, into the daily experience of students and staff who rely on assistive technology to do their work. I've spent the last two years remediating a complex enterprise application, fundamentally rethinking what I owe to my product and development teams as their designer.</p>
@@ -181,8 +93,8 @@
         </div>
 
         <!-- How I'm wired -->
-        <div class="prose-section animate-on-scroll">
-          <p class="prose-label">How I'm wired</p>
+        <div class="prose-section animate-on-scroll" id="how-im-wired">
+          <h2 class="prose-heading">How I'm wired</h2>
           <div class="prose-body">
             <p>I'm pensive by nature. When I notice a gap — in my skills, in a system, in a team — I don't sit with the discomfort for long. I invest in closing it. That's led me to deepen my expertise in project management, AI fluency, and emotional intelligence — each one an answer to a real question I was asking about how to do this work better.</p>
             <p>I also believe strongly in bringing others along. Mentoring junior designers is one of the most energizing parts of my work — from 1:1 coffee chats and Figma jam sessions to mob training, book clubs, and working through real product problems together. There's something that gets me every time about watching someone move from uncertain and self-doubting to confident and capable.</p>
@@ -196,8 +108,8 @@
         </div>
 
         <!-- Why education -->
-        <div class="prose-section animate-on-scroll">
-          <p class="prose-label">Why education, and why now</p>
+        <div class="prose-section animate-on-scroll" id="why-education">
+          <h2 class="prose-heading">Why education, and why now</h2>
           <div class="prose-body">
             <p>As a parent of school-age children, I've watched firsthand how much the landscape has shifted — in reading, in math, in the social-emotional skills kids are still rebuilding after the pandemic. I think about what technology can and should do in that space. Done well, it meets students where they are, builds genuine engagement, and supports teachers without replacing the human judgment at the center of great instruction. Done poorly, it adds noise to an already overwhelmed system.</p>
             <p>That line — between technology that serves learning and technology that just digitizes old problems — is exactly where I want to be working. I care about getting it right because I've seen what's at stake, up close, in my own home.</p>
@@ -210,8 +122,8 @@
         </div>
 
         <!-- Beyond the org chart -->
-        <div class="prose-section animate-on-scroll">
-          <p class="prose-label">Beyond the org chart</p>
+        <div class="prose-section animate-on-scroll" id="beyond-the-org">
+          <h2 class="prose-heading">Beyond the org chart</h2>
           <div class="prose-body">
             <p>My sense of responsibility doesn't stop at the edge of my organization. I've extended my accessibility advocacy into my local community — working with a municipality on a training gap that affects how residents who rely on assistive technology receive public information. It's slow, it's complex, and stakeholder dynamics in civic work are unlike anything I'd encountered in edtech or corporate environments. But it's real, and it's teaching me as much as I'm contributing.</p>
             <ul class="cred-list" aria-label="Community and civic work">
@@ -230,7 +142,6 @@
       <div class="cta-blob" aria-hidden="true"></div>
       <div class="cta-inner">
         <div>
-          <p class="cta-text-label">Let's connect</p>
           <h2 class="cta-headline" id="cta-heading">
             See the work.<br><em>Read the case studies.</em>
           </h2>
