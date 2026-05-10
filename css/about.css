@@ -1,0 +1,209 @@
+/* =============================================
+   ABOUT PAGE — Page Hero
+============================================= */
+.page-hero {
+  background: var(--near-black);
+  /* top padding clears fixed nav + breathing room */
+  padding: calc(72px + 4rem) 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.page-hero-blob--1 { top: -80px; right: -80px; width: 360px; height: 360px; background: var(--sage); opacity: 0.06; }
+.page-hero-blob--2 { bottom: -60px; left: 30%; width: 200px; height: 200px; background: var(--indigo); opacity: 0.07; }
+
+.page-hero-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+  position: relative;
+  z-index: 1;
+}
+
+.page-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--sage);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* h1 inherits global size */
+.page-title { color: #fff; margin-bottom: 1.25rem; max-width: 640px; }
+.page-title em { font-style: italic; color: var(--sage); }
+
+.page-subtitle {
+  font-size: var(--text-md);    /* 18px */
+  font-weight: 300;
+  color: rgba(255,255,255,0.72); /* contrast-safe */
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* =============================================
+   ABOUT PAGE — Hero Visual (SVG section)
+============================================= */
+.hero-visual-section {
+  background: var(--off-white);
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-visual-wrap {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+  overflow-x: auto;   /* allow horizontal scroll on tiny screens rather than clipping */
+}
+
+.hero-visual-svg {
+  width: 100%;
+  height: auto;
+  min-width: 320px;
+}
+
+/* =============================================
+   ABOUT PAGE — Prose sections
+============================================= */
+.about-content {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+}
+
+.prose-section {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.prose-section:first-of-type { border-top: 1px solid var(--border); }
+
+.prose-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-top: 0.375rem;
+  position: sticky;
+  top: 5.5rem;   /* clears fixed nav */
+  line-height: 1.5;
+}
+
+.prose-body { max-width: 640px; }
+
+.prose-body p {
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+.prose-body p:last-child { margin-bottom: 0; }
+
+/* Credential tags */
+.cred-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.cred-tag {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: 0.35rem 0.875rem;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+}
+.cred-tag--sage    { background: var(--sage-light);      color: var(--sage-dark); }
+.cred-tag--indigo  { background: var(--indigo-light);    color: var(--indigo); }
+.cred-tag--terra   { background: var(--terracotta-light); color: var(--terracotta); }
+.cred-tag--neutral { background: rgba(28,28,28,0.07);    color: var(--text-primary); }
+
+/* =============================================
+   ABOUT PAGE — CTA Strip
+============================================= */
+.cta-strip {
+  background: var(--near-black);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-blob {
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: var(--sage);
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.cta-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-text-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.75rem;
+}
+
+/* h2 styles from global */
+.cta-headline { color: #fff; }
+.cta-headline em { font-style: italic; color: var(--sage); }
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* =============================================
+   ABOUT — Responsive
+============================================= */
+@media (max-width: 768px) {
+  .page-hero { padding: calc(72px + 3rem) 0 3.5rem; }
+
+  .prose-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2.5rem 0;
+  }
+  .prose-label { position: static; }
+
+  .cta-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 360px) {
+  .page-hero { padding: calc(72px + 2rem) 0 3rem; }
+  .cred-tag { font-size: 0.6875rem; padding: 0.3rem 0.625rem; }
+}
