@@ -192,23 +192,25 @@
 }
 
 /* Accent backgrounds */
-.cs-card--sage   .cs-visual-inner { background: var(--sage); }
-.cs-card--indigo .cs-visual-inner { background: var(--indigo); }
-.cs-card--terra  .cs-visual-inner { background: var(--terracotta); }
+/* Solid color fallback for non-image cards */
+.cs-card--sage   .cs-visual-inner { background-color: var(--sage); }
+.cs-card--indigo .cs-visual-inner { background-color: var(--indigo); }
+.cs-card--terra  .cs-visual-inner { background-color: var(--terracotta); }
 
-/* Image thumbnail variant */
+/* Image thumbnail variant — background-image comes from inline style;
+   background-color is the fallback if image fails to load */
 .cs-visual-inner--img {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 
-/* CS1 — Training portal: top-left has the nav, content starts top-center */
-.cs-card--sage .cs-visual-inner--img   { background-position: top center; }
-/* CS2 — Testing results: dark image, show from left where row data is */
+/* CS1 — Training portal */
+.cs-card--sage   .cs-visual-inner--img { background-position: top center; }
+/* CS2 — Testing results */
 .cs-card--indigo .cs-visual-inner--img { background-position: top left; }
-/* CS3 — Admin panel: left panel is the interesting split, show from top-left */
-.cs-card--terra .cs-visual-inner--img  { background-position: top left; }
+/* CS3 — Admin panel */
+.cs-card--terra  .cs-visual-inner--img { background-position: top left; }
 
 /* Per-theme color overlay — tinted scrim keeps badge readable */
 .cs-visual-inner--img::after {
