@@ -75,16 +75,13 @@
   letter-spacing: 0.02em;
 }
 
-/* Icon inside chip */
-.cred-tag svg {
-  width: 13px;
-  height: 13px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 1.75;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+/* Icon inside chip — Phosphor icon font */
+.cred-tag i {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
   flex-shrink: 0;
+  color: currentColor;
 }
 
 .cred-tag--sage    { background: var(--sage-light);       color: var(--sage-dark); }
