@@ -1539,13 +1539,13 @@
   gap: 0.75rem;
 }
 
-/* Default frame: image drives its own height naturally */
+/* Default: image drives its own height naturally */
 .cs-figure-frame {
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
-  line-height: 0; /* collapse whitespace under inline img */
+  line-height: 0;
 }
 
 .cs-figure-frame img {
@@ -1554,26 +1554,17 @@
   display: block;
 }
 
-/* --tall: portrait images — cap height so they don't dominate the page.
-   Image is centered so the most important content (top) stays visible. */
+/* --tall: portrait images capped at 560px, showing from top */
 .cs-figure-frame--tall {
-  max-height: 600px;
+  max-height: 560px;
   overflow-y: hidden;
-  display: flex;
-  align-items: flex-start;
 }
 
-.cs-figure-frame--tall img {
-  width: 100%;
-  height: auto;
-  object-fit: none; /* show at natural size, clipped */
-  object-position: top center;
+/* --portrait: constrain portrait images to feel document-like, not full-bleed */
+.cs-figure-frame--portrait {
+  max-width: 640px;
 }
 
-/* --wide: ultra-wide images (4:1 etc) — let them breathe at full width */
-/* no modifier needed — default handles these perfectly */
-
-/* caption */
 .cs-figure-caption {
   display: flex;
   align-items: baseline;
@@ -1592,11 +1583,26 @@
   flex-shrink: 0;
 }
 
-/* Per-theme label accent */
 .cs-body--sage   .cs-figure-caption-label { color: var(--sage-dark); }
 .cs-body--indigo .cs-figure-caption-label { color: var(--indigo); }
 .cs-body--terra  .cs-figure-caption-label { color: #9A5040; }
 
 @media (max-width: 640px) {
-  .cs-figure-frame--tall { max-height: 400px; }
+  .cs-figure-frame--tall    { max-height: 380px; }
+  .cs-figure-frame--portrait { max-width: 100%; }
+}
+
+/* =============================================
+   FIX — Cascade step equal height (CS2 Framework Architecture)
+   Prevents "Product Experiences" wrapping wider than siblings
+============================================= */
+.cs-cascade {
+  align-items: stretch;
+}
+
+.cs-cascade-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
