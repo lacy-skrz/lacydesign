@@ -175,7 +175,7 @@
   margin-bottom: 0.75rem;
 }
 
-/* h2 styles from global */
+/* h2 styles from global — just set color overrides here */
 .cta-headline { color: #fff; }
 .cta-headline em { font-style: italic; color: var(--sage); }
 

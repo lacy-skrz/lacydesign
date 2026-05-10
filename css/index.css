@@ -106,17 +106,15 @@
   padding: 6rem 0;
 }
 
-/* h2 used as section label — styled visually as label */
+/* h2 section heading — styled as editorial label above case study list */
 .work-heading {
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  font-weight: 700;               /* bold for contrast on off-white */
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-primary);     /* near-black — full contrast */
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);   /* matches global h2 */
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
   margin-bottom: 2.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border);
+  line-height: 1.15;
 }
 
 .cs-list { display: flex; flex-direction: column; }

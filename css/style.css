@@ -65,11 +65,11 @@ h1, h2, h3, h4 {
 /* h1 = 32px minimum, scales up on larger viewports */
 h1 { font-size: clamp(2rem, 6vw, 5rem); }
 
-/* h2 = 18px minimum */
-h2 { font-size: clamp(1.125rem, 3vw, 1.75rem); }
+/* h2 — strong visual hierarchy, clearly dominant over h3 and body */
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); line-height: 1.15; }
 
-/* h3 stays between h2 and body */
-h3 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+/* h3 — clearly subordinate to h2 */
+h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); line-height: 1.25; }
 
 p {
   font-size: var(--text-base);
@@ -151,10 +151,10 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .nav-links a {
-  font-size: var(--text-sm);
+  font-size: var(--text-lg);       /* 20px */
   font-weight: 400;
   color: rgba(255,255,255,0.78);   /* meets 4.5:1 on near-black */
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -291,15 +291,15 @@ footer {
 
 .footer-name {
   font-family: var(--font-display);
-  font-size: var(--text-base);
-  color: rgba(255,255,255,0.88);   /* meets contrast */
+  font-size: var(--text-base);     /* 16px */
+  color: rgba(255,255,255,0.88);
   margin-bottom: 0.2rem;
 }
 
 .footer-title {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);     /* 16px */
   font-weight: 300;
-  color: rgba(255,255,255,0.60);   /* lightened to meet 4.5:1 on #111 */
+  color: rgba(255,255,255,0.60);
 }
 
 /* Footer links — plain ul, no nav landmark (footer is enough) */
@@ -311,9 +311,9 @@ footer {
 }
 
 .footer-connect-label {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);     /* 16px */
   font-weight: 400;
-  color: rgba(255,255,255,0.60);   /* lightened for contrast */
+  color: rgba(255,255,255,0.60);
   margin-right: 0.25rem;
 }
 
@@ -321,10 +321,10 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);     /* 16px */
   font-weight: 400;
-  color: rgba(255,255,255,0.78);   /* meets 4.5:1 on #111 */
-  padding: 0.4rem 0.875rem;
+  color: rgba(255,255,255,0.78);
+  padding: 0.4rem 1rem;
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 100px;
   min-height: 44px;
