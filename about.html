@@ -62,92 +62,89 @@
         <h1 class="page-title" id="page-title">
           Design is<br><em>responsibility.</em>
         </h1>
-        <!-- "Parent" removed — present in body copy, not a label -->
         <p class="page-subtitle">
           Lead UX Designer &middot; K–12 Ed-Tech &middot; Accessibility Strategist &middot; Mentor
         </p>
       </div>
     </header>
 
-    <!-- HERO VISUAL — SVG narrative arc -->
-    <!-- Tighter viewBox + larger text = legible at real screen sizes -->
-    <section class="hero-visual-section" aria-label="Design philosophy overview">
-      <div class="hero-visual-wrap">
-        <svg
-          class="hero-visual-svg"
-          viewBox="0 0 900 420"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-labelledby="svg-title svg-desc"
-        >
-          <title id="svg-title">Four pillars of Lacy's design practice</title>
-          <desc id="svg-desc">A visual narrative arc showing four connected pillars: Roots in K–12, Accessibility as craft, Growth by instinct, and Responsibility beyond the org. On the right: the headline "Design is responsibility" with supporting lines and identity tags.</desc>
+    <!-- STORY ARC -->
+    <section class="story-arc" aria-labelledby="story-heading">
+      <div class="story-arc-inner">
+        <p class="story-arc-eyebrow" id="story-heading">The path here wasn't accidental</p>
 
-          <!-- ── Left column: four pillar cards ── -->
+        <div class="story-stops">
 
-          <!-- Card 1 -->
-          <rect x="0" y="16" width="340" height="84" rx="6" fill="#E8F0E9"/>
-          <rect x="0" y="16" width="5" height="84" rx="2.5" fill="#6A8F6E"/>
-          <text x="22" y="46" font-family="'DM Serif Display', Georgia, serif" font-size="17" fill="#4A6B4E">Roots in K–12</text>
-          <text x="22" y="68" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#4A4A4A">12 years · Content → UX, 2021</text>
-          <text x="22" y="88" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#4A4A4A">K–12 education technology</text>
+          <!-- Stop 1: Roots -->
+          <div class="story-stop">
+            <div class="stop-spine">
+              <div class="stop-node" style="background: var(--sage);" aria-hidden="true">01</div>
+            </div>
+            <div class="stop-content">
+              <p class="stop-label">Roots</p>
+              <h2 class="stop-heading">K–12 Ed-Tech</h2>
+              <p class="stop-desc">12 years at the intersection of content, technology, and human-centered design in education. Content strategist first — UX designer by deliberate choice.</p>
+              <ul class="stop-chips" aria-label="Skills and focus areas">
+                <li class="stop-chip stop-chip--sage">K–12 Ed-Tech</li>
+                <li class="stop-chip stop-chip--sage">Content Strategy</li>
+              </ul>
+            </div>
+          </div>
 
-          <!-- Arrow 1→2 -->
-          <line x1="170" y1="100" x2="170" y2="122" stroke="#6A8F6E" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <polygon points="164,120 170,130 176,120" fill="#6A8F6E"/>
+          <!-- Stop 2: Accessibility -->
+          <div class="story-stop">
+            <div class="stop-spine">
+              <div class="stop-node" style="background: var(--indigo);" aria-hidden="true">02</div>
+            </div>
+            <div class="stop-content">
+              <p class="stop-label">The pivot that changed everything</p>
+              <h2 class="stop-heading">Accessibility as craft</h2>
+              <p class="stop-desc">Interest began in 2019. Full professional focus after the ADA Final Rule in 2024. Two years remediating a complex enterprise K–12 application at the framework level.</p>
+              <ul class="stop-chips" aria-label="Certifications and focus areas">
+                <li class="stop-chip stop-chip--indigo">CPAAC</li>
+                <li class="stop-chip stop-chip--indigo">Trusted Tester</li>
+                <li class="stop-chip stop-chip--neutral">WCAG 2.1 AA</li>
+                <li class="stop-chip stop-chip--neutral">Enterprise Remediation</li>
+              </ul>
+            </div>
+          </div>
 
-          <!-- Card 2 -->
-          <rect x="0" y="134" width="340" height="84" rx="6" fill="#EAEAF5"/>
-          <rect x="0" y="134" width="5" height="84" rx="2.5" fill="#4A4A7A"/>
-          <text x="22" y="164" font-family="'DM Serif Display', Georgia, serif" font-size="17" fill="#4A4A7A">Accessibility as craft</text>
-          <text x="22" y="186" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#4A4A4A">Since 2019 · Full focus 2024 · ADA Final Rule</text>
-          <text x="22" y="206" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#4A4A4A">CPAAC · Trusted Tester</text>
+          <!-- Stop 3: Growth -->
+          <div class="story-stop">
+            <div class="stop-spine">
+              <div class="stop-node" style="background: var(--terracotta);" aria-hidden="true">03</div>
+            </div>
+            <div class="stop-content">
+              <p class="stop-label">How I'm wired</p>
+              <h2 class="stop-heading">Growth by instinct</h2>
+              <p class="stop-desc">When I notice a gap — in my skills, a system, or a team — I invest in closing it. Mentoring junior designers is one of the most energizing parts of the work.</p>
+              <ul class="stop-chips" aria-label="Certifications and skills">
+                <li class="stop-chip stop-chip--indigo">PMP</li>
+                <li class="stop-chip stop-chip--indigo">AI Fluency</li>
+                <li class="stop-chip stop-chip--indigo">EQ Leadership</li>
+                <li class="stop-chip stop-chip--terra">Design Mentorship</li>
+              </ul>
+            </div>
+          </div>
 
-          <!-- Arrow 2→3 -->
-          <line x1="170" y1="218" x2="170" y2="240" stroke="#4A4A7A" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <polygon points="164,238 170,248 176,238" fill="#4A4A7A"/>
+          <!-- Stop 4: Responsibility -->
+          <div class="story-stop">
+            <div class="stop-spine">
+              <div class="stop-node" style="background: var(--near-black);" aria-hidden="true">04</div>
+            </div>
+            <div class="stop-content">
+              <p class="stop-label">Beyond the org chart</p>
+              <h2 class="stop-heading">Responsibility beyond the org</h2>
+              <p class="stop-desc">Extending accessibility advocacy into the local community — working with a municipality on a training gap affecting how residents who rely on assistive technology receive public information.</p>
+              <ul class="stop-chips" aria-label="Community and civic work">
+                <li class="stop-chip stop-chip--terra">Civic Advocacy</li>
+                <li class="stop-chip stop-chip--terra">Community Impact</li>
+                <li class="stop-chip stop-chip--neutral">Accessibility Training</li>
+              </ul>
+            </div>
+          </div>
 
-          <!-- Card 3 -->
-          <rect x="0" y="252" width="340" height="84" rx="6" fill="#F5EAE7"/>
-          <rect x="0" y="252" width="5" height="84" rx="2.5" fill="#A05A4A"/>
-          <text x="22" y="282" font-family="'DM Serif Display', Georgia, serif" font-size="17" fill="#A05A4A">Growth by instinct</text>
-          <text x="22" y="304" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#4A4A4A">Mentoring junior designers · PMP</text>
-          <text x="22" y="324" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#4A4A4A">EQ Leadership · AI Fluency</text>
-
-          <!-- Arrow 3→4 -->
-          <line x1="170" y1="336" x2="170" y2="358" stroke="#A05A4A" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <polygon points="164,356 170,366 176,356" fill="#A05A4A"/>
-
-          <!-- Card 4 -->
-          <rect x="0" y="370" width="340" height="36" rx="6" fill="rgba(28,28,28,0.07)"/>
-          <rect x="0" y="370" width="5" height="36" rx="2.5" fill="rgba(28,28,28,0.28)"/>
-          <text x="22" y="393" font-family="'DM Serif Display', Georgia, serif" font-size="15" fill="#4A4A4A">Responsibility beyond the org · Civic advocacy</text>
-
-          <!-- ── Divider ── -->
-          <line x1="384" y1="16" x2="384" y2="406" stroke="rgba(28,28,28,0.10)" stroke-width="1"/>
-
-          <!-- ── Right column ── -->
-
-          <!-- Headline -->
-          <text x="420" y="88" font-family="'DM Serif Display', Georgia, serif" font-size="56" fill="#1C1C1C">Design is</text>
-          <text x="420" y="158" font-family="'DM Serif Display', Georgia, serif" font-size="56" fill="#6A8F6E" font-style="italic">responsibility.</text>
-
-          <!-- Rule -->
-          <line x1="420" y1="182" x2="880" y2="182" stroke="rgba(28,28,28,0.12)" stroke-width="1"/>
-
-          <!-- Supporting lines -->
-          <text x="420" y="218" font-family="'DM Sans', system-ui, sans-serif" font-size="16" fill="#4A4A4A">For students who need more from their tools.</text>
-          <text x="420" y="248" font-family="'DM Sans', system-ui, sans-serif" font-size="16" fill="#4A4A4A">For designers who need someone in their corner.</text>
-          <text x="420" y="278" font-family="'DM Sans', system-ui, sans-serif" font-size="16" fill="#4A4A4A">For communities that fall through the cracks.</text>
-
-          <!-- Rule -->
-          <line x1="420" y1="306" x2="880" y2="306" stroke="rgba(28,28,28,0.08)" stroke-width="1"/>
-
-          <!-- Identity tags -->
-          <text x="420" y="340" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#5A5A5A" letter-spacing="0.03em">UX designer · a11y advocate · mentor</text>
-          <text x="420" y="362" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#5A5A5A" letter-spacing="0.03em">K–12 ed-tech · civic advocate</text>
-
-        </svg>
+        </div>
       </div>
     </section>
 
@@ -163,7 +160,6 @@
             <ul class="cred-list" aria-label="Background highlights">
               <li class="cred-tag cred-tag--sage">K–12 Ed-Tech</li>
               <li class="cred-tag cred-tag--sage">Content Strategy</li>
-              <li class="cred-tag cred-tag--sage">12 Years</li>
             </ul>
           </div>
         </div>
