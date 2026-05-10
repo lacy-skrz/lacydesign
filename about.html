@@ -8,536 +8,18 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
 
-  <style>
-    /* =============================================
-       DESIGN TOKENS — shared with index.html
-    ============================================= */
-    :root {
-      --near-black:       #1C1C1C;
-      --off-white:        #F5F4F0;
-      --sage:             #6A8F6E;
-      --sage-light:       #E8F0E9;
-      --sage-dark:        #4A6B4E;
-      --indigo:           #4A4A7A;
-      --indigo-mid:       #7A7AB8;
-      --indigo-light:     #EAEAF5;
-      --terracotta:       #A05A4A;
-      --terracotta-mid:   #C07060;
-      --terracotta-light: #F5EAE7;
-      --text-primary:     #1C1C1C;
-      --text-secondary:   #5A5A5A;
-      --text-muted:       #8A8A8A;
-      --border:           rgba(28, 28, 28, 0.12);
-      --font-display:     'DM Serif Display', Georgia, serif;
-      --font-body:        'DM Sans', system-ui, sans-serif;
-      --content-max:      1100px;
-      --content-pad:      clamp(1rem, 5vw, 2rem);
-    }
-
-    /* =============================================
-       RESET & BASE
-    ============================================= */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { overflow-x: hidden; }
-
-    body {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--text-primary);
-      background: var(--off-white);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3 {
-      font-family: var(--font-display);
-      font-weight: 400;
-      line-height: 1.1;
-      letter-spacing: -0.015em;
-    }
-
-    p { font-weight: 300; }
-    a { text-decoration: none; color: inherit; }
-    ul, ol { list-style: none; }
-    img, svg { display: block; max-width: 100%; }
-
-    /* =============================================
-       SKIP LINK
-    ============================================= */
-    .skip-link {
-      position: absolute;
-      top: -200%;
-      left: 1rem;
-      background: var(--sage);
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 0 0 6px 6px;
-      font-size: 0.875rem;
-      font-weight: 500;
-      z-index: 9999;
-    }
-    .skip-link:focus { top: 0; outline: 3px solid #fff; outline-offset: 2px; }
-
-    /* =============================================
-       FOCUS STYLES — WCAG 2.1 AA
-    ============================================= */
-    :focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; border-radius: 2px; }
-    :focus:not(:focus-visible) { outline: none; }
-
-    /* =============================================
-       NAVIGATION — identical to index.html
-    ============================================= */
-    .site-nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 1.25rem 0;
-      background: rgba(28, 28, 28, 0.97);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
-    }
-
-    .nav-inner {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 0 var(--content-pad);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .nav-name {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      color: #fff;
-      letter-spacing: -0.01em;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.75);
-      letter-spacing: 0.02em;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      padding: 0 0.25rem;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible { color: #fff; }
-
-    .nav-links a[aria-current="page"] {
-      color: #fff;
-      border-bottom: 1px solid var(--sage);
-    }
-
-    .nav-external::after {
-      content: ' ↗';
-      font-size: 0.7em;
-      opacity: 0.55;
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 4px;
-      cursor: pointer;
-      padding: 0.5rem;
-      color: #fff;
-      min-width: 44px;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* =============================================
-       PAGE HERO — dark, tight
-    ============================================= */
-    .page-hero {
-      background: var(--near-black);
-      padding: 8rem 0 5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-hero-blob {
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .page-hero-blob--1 { top: -80px; right: -80px; width: 360px; height: 360px; background: var(--sage); opacity: 0.06; }
-    .page-hero-blob--2 { bottom: -60px; left: 30%; width: 200px; height: 200px; background: var(--indigo); opacity: 0.07; }
-
-    .page-hero-inner {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 0 var(--content-pad);
-      position: relative;
-      z-index: 1;
-    }
-
-    .page-eyebrow {
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      color: var(--sage);
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .page-title {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      color: #fff;
-      margin-bottom: 1.25rem;
-      max-width: 640px;
-    }
-
-    .page-title em { font-style: italic; color: var(--sage); }
-
-    .page-subtitle {
-      font-size: clamp(1rem, 2vw, 1.125rem);
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.55);
-      line-height: 1.75;
-      max-width: 520px;
-    }
-
-    /* =============================================
-       HERO VISUAL — SVG narrative arc
-    ============================================= */
-    .hero-visual-section {
-      background: var(--off-white);
-      padding: 4rem 0 3rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-visual-wrap {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 0 var(--content-pad);
-    }
-
-    .hero-visual-svg {
-      width: 100%;
-      height: auto;
-      overflow: visible;
-    }
-
-    /* =============================================
-       ABOUT CONTENT — prose sections
-    ============================================= */
-    .about-content {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 0 var(--content-pad);
-    }
-
-    /* Section divider label */
-    .prose-section {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: clamp(2rem, 5vw, 4rem);
-      padding: 3.5rem 0;
-      border-bottom: 1px solid var(--border);
-      align-items: start;
-    }
-
-    .prose-section:first-of-type { border-top: 1px solid var(--border); }
-
-    .prose-label {
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      padding-top: 0.375rem;
-      position: sticky;
-      top: 5rem;
-    }
-
-    .prose-body { max-width: 640px; }
-
-    .prose-body p {
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--text-secondary);
-      line-height: 1.85;
-      margin-bottom: 1.25rem;
-    }
-
-    .prose-body p:last-child { margin-bottom: 0; }
-
-    /* Credential tags */
-    .cred-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.25rem;
-    }
-
-    .cred-tag {
-      font-size: 0.8125rem;
-      font-weight: 500;
-      padding: 0.35rem 0.875rem;
-      border-radius: 100px;
-      letter-spacing: 0.02em;
-    }
-
-    .cred-tag--sage     { background: var(--sage-light);       color: var(--sage-dark); }
-    .cred-tag--indigo   { background: var(--indigo-light);     color: var(--indigo); }
-    .cred-tag--terra    { background: var(--terracotta-light);  color: var(--terracotta); }
-    .cred-tag--neutral  { background: rgba(28,28,28,0.06);     color: var(--text-secondary); }
-
-    /* =============================================
-       CTA STRIP — bottom of page
-    ============================================= */
-    .cta-strip {
-      background: var(--near-black);
-      padding: 5rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-blob {
-      position: absolute;
-      bottom: -60px; right: -60px;
-      width: 280px; height: 280px;
-      border-radius: 50%;
-      background: var(--sage);
-      opacity: 0.07;
-      pointer-events: none;
-    }
-
-    .cta-inner {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 0 var(--content-pad);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-text-label {
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-bottom: 0.75rem;
-    }
-
-    .cta-headline {
-      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-      color: #fff;
-      margin-bottom: 0;
-    }
-
-    .cta-headline em { font-style: italic; color: var(--sage); }
-
-    .cta-actions {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      flex-shrink: 0;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--sage);
-      color: #fff;
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      font-weight: 500;
-      padding: 0.8125rem 1.5rem;
-      border-radius: 4px;
-      border: none;
-      cursor: pointer;
-      min-height: 44px;
-    }
-
-    .btn-primary:hover { background: var(--sage-dark); color: #fff; }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 4px;
-      padding: 0.6875rem 1.25rem;
-      min-height: 44px;
-    }
-
-    .btn-ghost:hover { border-color: rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.05); color: #fff; }
-
-    /* =============================================
-       FOOTER — identical to index.html
-    ============================================= */
-    footer {
-      background: #111;
-      padding: 2.5rem 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .footer-inner {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 0 var(--content-pad);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-name {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 0.2rem;
-    }
-
-    .footer-title { font-size: 0.8125rem; font-weight: 300; color: rgba(255, 255, 255, 0.35); }
-
-    .footer-links { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
-
-    .footer-connect-label { font-size: 0.75rem; color: rgba(255, 255, 255, 0.35); letter-spacing: 0.06em; margin-right: 0.25rem; }
-
-    .footer-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.375rem;
-      font-size: 0.8125rem;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.55);
-      padding: 0.4rem 0.875rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 100px;
-      min-height: 44px;
-    }
-
-    .footer-link:hover { color: #fff; border-color: rgba(255, 255, 255, 0.3); }
-
-    .footer-link svg {
-      width: 14px; height: 14px;
-      stroke: currentColor; fill: none;
-      stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    /* =============================================
-       ANIMATION — prefers-reduced-motion
-    ============================================= */
-    @media (prefers-reduced-motion: no-preference) {
-      html { scroll-behavior: smooth; }
-
-      .btn-primary { transition: background 0.2s, transform 0.15s; }
-      .btn-primary:hover { transform: translateY(-1px); }
-      .btn-ghost { transition: border-color 0.2s, background 0.2s; }
-      .footer-link { transition: color 0.2s, border-color 0.2s; }
-      .nav-links a { transition: color 0.2s; }
-
-      .animate-on-scroll {
-        opacity: 0;
-        transform: translateY(16px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
-      .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
-      .animate-on-scroll { opacity: 1; transform: none; }
-    }
-
-    /* =============================================
-       RESPONSIVE — Mobile (≤ 768px)
-    ============================================= */
-    @media (max-width: 768px) {
-      .nav-toggle { display: inline-flex; }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        position: absolute;
-        top: 100%; left: 0; right: 0;
-        background: rgba(28, 28, 28, 0.99);
-        padding: 1rem var(--content-pad) 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
-      }
-
-      .nav-links.open { display: flex; }
-
-      .nav-links a {
-        width: 100%;
-        padding: 0.75rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
-      .nav-links li:last-child a { border-bottom: none; }
-
-      .prose-section {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 2.5rem 0;
-      }
-
-      .prose-label { position: static; }
-
-      .cta-inner { flex-direction: column; align-items: flex-start; }
-
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-    }
-
-    /* =============================================
-       RESPONSIVE — 320px reflow (WCAG 1.4.10)
-    ============================================= */
-    @media (max-width: 360px) {
-      :root { --content-pad: 1rem; }
-      .page-title { font-size: 1.875rem; }
-      .cred-list { gap: 0.375rem; }
-      .cred-tag { font-size: 0.75rem; padding: 0.3rem 0.625rem; }
-      .footer-links { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
 </head>
 
 <body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Navigation -->
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <!-- nav is a landmark by default; no role or aria-label needed -->
+  <nav class="site-nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-name" aria-label="Lacy — go to home page">Lacy</a>
 
@@ -578,36 +60,35 @@
       <div class="page-hero-blob page-hero-blob--2" aria-hidden="true"></div>
       <div class="page-hero-inner">
         <p class="page-eyebrow">About me</p>
+        <!-- h1 — primary page heading -->
         <h1 class="page-title" id="page-title">
           Design is<br><em>responsibility.</em>
         </h1>
         <p class="page-subtitle">
-          Lead UX Designer · K–12 Ed-Tech · Accessibility Strategist · Parent · Mentor
+          Lead UX Designer &middot; K–12 Ed-Tech &middot; Accessibility Strategist &middot; Parent &middot; Mentor
         </p>
       </div>
     </header>
 
-    <!-- HERO VISUAL — narrative arc SVG -->
+    <!-- HERO VISUAL — SVG narrative arc -->
     <section class="hero-visual-section" aria-label="Design philosophy overview">
       <div class="hero-visual-wrap">
         <svg
           class="hero-visual-svg"
-          viewBox="0 0 1060 380"
+          viewBox="0 0 1060 390"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           aria-labelledby="svg-title svg-desc"
         >
           <title id="svg-title">Four pillars of Lacy's design practice</title>
-          <desc id="svg-desc">A visual narrative showing four connected areas: Roots in K–12, Accessibility as craft, Growth by instinct, and Responsibility beyond the org. On the right: the headline "Design is responsibility" with supporting lines and identity tags.</desc>
-
-          <!-- ── Left column: four pillar cards with connecting arrows ── -->
+          <desc id="svg-desc">A visual narrative showing four connected pillars: Roots in K–12, Accessibility as craft, Growth by instinct, and Responsibility beyond the org. On the right: the headline "Design is responsibility" with supporting lines and identity tags.</desc>
 
           <!-- Card 1: Roots in K–12 -->
           <rect x="0" y="20" width="320" height="76" rx="6" fill="#E8F0E9"/>
           <rect x="0" y="20" width="4" height="76" rx="2" fill="#6A8F6E"/>
-          <text x="20" y="48" font-family="'DM Serif Display', Georgia, serif" font-size="14" fill="#4A6B4E" font-weight="400">Roots in K–12</text>
-          <text x="20" y="68" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#5A5A5A" font-weight="300">12 years · Content → UX, 2021</text>
-          <text x="20" y="86" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#5A5A5A" font-weight="300">K–12 education technology</text>
+          <text x="20" y="48" font-family="'DM Serif Display', Georgia, serif" font-size="14" fill="#4A6B4E">Roots in K–12</text>
+          <text x="20" y="68" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#4A4A4A" font-weight="300">12 years · Content → UX, 2021</text>
+          <text x="20" y="86" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#4A4A4A" font-weight="300">K–12 education technology</text>
 
           <!-- Arrow 1→2 -->
           <line x1="160" y1="96" x2="160" y2="118" stroke="#6A8F6E" stroke-width="1.5" stroke-dasharray="4 3"/>
@@ -616,9 +97,9 @@
           <!-- Card 2: Accessibility as craft -->
           <rect x="0" y="130" width="320" height="76" rx="6" fill="#EAEAF5"/>
           <rect x="0" y="130" width="4" height="76" rx="2" fill="#4A4A7A"/>
-          <text x="20" y="158" font-family="'DM Serif Display', Georgia, serif" font-size="14" fill="#4A4A7A" font-weight="400">Accessibility as craft</text>
-          <text x="20" y="178" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#5A5A5A" font-weight="300">Since 2019 · Full focus 2024 · ADA Final Rule</text>
-          <text x="20" y="196" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#5A5A5A" font-weight="300">CPAAC · Trusted Tester</text>
+          <text x="20" y="158" font-family="'DM Serif Display', Georgia, serif" font-size="14" fill="#4A4A7A">Accessibility as craft</text>
+          <text x="20" y="178" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#4A4A4A" font-weight="300">Since 2019 · Full focus 2024 · ADA Final Rule</text>
+          <text x="20" y="196" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#4A4A4A" font-weight="300">CPAAC · Trusted Tester</text>
 
           <!-- Arrow 2→3 -->
           <line x1="160" y1="206" x2="160" y2="228" stroke="#4A4A7A" stroke-width="1.5" stroke-dasharray="4 3"/>
@@ -627,41 +108,39 @@
           <!-- Card 3: Growth by instinct -->
           <rect x="0" y="240" width="320" height="76" rx="6" fill="#F5EAE7"/>
           <rect x="0" y="240" width="4" height="76" rx="2" fill="#A05A4A"/>
-          <text x="20" y="268" font-family="'DM Serif Display', Georgia, serif" font-size="14" fill="#A05A4A" font-weight="400">Growth by instinct</text>
-          <text x="20" y="288" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#5A5A5A" font-weight="300">Mentoring junior designers · PMP</text>
-          <text x="20" y="306" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#5A5A5A" font-weight="300">EQ Leadership · AI Fluency</text>
+          <text x="20" y="268" font-family="'DM Serif Display', Georgia, serif" font-size="14" fill="#A05A4A">Growth by instinct</text>
+          <text x="20" y="288" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#4A4A4A" font-weight="300">Mentoring junior designers · PMP</text>
+          <text x="20" y="306" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#4A4A4A" font-weight="300">EQ Leadership · AI Fluency</text>
 
           <!-- Arrow 3→4 -->
           <line x1="160" y1="316" x2="160" y2="338" stroke="#A05A4A" stroke-width="1.5" stroke-dasharray="4 3"/>
           <polygon points="155,336 160,346 165,336" fill="#A05A4A"/>
 
           <!-- Card 4: Responsibility beyond the org -->
-          <rect x="0" y="350" width="320" height="28" rx="6" fill="rgba(28,28,28,0.06)"/>
-          <rect x="0" y="350" width="4" height="28" rx="2" fill="rgba(28,28,28,0.25)"/>
-          <text x="20" y="369" font-family="'DM Serif Display', Georgia, serif" font-size="13" fill="#5A5A5A" font-weight="400">Responsibility beyond the org · Civic advocacy</text>
+          <rect x="0" y="350" width="320" height="28" rx="6" fill="rgba(28,28,28,0.07)"/>
+          <rect x="0" y="350" width="4" height="28" rx="2" fill="rgba(28,28,28,0.3)"/>
+          <text x="20" y="369" font-family="'DM Serif Display', Georgia, serif" font-size="13" fill="#4A4A4A">Responsibility beyond the org · Civic advocacy</text>
 
-          <!-- ── Divider ── -->
+          <!-- Divider -->
           <line x1="368" y1="20" x2="368" y2="378" stroke="rgba(28,28,28,0.10)" stroke-width="1"/>
 
-          <!-- ── Right column: philosophy statement ── -->
+          <!-- Right column: headline -->
+          <text x="412" y="84" font-family="'DM Serif Display', Georgia, serif" font-size="52" fill="#1C1C1C">Design is</text>
+          <text x="412" y="150" font-family="'DM Serif Display', Georgia, serif" font-size="52" fill="#6A8F6E" font-style="italic">responsibility.</text>
 
-          <!-- Headline -->
-          <text x="412" y="80" font-family="'DM Serif Display', Georgia, serif" font-size="52" fill="#1C1C1C" font-weight="400" font-style="normal">Design is</text>
-          <text x="412" y="146" font-family="'DM Serif Display', Georgia, serif" font-size="52" fill="#6A8F6E" font-weight="400" font-style="italic">responsibility.</text>
-
-          <!-- Divider line -->
-          <line x1="412" y1="172" x2="680" y2="172" stroke="rgba(28,28,28,0.12)" stroke-width="1"/>
+          <!-- Rule -->
+          <line x1="412" y1="174" x2="700" y2="174" stroke="rgba(28,28,28,0.12)" stroke-width="1"/>
 
           <!-- Supporting lines -->
-          <text x="412" y="204" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#5A5A5A" font-weight="300">For students who need more from their tools.</text>
-          <text x="412" y="230" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#5A5A5A" font-weight="300">For designers who need someone in their corner.</text>
-          <text x="412" y="256" font-family="'DM Sans', system-ui, sans-serif" font-size="14" fill="#5A5A5A" font-weight="300">For communities that fall through the cracks.</text>
+          <text x="412" y="206" font-family="'DM Sans', system-ui, sans-serif" font-size="15" fill="#4A4A4A" font-weight="300">For students who need more from their tools.</text>
+          <text x="412" y="232" font-family="'DM Sans', system-ui, sans-serif" font-size="15" fill="#4A4A4A" font-weight="300">For designers who need someone in their corner.</text>
+          <text x="412" y="258" font-family="'DM Sans', system-ui, sans-serif" font-size="15" fill="#4A4A4A" font-weight="300">For communities that fall through the cracks.</text>
 
-          <!-- Divider line -->
-          <line x1="412" y1="282" x2="680" y2="282" stroke="rgba(28,28,28,0.08)" stroke-width="1"/>
+          <!-- Rule -->
+          <line x1="412" y1="282" x2="700" y2="282" stroke="rgba(28,28,28,0.08)" stroke-width="1"/>
 
           <!-- Identity tags -->
-          <text x="412" y="314" font-family="'DM Sans', system-ui, sans-serif" font-size="12" fill="#8A8A8A" font-weight="400" letter-spacing="0.04em">UX designer · a11y advocate · mentor · K–12 ed-tech · civic advocate · parent</text>
+          <text x="412" y="314" font-family="'DM Sans', system-ui, sans-serif" font-size="13" fill="#5A5A5A" font-weight="400" letter-spacing="0.03em">UX designer · a11y advocate · mentor · K–12 ed-tech · civic advocate · parent</text>
 
         </svg>
       </div>
@@ -671,7 +150,6 @@
     <article aria-label="About Lacy — full biography">
       <div class="about-content">
 
-        <!-- Opening -->
         <div class="prose-section animate-on-scroll">
           <p class="prose-label">Background</p>
           <div class="prose-body">
@@ -679,37 +157,34 @@
           </div>
         </div>
 
-        <!-- The pivot -->
         <div class="prose-section animate-on-scroll">
           <p class="prose-label">The pivot that changed everything</p>
           <div class="prose-body">
             <p>In 2021 I made the move from content to UX — a transition I'd been building toward for years. But the shift that truly sharpened my design craft came later, when accessible design went from being something I cared about to something I was responsible for at a structural level.</p>
             <p>The ADA Final Rule changed the landscape for everyone. For me, it crystallized something I'd been circling since 2019: that accessibility isn't a feature or a checklist. It's a design decision that ripples outward — into development cycles, into product roadmaps, into the daily experience of students and staff who rely on assistive technology to do their work. I've spent the last two years remediating a complex enterprise application, fundamentally rethinking what I owe to my product and development teams as their designer.</p>
-            <div class="cred-list" aria-label="Accessibility certifications">
-              <span class="cred-tag cred-tag--indigo">CPAAC</span>
-              <span class="cred-tag cred-tag--indigo">Trusted Tester</span>
-              <span class="cred-tag cred-tag--neutral">WCAG 2.1 AA</span>
-              <span class="cred-tag cred-tag--neutral">ADA Final Rule</span>
-            </div>
+            <ul class="cred-list" aria-label="Accessibility certifications">
+              <li class="cred-tag cred-tag--indigo">CPAAC</li>
+              <li class="cred-tag cred-tag--indigo">Trusted Tester</li>
+              <li class="cred-tag cred-tag--neutral">WCAG 2.1 AA</li>
+              <li class="cred-tag cred-tag--neutral">ADA Final Rule</li>
+            </ul>
           </div>
         </div>
 
-        <!-- How I'm wired -->
         <div class="prose-section animate-on-scroll">
           <p class="prose-label">How I'm wired</p>
           <div class="prose-body">
             <p>I'm pensive by nature. When I notice a gap — in my skills, in a system, in a team — I don't sit with the discomfort for long. I invest in closing it. That's led me to deepen my expertise in project management, AI fluency, and emotional intelligence — each one an answer to a real question I was asking about how to do this work better.</p>
             <p>I also believe strongly in bringing others along. Mentoring junior designers is one of the most energizing parts of my work — from 1:1 coffee chats and Figma jam sessions to mob training, book clubs, and working through real product problems together. There's something that gets me every time about watching someone move from uncertain and self-doubting to confident and capable.</p>
-            <div class="cred-list" aria-label="Professional certifications">
-              <span class="cred-tag cred-tag--sage">PMP</span>
-              <span class="cred-tag cred-tag--sage">AI Fluency</span>
-              <span class="cred-tag cred-tag--sage">EQ Leadership</span>
-              <span class="cred-tag cred-tag--neutral">Design Mentorship</span>
-            </div>
+            <ul class="cred-list" aria-label="Professional certifications">
+              <li class="cred-tag cred-tag--sage">PMP</li>
+              <li class="cred-tag cred-tag--sage">AI Fluency</li>
+              <li class="cred-tag cred-tag--sage">EQ Leadership</li>
+              <li class="cred-tag cred-tag--neutral">Design Mentorship</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Why education -->
         <div class="prose-section animate-on-scroll">
           <p class="prose-label">Why education, and why now</p>
           <div class="prose-body">
@@ -718,7 +193,6 @@
           </div>
         </div>
 
-        <!-- Beyond the org chart -->
         <div class="prose-section animate-on-scroll">
           <p class="prose-label">Beyond the org chart</p>
           <div class="prose-body">
@@ -753,75 +227,39 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
+  <!-- footer is a landmark by default; no role needed -->
+  <footer>
     <div class="footer-inner">
-      <div>
+      <div class="footer-id">
         <p class="footer-name">Lacy</p>
         <p class="footer-title">Lead UX Designer</p>
       </div>
-      <nav aria-label="Social and contact links" class="footer-links">
-        <span class="footer-connect-label" aria-hidden="true">Let's connect</span>
-        <a
-          href="https://www.linkedin.com/in/your-linkedin"
-          class="footer-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn profile (opens in a new tab)"
-        >
-          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="mailto:hello@lacydesigns.com" class="footer-link" aria-label="Send an email to Lacy">
-          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email
-        </a>
-      </nav>
+      <!-- Plain ul — footer landmark is sufficient context -->
+      <ul class="footer-links">
+        <li><span class="footer-connect-label" aria-hidden="true">Let's connect</span></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/your-linkedin"
+            class="footer-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile (opens in a new tab)"
+          >
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hello@lacydesigns.com" class="footer-link" aria-label="Send an email to Lacy">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </li>
+      </ul>
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    toggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
-      toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open navigation menu');
-      });
-    });
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-        navLinks.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open navigation menu');
-        toggle.focus();
-      }
-    });
-
-    // Scroll animations — only if motion is OK
-    if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-    }
-  </script>
+  <script src="js/nav.js"></script>
 
 </body>
 </html>
