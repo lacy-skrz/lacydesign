@@ -103,7 +103,7 @@ img, svg { display: block; max-width: 100%; }
   position: absolute;
   top: -200%;
   left: 1rem;
-  background: var(--sage);
+  background: var(--sage-dark);   /* #4A6B4E — 5.99:1 on white text */
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0 0 6px 6px;
@@ -237,7 +237,7 @@ img, svg { display: block; max-width: 100%; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--sage);
+  background: var(--sage-dark);   /* #4A6B4E — 5.99:1 on white text */
   color: #fff;
   font-family: var(--font-body);
   font-size: var(--text-base);
