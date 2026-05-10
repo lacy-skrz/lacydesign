@@ -197,44 +197,39 @@
 .cs-card--indigo .cs-visual-inner { background-color: var(--indigo); }
 .cs-card--terra  .cs-visual-inner { background-color: var(--terracotta); }
 
-/* Image thumbnail variant — background-image comes from inline style;
-   background-color is the fallback if image fails to load */
+/* Image thumbnail — no overlay, clean full-bleed crop */
 .cs-visual-inner--img {
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
 }
 
-/* CS1 — Training portal */
+/* Per-image crop positions */
 .cs-card--sage   .cs-visual-inner--img { background-position: top center; }
-/* CS2 — Testing results */
 .cs-card--indigo .cs-visual-inner--img { background-position: top left; }
-/* CS3 — Admin panel */
 .cs-card--terra  .cs-visual-inner--img { background-position: top left; }
 
-/* Per-theme color overlay — tinted scrim keeps badge readable */
-.cs-visual-inner--img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.cs-card--sage   .cs-visual-inner--img::after { background: rgba(78, 110, 80, 0.42); }
-.cs-card--indigo .cs-visual-inner--img::after { background: rgba(50, 50, 105, 0.50); }
-.cs-card--terra  .cs-visual-inner--img::after { background: rgba(130, 65, 45, 0.42); }
-
-/* Badge and number sit above overlay */
-.cs-visual-inner--img .cs-visual-badge,
-.cs-visual-inner--img .cs-visual-number {
-  position: relative;
-  z-index: 1;
-}
-
-/* Mobile — image is now full-width banner; adjust crop so content is visible */
+/* Mobile crop adjustments */
 @media (max-width: 768px) {
   .cs-card--sage   .cs-visual-inner--img { background-position: top center; }
-  .cs-card--indigo .cs-visual-inner--img { background-position: top left; }
-  .cs-card--terra  .cs-visual-inner--img { background-position: top center; }
+  .cs-card--indigo .cs-visual-inner--img { background-position: top center; }
+  .cs-card--terra  .cs-visual-inner--img { background-position: top left; }
+}
+
+/* Themed cs-tags — tinted background, themed border and text */
+.cs-card--sage   .cs-tag {
+  background-color: rgba(88, 120, 90, 0.08);
+  border-color: rgba(88, 120, 90, 0.35);
+  color: var(--sage-dark);
+}
+.cs-card--indigo .cs-tag {
+  background-color: rgba(75, 75, 140, 0.08);
+  border-color: rgba(75, 75, 140, 0.3);
+  color: var(--indigo);
+}
+.cs-card--terra  .cs-tag {
+  background-color: rgba(160, 85, 60, 0.08);
+  border-color: rgba(160, 85, 60, 0.3);
+  color: var(--terracotta);
 }
 
 /* Content */
