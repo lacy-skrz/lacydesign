@@ -57,7 +57,7 @@
 
     <!-- HERO -->
     <header class="cs-hero">
-      <div class="cs-hero-blob cs-hero-blob--1" aria-hidden="true"></div>
+      <div class="cs-hero-blob cs-hero-blob--1 cs-hero-blob--terra" aria-hidden="true"></div>
       <div class="cs-hero-inner">
         <p class="cs-hero-eyebrow">UX Case Study · Enterprise K–12 Platform</p>
         <h1 class="cs-hero-title">Texas School District / Forms Project</h1>
@@ -80,7 +80,7 @@
     </header>
 
     <!-- METRICS BAR -->
-    <section class="cs-metrics" aria-label="Hero metrics">
+    <section class="cs-metrics cs-metrics--terra" aria-label="Hero metrics">
       <div class="cs-metrics-inner">
         <div class="cs-metric">
           <p class="cs-metric-value">40,000+</p>
@@ -101,7 +101,7 @@
       </div>
     </section>
 
-    <div class="cs-body">
+    <div class="cs-body cs-body--terra">
 
       <!-- 01 OVERVIEW -->
       <section class="cs-section animate-on-scroll" aria-labelledby="overview-heading">
@@ -728,24 +728,38 @@
 
     </div><!-- /cs-body -->
 
-    <!-- CTA STRIP -->
-    <section class="cta-strip" aria-labelledby="cta-heading">
-      <div class="cta-blob" aria-hidden="true"></div>
-      <div class="cta-inner">
-        <div>
-          <h2 class="cta-headline" id="cta-heading">
-            See more work.<br><em>Read the other case studies.</em>
-          </h2>
-        </div>
-        <div class="cta-actions">
-          <a href="index.html#work" class="btn-primary">
-            View all projects
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
-          </a>
-          <a href="mailto:hello@lacydesigns.com" class="btn-ghost" aria-label="Send an email to Lacy">
-            Get in touch
+    <!-- SEQUENTIAL NAV CTA -->
+    <section class="cs-nav-cta" aria-label="Case study navigation">
+      <div class="cs-nav-cta-inner">
+
+        <div class="cs-nav-top">
+          <a href="#main-content" class="cs-nav-top-link">
+            <span aria-hidden="true">↑</span> Back to top
           </a>
         </div>
+
+        <nav class="cs-nav-cards" aria-label="Navigate between case studies">
+          <a href="cs1-accessibility-program-architecture.html" class="cs-nav-card">
+            <div class="cs-nav-card-visual cs-nav-card-visual--sage" aria-hidden="true">
+              <span class="cs-nav-card-num">01</span>
+            </div>
+            <div class="cs-nav-card-body">
+              <p class="cs-nav-card-eyebrow">Back to the beginning</p>
+              <p class="cs-nav-card-title">Accessibility Program Architecture</p>
+              <span class="cs-nav-card-arrow" aria-hidden="true">Read the case study →</span>
+            </div>
+          </a>
+
+          <a href="index.html#work" class="cs-nav-card">
+            <div class="cs-nav-card-visual cs-nav-card-visual--neutral" aria-hidden="true"></div>
+            <div class="cs-nav-card-body">
+              <p class="cs-nav-card-eyebrow">All projects</p>
+              <p class="cs-nav-card-title">Back to featured work</p>
+              <span class="cs-nav-card-arrow" aria-hidden="true">View all →</span>
+            </div>
+          </a>
+        </nav>
+
       </div>
     </section>
 
