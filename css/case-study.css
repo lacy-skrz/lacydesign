@@ -467,6 +467,96 @@
 }
 
 /* =============================================
+   CASE STUDY — Atomic Table (unified grid, CS3)
+============================================= */
+.cs-atomic-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.625rem;
+  margin: 1.75rem 0;
+  table-layout: fixed;
+}
+
+.cs-atomic-table thead th {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.875rem 1rem;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+
+/* First 3 columns: terracotta */
+.cs-atomic-table thead th:nth-child(1),
+.cs-atomic-table thead th:nth-child(2),
+.cs-atomic-table thead th:nth-child(3) {
+  background: var(--terracotta);
+}
+
+/* Last column (Recommendation): near-black */
+.cs-atomic-table thead th:nth-child(4) {
+  background: var(--near-black);
+}
+
+.cs-atomic-table tbody td {
+  padding: 1rem;
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: top;
+  border-radius: 0 0 6px 6px;
+}
+
+.cs-atomic-table tbody td:nth-child(1),
+.cs-atomic-table tbody td:nth-child(2),
+.cs-atomic-table tbody td:nth-child(3) {
+  background: #9A5040;
+}
+
+.cs-atomic-table tbody td:nth-child(4) {
+  background: #1c1c1c;
+}
+
+@media (max-width: 768px) {
+  .cs-atomic-table,
+  .cs-atomic-table thead,
+  .cs-atomic-table tbody,
+  .cs-atomic-table tr,
+  .cs-atomic-table th,
+  .cs-atomic-table td {
+    display: block;
+    width: 100%;
+  }
+  .cs-atomic-table thead { display: none; }
+  .cs-atomic-table tbody td {
+    border-radius: 4px;
+    margin-bottom: 0.375rem;
+    text-align: left;
+  }
+  .cs-atomic-table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.375rem;
+  }
+  .cs-atomic-table tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+}
+
+/* =============================================
    CASE STUDY — Atomic Examples (3-col grid)
 ============================================= */
 .cs-atomic-examples {
@@ -1526,83 +1616,4 @@
 @media (max-width: 360px) {
   .cs-hero   { padding: calc(72px + 1.5rem) 0 2rem; }
   .cs-metric { flex: 1 1 100%; }
-}
-
-/* =============================================
-   CASE STUDY — Screenshot / Artifact Figure
-============================================= */
-
-.cs-figure {
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-/* Default: image drives its own height naturally */
-.cs-figure-frame {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  line-height: 0;
-}
-
-.cs-figure-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* --tall: portrait images capped at 560px, showing from top */
-.cs-figure-frame--tall {
-  max-height: 560px;
-  overflow-y: hidden;
-}
-
-/* --portrait: constrain portrait images to feel document-like, not full-bleed */
-.cs-figure-frame--portrait {
-  max-width: 640px;
-}
-
-.cs-figure-caption {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  font-size: var(--text-sm);
-  font-weight: 300;
-  color: var(--text-muted);
-  line-height: 1.55;
-}
-
-.cs-figure-caption-label {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  flex-shrink: 0;
-}
-
-.cs-body--sage   .cs-figure-caption-label { color: var(--sage-dark); }
-.cs-body--indigo .cs-figure-caption-label { color: var(--indigo); }
-.cs-body--terra  .cs-figure-caption-label { color: #9A5040; }
-
-@media (max-width: 640px) {
-  .cs-figure-frame--tall    { max-height: 380px; }
-  .cs-figure-frame--portrait { max-width: 100%; }
-}
-
-/* =============================================
-   FIX — Cascade step equal height (CS2 Framework Architecture)
-   Prevents "Product Experiences" wrapping wider than siblings
-============================================= */
-.cs-cascade {
-  align-items: stretch;
-}
-
-.cs-cascade-step {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
