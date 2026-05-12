@@ -176,29 +176,6 @@
         <h3 class="cs-sub-heading">Atomic Accessibility Research Framework</h3>
         <p class="cs-prose" style="max-width:680px; font-weight:300; color:var(--text-secondary); line-height:1.85; margin-bottom:1rem;">Turning testing into decisions — I adapted the Atomic Research model into an accessibility-specific framework. Rather than presenting disconnected accessibility bugs, findings were structured through four progressive layers, transforming accessibility from subjective feedback into actionable organizational decision-making.</p>
 
-        <ol class="cs-atomic-flow" aria-label="Atomic accessibility research framework steps">
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Experiment</p>
-            <p class="cs-atomic-step-title">We tested…</p>
-            <p>Screen reader, keyboard, zoom, voice control</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Fact</p>
-            <p class="cs-atomic-step-title">We observed…</p>
-            <p>Measurable interaction failures with % data</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Insight</p>
-            <p class="cs-atomic-step-title">This suggests…</p>
-            <p>User impact and behavioral implications</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Recommendation</p>
-            <p class="cs-atomic-step-title">We should…</p>
-            <p>Clear, prioritized remediation actions</p>
-          </li>
-        </ol>
-
         <h3 class="cs-sub-heading">Accessibility Testing Inputs</h3>
         <ul class="cs-card-grid" aria-label="Accessibility testing inputs">
           <li class="cs-info-card">
@@ -228,62 +205,36 @@
         </ul>
 
         <h3 class="cs-sub-heading">Atomic Research Examples</h3>
-        <ol class="cs-atomic-examples" aria-label="Atomic research examples">
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">Screen reader testing on forms</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">63% of inputs lacked accessible names</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Users cannot complete forms confidently or independently</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Standardize accessible naming patterns across all inputs</span>
-            </div>
-          </li>
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">Navigation usability testing</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">20% of users failed to locate key tasks</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Navigation hierarchy lacks sufficient clarity</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Redesign navigation structure with semantic headings</span>
-            </div>
-          </li>
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">A/B testing labels and icons</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">40% increase in task engagement with icons</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Icons meaningfully improve comprehension</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Expand icon-supported labeling across the system</span>
-            </div>
-          </li>
-        </ol>
+        <table class="cs-atomic-table cs-atomic-table--sage" aria-label="Atomic accessibility research framework examples">
+          <thead>
+            <tr>
+              <th scope="col">Experiment</th>
+              <th scope="col">Fact</th>
+              <th scope="col">Insight</th>
+              <th scope="col">Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Experiment">Screen reader testing on forms</td>
+              <td data-label="Fact">63% of inputs lacked accessible names</td>
+              <td data-label="Insight">Users cannot complete forms confidently or independently</td>
+              <td data-label="Recommendation">Standardize accessible naming patterns across all inputs</td>
+            </tr>
+            <tr>
+              <td data-label="Experiment">Navigation usability testing</td>
+              <td data-label="Fact">20% of users failed to locate key tasks</td>
+              <td data-label="Insight">Navigation hierarchy lacks sufficient clarity</td>
+              <td data-label="Recommendation">Redesign navigation structure with semantic headings</td>
+            </tr>
+            <tr>
+              <td data-label="Experiment">A/B testing labels and icons</td>
+              <td data-label="Fact">40% increase in task engagement with icons</td>
+              <td data-label="Insight">Icons meaningfully improve comprehension</td>
+              <td data-label="Recommendation">Expand icon-supported labeling across the system</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <!-- 03 DEFINE -->
