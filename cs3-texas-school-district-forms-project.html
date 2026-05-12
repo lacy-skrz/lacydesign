@@ -492,25 +492,6 @@
           <p>Across four key design questions, I explored competing directions with users and stakeholders — each decision directly shaped how the conditional form experience would work for both families and administrators.</p>
         </div>
 
-        <h3 class="cs-sub-heading">Decision 4 — How Should Validation Logic Shape What Parents See?</h3>
-        <div class="cs-prose">
-          <p>An early prototype surfaced school and grade level dropdowns immediately — even when those fields couldn't be populated yet. User testing feedback was direct: seeing fields you can't interact with creates confusion, not clarity. In collaboration with engineering, we validated an AJAX approach that hides grade level and school until the birth date is confirmed on save — only surfacing eligible fields once the system can determine what should appear.</p>
-        </div>
-
-        <figure class="cs-figure" aria-label="Prototype iteration incorporating validation logic with cross-functional annotations">
-          <div class="cs-figure-frame">
-            <img
-              src="images/Step_Rule_Filtering__Parent__3__Iteration_to_Incorporate_Validation.png"
-              alt="Side-by-side before and after showing the enrollment modal redesign: before shows school, birth date, and grade level fields all visible upfront; after shows a three-state sequence — birth date only, validation error on ineligible date, then birth date confirmed with grade level and school revealed — annotated with a parent testing quote and engineering feasibility note"
-              loading="lazy"
-            />
-          </div>
-          <figcaption class="cs-figure-caption">
-            <span class="cs-figure-caption-label">Iteration —</span>
-            Prototype iteration incorporating validation logic — sticky notes capture the cross-functional conversation between design, engineering, and user testing that drove the decision to suppress inaccessible fields before eligibility is confirmed.
-          </figcaption>
-        </figure>
-
         <h3 class="cs-sub-heading">Decision 1 — Where Should Parents Enter Scoping Information?</h3>
         <div class="cs-prose">
           <p>We needed to determine the right moment to ask parents for the student details that drive the conditional form experience. Option A embedded the school and birth date fields inline at the bottom of the instruction page itself. Option B moved that entry into a modal overlay that appeared after the instruction page — a more deliberate separation between context-setting and data entry.</p>
@@ -615,6 +596,25 @@
             </figcaption>
           </figure>
         </div>
+
+        <h3 class="cs-sub-heading">Decision 4 — How Should Validation Logic Shape What Parents See?</h3>
+        <div class="cs-prose">
+          <p>An early prototype surfaced school and grade level dropdowns immediately — even when those fields couldn't be populated yet. User testing feedback was direct: seeing fields you can't interact with creates confusion, not clarity. In collaboration with engineering, we validated an AJAX approach that hides grade level and school until the birth date is confirmed on save — only surfacing eligible fields once the system can determine what should appear.</p>
+        </div>
+
+        <figure class="cs-figure" aria-label="Prototype iteration incorporating validation logic with cross-functional annotations">
+          <div class="cs-figure-frame">
+            <img
+              src="images/Step_Rule_Filtering__Parent__3__Iteration_to_Incorporate_Validation.png"
+              alt="Side-by-side before and after showing the enrollment modal redesign: before shows school, birth date, and grade level fields all visible upfront; after shows a three-state sequence — birth date only, validation error on ineligible date, then birth date confirmed with grade level and school revealed — annotated with a parent testing quote and engineering feasibility note"
+              loading="lazy"
+            />
+          </div>
+          <figcaption class="cs-figure-caption">
+            <span class="cs-figure-caption-label">Iteration —</span>
+            Prototype iteration incorporating validation logic — sticky notes capture the cross-functional conversation between design, engineering, and user testing that drove the decision to suppress inaccessible fields before eligibility is confirmed.
+          </figcaption>
+        </figure>
 
         <h3 class="cs-sub-heading">Prototype Impact Comparison</h3>
         <div class="cs-compare-grid" aria-label="Prototype before and after comparison">
