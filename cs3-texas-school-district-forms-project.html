@@ -501,19 +501,115 @@
           </figcaption>
         </figure>
 
-        <figure class="cs-figure" aria-label="Admin step rule configuration low-fidelity prototype">
-          <div class="cs-figure-frame">
-            <img
-              src="images/Step_Rule_Filtering__Admin__2__LowFi_Prototype.png"
-              alt="Low-fidelity prototype of the admin Online Form configuration interface — left panel lists forms and steps, right panel shows Step Rule Details with Condition Type set to Grade Level, Condition set to Is Equal To, Value set to PK, and Step Visibility set to Show"
-              loading="lazy"
-            />
-          </div>
-          <figcaption class="cs-figure-caption">
-            <span class="cs-figure-caption-label">Admin Prototype —</span>
-            Low-fidelity prototype of the admin step rule configuration panel — showing how district administrators define the conditional logic that dynamically shapes what families see downstream.
-          </figcaption>
-        </figure>
+        <h3 class="cs-sub-heading">Prototype Ideation Decisions</h3>
+        <div class="cs-prose">
+          <p>Across three key design questions, I explored competing directions with users and stakeholders — each decision directly shaped how the conditional form experience would work for both families and administrators.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Decision 1 — Where Should Parents Enter Scoping Information?</h3>
+        <div class="cs-prose">
+          <p>We needed to determine the right moment to ask parents for the student details that drive the conditional form experience. Option A surfaced school and birth date entry immediately on opening the form. Option B deferred that entry until after a district instruction page — preserving context before asking families to make selections.</p>
+        </div>
+
+        <div class="cs-ab-grid" aria-label="A/B prototypes: placement of parent scoping entry">
+          <figure class="cs-figure" aria-label="Option A: scoping fields presented immediately on entering the form">
+            <div class="cs-figure-frame">
+              <img
+                src="images/A_-_On_Entering_Form.png"
+                alt="New Student Enrollment modal showing school dropdown and birth date field presented immediately when a parent opens the form — before any instruction content — with Start and Cancel buttons"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="cs-figure-caption">
+              <span class="cs-figure-caption-label">Option A —</span>
+              Scoping fields (school and birth date) presented immediately on entering the form — before any district instructions are shown.
+            </figcaption>
+          </figure>
+
+          <figure class="cs-figure" aria-label="Option B: scoping fields presented after the district instruction page">
+            <div class="cs-figure-frame">
+              <img
+                src="images/B_-_After_Instruction_Page.png"
+                alt="New Student Enrollment screen showing the district instruction page first, with a modal overlay prompting parents to select school and enter birth date only after reading the instructions — Save and Cancel buttons visible"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="cs-figure-caption">
+              <span class="cs-figure-caption-label">Option B —</span>
+              Scoping fields deferred until after the district instruction page — giving families context before making selections that shape their form experience.
+            </figcaption>
+          </figure>
+        </div>
+
+        <h3 class="cs-sub-heading">Decision 2 — Should Parents Be Able to Edit the Birth Date Mid-Form?</h3>
+        <div class="cs-prose">
+          <p>Because birth date drives grade level — and grade level drives the entire conditional form path — we needed to decide whether parents could freely edit it during form completion. Districts were unambiguous: an editable birth date risked families seeing the wrong form. Option B locked the field and required a deliberate "Change Birth Date" action that triggered a full form reset with a warning, preserving the integrity of the conditional logic.</p>
+        </div>
+
+        <div class="cs-ab-grid" aria-label="A/B prototypes: editable vs non-editable birth date">
+          <figure class="cs-figure" aria-label="Option A: birth date field is editable inline during form completion">
+            <div class="cs-figure-frame">
+              <img
+                src="images/A_-_Editable_Birth_Date_with_Age_Calculation.png"
+                alt="Student enrollment form showing an editable birth date field with a date of 11/13/2019 and auto-calculated age of 4 — the field is active and modifiable inline, with grade auto-populated as PK"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="cs-figure-caption">
+              <span class="cs-figure-caption-label">Option A —</span>
+              Birth date remains editable throughout form completion, with age calculated dynamically — a simpler experience but one that allowed changes that could silently invalidate the form path.
+            </figcaption>
+          </figure>
+
+          <figure class="cs-figure" aria-label="Option B: birth date locked with a form reset warning on change">
+            <div class="cs-figure-frame">
+              <img
+                src="images/B_-_Non-Editable_Birth_Date_with_Form_Reset.png"
+                alt="Student enrollment form showing a locked birth date of 11/13/2018 with age 5 and grade KG — a Change Birth Date button triggers a warning dialog stating that changing the birth date will recalculate the student's grade and reset all form progress, with Confirm and Cancel options"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="cs-figure-caption">
+              <span class="cs-figure-caption-label">Option B —</span>
+              Birth date locked after initial entry — a "Change Birth Date" action triggers a warning that progress will be lost and the form will restart, protecting the integrity of the conditional path. Districts selected this approach.
+            </figcaption>
+          </figure>
+        </div>
+
+        <h3 class="cs-sub-heading">Decision 3 — Should Conditional Logic Be Enabled by Default for Admins?</h3>
+        <div class="cs-prose">
+          <p>When administrators set up a form step, we needed to decide whether conditional (step rule) logic should be on or off by default. Option A left the "Enable Rules for Step" checkbox unchecked — requiring admins to opt in. Option B pre-checked it, exposing the full rule configuration panel immediately. Testing revealed that districts preferred opt-in: not every step needs a rule, and defaulting to enabled added noise and confusion for simpler steps.</p>
+        </div>
+
+        <div class="cs-ab-grid" aria-label="A/B prototypes: conditional logic unchecked vs checked by default">
+          <figure class="cs-figure" aria-label="Option A: Enable Rules for Step unchecked by default">
+            <div class="cs-figure-frame">
+              <img
+                src="images/A_-_Unchecked_By_Default.png"
+                alt="Add Step admin panel with the Enable Rules for Step checkbox unchecked — the Step Rule Details section is hidden, and only Name, Message, Required, and Elements fields are visible"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="cs-figure-caption">
+              <span class="cs-figure-caption-label">Option A —</span>
+              Conditional logic opt-in — "Enable Rules for Step" unchecked by default, keeping the configuration panel hidden until explicitly activated. Districts selected this approach.
+            </figcaption>
+          </figure>
+
+          <figure class="cs-figure" aria-label="Option B: Enable Rules for Step checked by default, rule panel expanded">
+            <div class="cs-figure-frame">
+              <img
+                src="images/B_-_Checked_By_Default.png"
+                alt="Add Step admin panel with Enable Rules for Step checked — the Step Rule Details panel is expanded, showing Field set to Grade Level, Condition Type set to List, and a List field with value 10 pre-populated"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="cs-figure-caption">
+              <span class="cs-figure-caption-label">Option B —</span>
+              Conditional logic on by default — the full Step Rule Details panel is immediately visible, which added complexity for steps that don't require conditional behavior.
+            </figcaption>
+          </figure>
+        </div>
 
         <h3 class="cs-sub-heading">Prototype Impact Comparison</h3>
         <div class="cs-compare-grid" aria-label="Prototype before and after comparison">
