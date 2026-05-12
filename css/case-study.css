@@ -1048,6 +1048,18 @@
   margin: 1.75rem 0;
 }
 
+/* A/B prototype pair grid */
+.cs-ab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.75rem 0 2.5rem;
+}
+
+.cs-ab-grid .cs-figure {
+  margin: 0;
+}
+
 .cs-state-col,
 .cs-compare-col {
   border: 1px solid var(--border);
@@ -1623,6 +1635,7 @@
   .cs-language-change-grid { grid-template-columns: 1fr; }
   .cs-state-grid   { grid-template-columns: 1fr; }
   .cs-compare-grid { grid-template-columns: 1fr; }
+  .cs-ab-grid      { grid-template-columns: 1fr; }
   .cs-logic-label  { width: 120px; }
   .cs-loop { flex-direction: column; }
   .cs-loop-step { width: 100%; border-right: 1px solid var(--border); border-bottom: none; border-radius: 0; }
