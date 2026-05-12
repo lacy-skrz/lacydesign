@@ -292,86 +292,36 @@
           <p>As discovery findings accumulated, I used the Atomic UX Research framework to organize observations into actionable product direction — helping stakeholders move beyond isolated user comments toward structured decision-making grounded in patterns and operational impact.</p>
         </div>
 
-        <ol class="cs-atomic-flow" aria-label="Atomic UX research framework steps">
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Experiment</p>
-            <p class="cs-atomic-step-title">We tested…</p>
-            <p>Stakeholder interviews across districts</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Fact</p>
-            <p class="cs-atomic-step-title">We observed…</p>
-            <p>Districts manage forms differently by age group and school</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Insight</p>
-            <p class="cs-atomic-step-title">This suggests…</p>
-            <p>Static forms cannot scale across varied district operations</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Recommendation</p>
-            <p class="cs-atomic-step-title">We should…</p>
-            <p>Introduce dynamic scoping logic driven by student data</p>
-          </li>
-        </ol>
-
-        <h3 class="cs-sub-heading">Research Examples</h3>
-        <ol class="cs-atomic-examples" aria-label="Atomic research examples">
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">Stakeholder interviews across districts</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">Districts manage forms differently by age group and school</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Static forms cannot scale across varied district operations</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Introduce dynamic scoping logic driven by student data</span>
-            </div>
-          </li>
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">User testing on live form flows</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">Families skipped irrelevant sections or abandoned flows</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Cognitive overload reducing completion confidence</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Reduce visible steps contextually based on user profile</span>
-            </div>
-          </li>
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">Support ticket analysis</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">Duplicate forms significantly increased administrative effort</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Existing workflows create compounding operational inefficiency</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Build bulk move functionality for family transfer scenarios</span>
-            </div>
-          </li>
-        </ol>
+        <table class="cs-atomic-table" aria-label="Atomic UX research framework examples">
+          <thead>
+            <tr>
+              <th scope="col">Experiment</th>
+              <th scope="col">Fact</th>
+              <th scope="col">Insight</th>
+              <th scope="col">Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Experiment">Stakeholder interviews across districts</td>
+              <td data-label="Fact">Districts manage forms differently by age group and school</td>
+              <td data-label="Insight">Static forms cannot scale across varied district operations</td>
+              <td data-label="Recommendation">Introduce dynamic scoping logic driven by student data</td>
+            </tr>
+            <tr>
+              <td data-label="Experiment">User testing on live form flows</td>
+              <td data-label="Fact">Families skipped irrelevant sections or abandoned flows</td>
+              <td data-label="Insight">Cognitive overload reducing completion confidence</td>
+              <td data-label="Recommendation">Reduce visible steps contextually based on user profile</td>
+            </tr>
+            <tr>
+              <td data-label="Experiment">Support ticket analysis</td>
+              <td data-label="Fact">Duplicate forms significantly increased administrative effort</td>
+              <td data-label="Insight">Existing workflows create compounding operational inefficiency</td>
+              <td data-label="Recommendation">Build bulk move functionality for family transfer scenarios</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <!-- 03 DEFINE -->
@@ -474,7 +424,7 @@
           </div>
           <figcaption class="cs-figure-caption">
             <span class="cs-figure-caption-label">Ideation —</span>
-            Bird's-eye view of the birth date and grade level configuration logic — mapping how admin configuration choices cascade into different parent-facing form experiences. Not intended to be read at this scale; it evidences the scope of conditional thinking behind the feature.
+            Bird's-eye view of the birth date and grade level configuration logic — mapping how admin configuration choices cascade into different parent-facing form experiences.
           </figcaption>
         </figure>
 
@@ -537,14 +487,10 @@
           </li>
         </ul>
 
-        <div class="cs-prose">
-          <p>Accessibility was integrated throughout — not treated as a separate track. Keyboard accessibility, semantic hierarchy, clear error handling, and reduced cognitive load were embedded directly into prototype decisions.</p>
-        </div>
-
         <figure class="cs-figure" aria-label="Prototype iteration incorporating validation logic with cross-functional annotations">
           <div class="cs-figure-frame">
             <img
-              src="images/validation_iteration_improved.png"
+              src="images/Step_Rule_Filtering__Parent__3__Iteration_to_Incorporate_Validation.png"
               alt="Before and after enrollment form redesign — parent feedback and cross-functional notes drove the decision to hide ineligible fields until birth date is confirmed."
               loading="lazy"
             />
@@ -652,10 +598,6 @@
           <li class="cs-info-card">
             <p class="cs-info-card-label">Workflow Reviews</p>
             <p>Check administrative bulk-move flows with admin participants</p>
-          </li>
-          <li class="cs-info-card">
-            <p class="cs-info-card-label">Accessibility Evaluation</p>
-            <p>Verify keyboard navigation, screen reader support, and contrast</p>
           </li>
         </ul>
 
