@@ -489,14 +489,7 @@
   border-radius: 6px 6px 0 0;
 }
 
-/* First 3 columns: terracotta */
-.cs-atomic-table thead th:nth-child(1),
-.cs-atomic-table thead th:nth-child(2),
-.cs-atomic-table thead th:nth-child(3) {
-  background: var(--terracotta);
-}
-
-/* Last column (Recommendation): near-black */
+/* Last column (Recommendation): near-black — all themes */
 .cs-atomic-table thead th:nth-child(4) {
   background: var(--near-black);
 }
@@ -512,14 +505,21 @@
   border-radius: 0 0 6px 6px;
 }
 
-.cs-atomic-table tbody td:nth-child(1),
-.cs-atomic-table tbody td:nth-child(2),
-.cs-atomic-table tbody td:nth-child(3) {
-  background: #9A5040;
-}
-
 .cs-atomic-table tbody td:nth-child(4) {
   background: #1c1c1c;
+}
+
+/* Terracotta theme variant (CS3) */
+.cs-atomic-table--terra thead th:nth-child(1),
+.cs-atomic-table--terra thead th:nth-child(2),
+.cs-atomic-table--terra thead th:nth-child(3) {
+  background: var(--terracotta);
+}
+
+.cs-atomic-table--terra tbody td:nth-child(1),
+.cs-atomic-table--terra tbody td:nth-child(2),
+.cs-atomic-table--terra tbody td:nth-child(3) {
+  background: #9A5040;
 }
 
 /* Sage theme variant (CS1) */
