@@ -487,11 +487,21 @@
           </li>
         </ul>
 
+        <h3 class="cs-sub-heading">Prototype Ideation Decisions</h3>
+        <div class="cs-prose">
+          <p>Across four key design questions, I explored competing directions with users and stakeholders — each decision directly shaped how the conditional form experience would work for both families and administrators.</p>
+        </div>
+
+        <h3 class="cs-sub-heading">Decision 4 — How Should Validation Logic Shape What Parents See?</h3>
+        <div class="cs-prose">
+          <p>An early prototype surfaced school and grade level dropdowns immediately — even when those fields couldn't be populated yet. User testing feedback was direct: seeing fields you can't interact with creates confusion, not clarity. In collaboration with engineering, we validated an AJAX approach that hides grade level and school until the birth date is confirmed on save — only surfacing eligible fields once the system can determine what should appear.</p>
+        </div>
+
         <figure class="cs-figure" aria-label="Prototype iteration incorporating validation logic with cross-functional annotations">
           <div class="cs-figure-frame">
             <img
               src="images/Step_Rule_Filtering__Parent__3__Iteration_to_Incorporate_Validation.png"
-              alt="Before and after enrollment form redesign — parent feedback and cross-functional notes drove the decision to hide ineligible fields until birth date is confirmed."
+              alt="Side-by-side before and after showing the enrollment modal redesign: before shows school, birth date, and grade level fields all visible upfront; after shows a three-state sequence — birth date only, validation error on ineligible date, then birth date confirmed with grade level and school revealed — annotated with a parent testing quote and engineering feasibility note"
               loading="lazy"
             />
           </div>
@@ -501,42 +511,37 @@
           </figcaption>
         </figure>
 
-        <h3 class="cs-sub-heading">Prototype Ideation Decisions</h3>
-        <div class="cs-prose">
-          <p>Across three key design questions, I explored competing directions with users and stakeholders — each decision directly shaped how the conditional form experience would work for both families and administrators.</p>
-        </div>
-
         <h3 class="cs-sub-heading">Decision 1 — Where Should Parents Enter Scoping Information?</h3>
         <div class="cs-prose">
-          <p>We needed to determine the right moment to ask parents for the student details that drive the conditional form experience. Option A surfaced school and birth date entry immediately on opening the form. Option B deferred that entry until after a district instruction page — preserving context before asking families to make selections.</p>
+          <p>We needed to determine the right moment to ask parents for the student details that drive the conditional form experience. Option A embedded the school and birth date fields inline at the bottom of the instruction page itself. Option B moved that entry into a modal overlay that appeared after the instruction page — a more deliberate separation between context-setting and data entry.</p>
         </div>
 
         <div class="cs-ab-grid" aria-label="A/B prototypes: placement of parent scoping entry">
-          <figure class="cs-figure" aria-label="Option A: scoping fields presented immediately on entering the form">
+          <figure class="cs-figure" aria-label="Option A: scoping fields embedded inline at the bottom of the instruction page">
             <div class="cs-figure-frame">
               <img
                 src="images/A_-_On_Entering_Form.png"
-                alt="New Student Enrollment modal showing school dropdown and birth date field presented immediately when a parent opens the form — before any instruction content — with Start and Cancel buttons"
+                alt="New Student Enrollment screen showing the district instruction page with school dropdown and birth date fields embedded directly below the instructions — Start and Cancel buttons at the bottom"
                 loading="lazy"
               />
             </div>
             <figcaption class="cs-figure-caption">
               <span class="cs-figure-caption-label">Option A —</span>
-              Scoping fields (school and birth date) presented immediately on entering the form — before any district instructions are shown.
+              Scoping fields embedded inline at the bottom of the instruction page — school and birth date appear as part of the same screen as the district instructions.
             </figcaption>
           </figure>
 
-          <figure class="cs-figure" aria-label="Option B: scoping fields presented after the district instruction page">
+          <figure class="cs-figure" aria-label="Option B: scoping fields collected in a modal overlay after the instruction page">
             <div class="cs-figure-frame">
               <img
                 src="images/B_-_After_Instruction_Page.png"
-                alt="New Student Enrollment screen showing the district instruction page first, with a modal overlay prompting parents to select school and enter birth date only after reading the instructions — Save and Cancel buttons visible"
+                alt="New Student Enrollment screen showing the district instruction page with a modal dialog overlaid on top — the modal prompts parents to select school and enter birth date after reading the instructions, with Save and Cancel buttons"
                 loading="lazy"
               />
             </div>
             <figcaption class="cs-figure-caption">
               <span class="cs-figure-caption-label">Option B —</span>
-              Scoping fields deferred until after the district instruction page — giving families context before making selections that shape their form experience.
+              Scoping fields collected in a modal overlay after the instruction page — creating a clear separation between reading context and providing student information.
             </figcaption>
           </figure>
         </div>
