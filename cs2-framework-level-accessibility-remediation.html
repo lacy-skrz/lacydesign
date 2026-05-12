@@ -298,86 +298,36 @@
           <p>Rather than presenting disconnected violations, I structured findings through a layered progression — transforming accessibility from subjective observations into actionable product decisions grounded in user impact.</p>
         </div>
 
-        <ol class="cs-atomic-flow" aria-label="Atomic accessibility research framework steps">
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Experiment</p>
-            <p class="cs-atomic-step-title">We tested…</p>
-            <p>Keyboard, screen reader, zoom, voice control</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Fact</p>
-            <p class="cs-atomic-step-title">We observed…</p>
-            <p>Users unable to navigate dropdowns or complete forms</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Insight</p>
-            <p class="cs-atomic-step-title">This suggests…</p>
-            <p>Navigation and form structure lack semantic predictability</p>
-          </li>
-          <li class="cs-atomic-step">
-            <p class="cs-atomic-step-num">Recommendation</p>
-            <p class="cs-atomic-step-title">We should…</p>
-            <p>Rebuild using semantic HTML and standardized naming patterns</p>
-          </li>
-        </ol>
-
-        <h3 class="cs-sub-heading">Research Examples</h3>
-        <ol class="cs-atomic-examples" aria-label="Atomic research examples">
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">Screen reader testing on forms</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">Inputs announced without context — 0 accessible names on key forms</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Users cannot confidently complete workflows or understand field purpose</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Standardize accessible naming conventions across all form components</span>
-            </div>
-          </li>
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">Keyboard testing on navigation</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">Focus order inconsistent — users land on unexpected elements</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Users lose spatial orientation and cannot predict navigation flow</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Rebuild focus management logic at the framework level</span>
-            </div>
-          </li>
-          <li class="cs-atomic-example">
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Experiment</span>
-              <span class="cs-atomic-example-val">Zoom testing at 200%</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Fact</span>
-              <span class="cs-atomic-example-val">Layout breaks — content clips or reflows off-screen</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Insight</span>
-              <span class="cs-atomic-example-val">Content entirely inaccessible for low-vision users</span>
-            </div>
-            <div class="cs-atomic-example-row">
-              <span class="cs-atomic-example-key">Recommendation</span>
-              <span class="cs-atomic-example-val">Refactor responsive structure to support 200–400% zoom</span>
-            </div>
-          </li>
-        </ol>
+        <table class="cs-atomic-table cs-atomic-table--indigo" aria-label="Atomic accessibility research framework examples">
+          <thead>
+            <tr>
+              <th scope="col">Experiment</th>
+              <th scope="col">Fact</th>
+              <th scope="col">Insight</th>
+              <th scope="col">Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Experiment">Screen reader testing on forms</td>
+              <td data-label="Fact">Inputs announced without context — 0 accessible names on key forms</td>
+              <td data-label="Insight">Users cannot confidently complete workflows or understand field purpose</td>
+              <td data-label="Recommendation">Standardize accessible naming conventions across all form components</td>
+            </tr>
+            <tr>
+              <td data-label="Experiment">Keyboard testing on navigation</td>
+              <td data-label="Fact">Focus order inconsistent — users land on unexpected elements</td>
+              <td data-label="Insight">Users lose spatial orientation and cannot predict navigation flow</td>
+              <td data-label="Recommendation">Rebuild focus management logic at the framework level</td>
+            </tr>
+            <tr>
+              <td data-label="Experiment">Zoom testing at 200%</td>
+              <td data-label="Fact">Layout breaks — content clips or reflows off-screen</td>
+              <td data-label="Insight">Content entirely inaccessible for low-vision users</td>
+              <td data-label="Recommendation">Refactor responsive structure to support 200–400% zoom</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
       <!-- 03 DEFINE -->
