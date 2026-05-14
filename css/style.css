@@ -250,7 +250,7 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .btn-primary:hover { background: #3A5B3E; color: #fff; }
-.btn-primary:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.btn-primary:focus-visible { outline: 2px solid var(--sage-dark); outline-offset: 3px; box-shadow: 0 0 0 4px rgba(74, 107, 78, 0.3); }
 
 .btn-primary svg {
   width: 14px; height: 14px;
@@ -340,7 +340,12 @@ footer {
   border-radius: 100px;
   min-height: 44px;
 }
+.footer-link {
+  background: transparent;
+  cursor: pointer;
+}
 .footer-link:hover { color: #fff; border-color: rgba(255,255,255,0.45); }
+.footer-link:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; color: #fff; }
 
 .footer-link svg {
   width: 14px; height: 14px;
