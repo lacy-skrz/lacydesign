@@ -203,9 +203,9 @@
             View featured projects
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 7h10M7 2l5 5-5 5"/></svg>
           </a>
-          <a href="mailto:lacy.skrzeczkoski@gmail.com" class="btn-ghost" aria-label="Send an email to Lacy">
+          <button class="btn-ghost" data-contact-trigger aria-label="Open contact form">
             Get in touch
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -233,16 +233,18 @@
           </a>
         </li>
         <li>
-          <a href="mailto:lacy.skrzeczkoski@gmail.com" class="footer-link" aria-label="Send an email to Lacy">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Email
-          </a>
+          <button class="footer-link" data-contact-trigger aria-label="Open contact form">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Contact
+          </button>
         </li>
       </ul>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
 
 </body>
 </html>
