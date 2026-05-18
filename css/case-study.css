@@ -135,7 +135,7 @@
   color: rgba(255,255,255,0.88);
   line-height: 1.5;
 }
-
+.cs-metrics--terra .cs-metric-label { color: #fff; }
 /* =============================================
    CASE STUDY — Body Layout
 ============================================= */
