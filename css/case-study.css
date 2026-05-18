@@ -79,7 +79,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.72);
 }
 
 .cs-meta-value {
@@ -132,7 +132,7 @@
 .cs-metric-label {
   font-size: var(--text-sm);
   font-weight: 400;
-  color: rgba(255,255,255,0.78);
+  color: rgba(255,255,255,0.88);
   line-height: 1.5;
 }
 
@@ -1498,11 +1498,11 @@
   gap: 0.375rem;
   font-size: var(--text-sm);
   font-weight: 500;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.72);
   letter-spacing: 0.04em;
   transition: color 0.2s;
 }
-.cs-nav-top-link:hover { color: rgba(255,255,255,0.78); }
+.cs-nav-top-link:hover { color: rgba(255,255,255,0.88); }
 
 /* Card row */
 .cs-nav-cards {
@@ -1565,7 +1565,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.72);
   margin-bottom: 0.375rem;
 }
 
