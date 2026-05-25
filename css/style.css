@@ -96,6 +96,25 @@ a { text-decoration: none; color: inherit; }
 ul, ol { list-style: none; }
 img, svg { display: block; max-width: 100%; }
 
+.cs-prose a,
+.cs-checklist a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.cs-prose a:hover,
+.cs-checklist a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.cs-prose a:focus-visible,
+.cs-checklist a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* =============================================
    SKIP LINK
 ============================================= */
