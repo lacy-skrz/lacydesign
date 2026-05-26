@@ -1,0 +1,90 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Framework-Level Accessibility Remediation case study thumbnail">
+  <defs>
+    <pattern id="grid2" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="#4A4A7A"/>
+  <rect width="600" height="400" fill="url(#grid2)"/>
+
+  <!-- Ambient -->
+  <ellipse cx="540" cy="50"  rx="200" ry="170" fill="#3A3A6A" opacity="0.55"/>
+  <ellipse cx="60"  cy="360" rx="160" ry="140" fill="#3A3A6A" opacity="0.45"/>
+
+  <!-- Dividing line — centre split -->
+  <line x1="300" y1="40" x2="300" y2="360" stroke="#ffffff" stroke-width="1" opacity="0.15" stroke-dasharray="6 4"/>
+
+  <!-- ── LEFT SIDE: BROKEN / MISALIGNED ── -->
+  <!-- Row 1 — offset, wrong sizes -->
+  <rect x="60"  y="80"  width="70" height="36" rx="4" fill="#7A7AB8" opacity="0.5"/>
+  <rect x="142" y="92"  width="48" height="36" rx="4" fill="#7A7AB8" opacity="0.35"/>
+  <rect x="200" y="75"  width="60" height="28" rx="4" fill="#7A7AB8" opacity="0.45"/>
+
+  <!-- Row 2 — clipped, overlapping -->
+  <rect x="55"  y="140" width="90" height="32" rx="4" fill="#7A7AB8" opacity="0.4"/>
+  <rect x="158" y="132" width="55" height="44" rx="4" fill="#7A7AB8" opacity="0.3"/>
+  <rect x="220" y="148" width="50" height="24" rx="4" fill="#7A7AB8" opacity="0.45"/>
+
+  <!-- Row 3 — misaligned, wrong heights -->
+  <rect x="70"  y="200" width="40" height="52" rx="4" fill="#7A7AB8" opacity="0.35"/>
+  <rect x="122" y="215" width="80" height="30" rx="4" fill="#7A7AB8" opacity="0.4"/>
+  <rect x="210" y="196" width="56" height="44" rx="4" fill="#7A7AB8" opacity="0.3"/>
+
+  <!-- Row 4 -->
+  <rect x="60"  y="274" width="60" height="32" rx="4" fill="#7A7AB8" opacity="0.35"/>
+  <rect x="135" y="268" width="90" height="36" rx="4" fill="#7A7AB8" opacity="0.3"/>
+  <rect x="232" y="278" width="40" height="24" rx="4" fill="#7A7AB8" opacity="0.4"/>
+
+  <!-- Broken indicators — small X marks -->
+  <line x1="95"  y1="155" x2="105" y2="165" stroke="#C07070" stroke-width="1.5" opacity="0.7"/>
+  <line x1="105" y1="155" x2="95"  y2="165" stroke="#C07070" stroke-width="1.5" opacity="0.7"/>
+  <line x1="168" y1="213" x2="178" y2="223" stroke="#C07070" stroke-width="1.5" opacity="0.6"/>
+  <line x1="178" y1="213" x2="168" y2="223" stroke="#C07070" stroke-width="1.5" opacity="0.6"/>
+  <line x1="88"  y1="280" x2="98"  y2="290" stroke="#C07070" stroke-width="1.5" opacity="0.6"/>
+  <line x1="98"  y1="280" x2="88"  y2="290" stroke="#C07070" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- ── RIGHT SIDE: CLEAN / REMEDIATED ── -->
+  <!-- Consistent grid — 3 columns × 4 rows, uniform sizing -->
+  <!-- Row 1 -->
+  <rect x="320" y="80"  width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="320" y="80"  width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+  <rect x="402" y="80"  width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="402" y="80"  width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+  <rect x="484" y="80"  width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="484" y="80"  width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Row 2 -->
+  <rect x="320" y="132" width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="320" y="132" width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+  <rect x="402" y="132" width="70" height="36" rx="4" fill="#7A7AB8" opacity="0.5"/>
+  <rect x="484" y="132" width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="484" y="132" width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Row 3 -->
+  <rect x="320" y="184" width="70" height="36" rx="4" fill="#7A7AB8" opacity="0.5"/>
+  <rect x="402" y="184" width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="402" y="184" width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+  <rect x="484" y="184" width="70" height="36" rx="4" fill="#7A7AB8" opacity="0.5"/>
+
+  <!-- Row 4 -->
+  <rect x="320" y="236" width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="320" y="236" width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+  <rect x="402" y="236" width="70" height="36" rx="4" fill="#7A7AB8" opacity="0.5"/>
+  <rect x="484" y="236" width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="484" y="236" width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Row 5 -->
+  <rect x="320" y="288" width="70" height="36" rx="4" fill="#7A7AB8" opacity="0.5"/>
+  <rect x="402" y="288" width="70" height="36" rx="4" fill="#ffffff" opacity="0.12"/>
+  <rect x="402" y="288" width="70" height="36" rx="4" fill="none" stroke="#7A7AB8" stroke-width="1.5" opacity="0.6"/>
+  <rect x="484" y="288" width="70" height="36" rx="4" fill="#7A7AB8" opacity="0.5"/>
+
+  <!-- Checkmark indicators on right side -->
+  <polyline points="336,152 343,159 357,143" fill="none" stroke="#8FB090" stroke-width="2" opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="500,204 507,211 521,195" fill="none" stroke="#8FB090" stroke-width="2" opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="418,256 425,263 439,247" fill="none" stroke="#8FB090" stroke-width="2" opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="336,308 343,315 357,299" fill="none" stroke="#8FB090" stroke-width="2" opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="500,308 507,315 521,299" fill="none" stroke="#8FB090" stroke-width="2" opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

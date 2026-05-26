@@ -1,0 +1,67 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Accessibility Program Architecture case study thumbnail">
+  <defs>
+    <pattern id="grid1" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="#4A6B4E"/>
+  <rect width="600" height="400" fill="url(#grid1)"/>
+
+  <!-- Ambient blobs -->
+  <ellipse cx="560" cy="40"  rx="200" ry="180" fill="#3A5B3E" opacity="0.55"/>
+  <ellipse cx="40"  cy="370" rx="160" ry="140" fill="#3A5B3E" opacity="0.45"/>
+
+  <!-- ── NETWORK / SYSTEM DIAGRAM ── -->
+
+  <!-- Connection lines — drawn first so nodes sit on top -->
+  <!-- Hub to ring 1 -->
+  <line x1="300" y1="200" x2="300" y2="108" stroke="#ffffff" stroke-width="1.2" opacity="0.2"/>
+  <line x1="300" y1="200" x2="300" y2="292" stroke="#ffffff" stroke-width="1.2" opacity="0.2"/>
+  <line x1="300" y1="200" x2="208" y2="200" stroke="#ffffff" stroke-width="1.2" opacity="0.2"/>
+  <line x1="300" y1="200" x2="392" y2="200" stroke="#ffffff" stroke-width="1.2" opacity="0.2"/>
+  <line x1="300" y1="200" x2="235" y2="135" stroke="#ffffff" stroke-width="1.2" opacity="0.15"/>
+  <line x1="300" y1="200" x2="365" y2="135" stroke="#ffffff" stroke-width="1.2" opacity="0.15"/>
+  <line x1="300" y1="200" x2="235" y2="265" stroke="#ffffff" stroke-width="1.2" opacity="0.15"/>
+  <line x1="300" y1="200" x2="365" y2="265" stroke="#ffffff" stroke-width="1.2" opacity="0.15"/>
+
+  <!-- Ring 1 to ring 2 connections -->
+  <line x1="300" y1="108" x2="190" y2="80"  stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+  <line x1="300" y1="108" x2="410" y2="80"  stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+  <line x1="392" y1="200" x2="460" y2="130" stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+  <line x1="392" y1="200" x2="460" y2="270" stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+  <line x1="300" y1="292" x2="190" y2="330" stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+  <line x1="300" y1="292" x2="410" y2="330" stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+  <line x1="208" y1="200" x2="140" y2="130" stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+  <line x1="208" y1="200" x2="140" y2="270" stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+
+  <!-- Ring 2 nodes — small -->
+  <circle cx="190" cy="80"  r="7" fill="#6A8F6E" opacity="0.7"/>
+  <circle cx="410" cy="80"  r="7" fill="#6A8F6E" opacity="0.7"/>
+  <circle cx="460" cy="130" r="7" fill="#6A8F6E" opacity="0.7"/>
+  <circle cx="460" cy="270" r="7" fill="#6A8F6E" opacity="0.7"/>
+  <circle cx="410" cy="330" r="7" fill="#6A8F6E" opacity="0.7"/>
+  <circle cx="190" cy="330" r="7" fill="#6A8F6E" opacity="0.7"/>
+  <circle cx="140" cy="270" r="7" fill="#6A8F6E" opacity="0.7"/>
+  <circle cx="140" cy="130" r="7" fill="#6A8F6E" opacity="0.7"/>
+
+  <!-- Ring 1 nodes — medium -->
+  <circle cx="300" cy="108" r="14" fill="#4A6B4E" stroke="#8FB090" stroke-width="2" opacity="0.9"/>
+  <circle cx="392" cy="200" r="14" fill="#4A6B4E" stroke="#8FB090" stroke-width="2" opacity="0.9"/>
+  <circle cx="300" cy="292" r="14" fill="#4A6B4E" stroke="#8FB090" stroke-width="2" opacity="0.9"/>
+  <circle cx="208" cy="200" r="14" fill="#4A6B4E" stroke="#8FB090" stroke-width="2" opacity="0.9"/>
+  <circle cx="235" cy="135" r="10" fill="#4A6B4E" stroke="#8FB090" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="365" cy="135" r="10" fill="#4A6B4E" stroke="#8FB090" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="235" cy="265" r="10" fill="#4A6B4E" stroke="#8FB090" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="365" cy="265" r="10" fill="#4A6B4E" stroke="#8FB090" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Hub — center -->
+  <circle cx="300" cy="200" r="28" fill="#ffffff" opacity="0.12"/>
+  <circle cx="300" cy="200" r="28" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="300" cy="200" r="16" fill="#8FB090"/>
+
+  <!-- Outer pulse ring -->
+  <circle cx="300" cy="200" r="52" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.08"/>
+  <circle cx="300" cy="200" r="80" fill="none" stroke="#ffffff" stroke-width="0.6" opacity="0.05"/>
+</svg>
