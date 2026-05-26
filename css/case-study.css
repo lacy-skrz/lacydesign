@@ -24,6 +24,7 @@
 .cs-hero-blob--sage   { background: var(--sage); }
 .cs-hero-blob--indigo { background: var(--indigo); }
 .cs-hero-blob--terra  { background: var(--terracotta); }
+.cs-hero-blob--slate  { background: var(--slate); }
 
 .cs-hero-inner {
   max-width: var(--content-max);
@@ -99,6 +100,7 @@
 .cs-metrics--sage   { background: var(--sage-dark); }
 .cs-metrics--indigo { background: var(--indigo); }
 .cs-metrics--terra  { background: var(--terracotta); }
+.cs-metrics--slate  { background: var(--slate); }
 
 .cs-metrics-inner {
   max-width: var(--content-max);
@@ -196,6 +198,23 @@
 .cs-body--terra .cs-checklist-icon       { background: var(--terracotta-light); }
 .cs-body--terra .cs-checklist-icon i     { color: #9A5040; }
 
+/* ── Slate theme (CS4) ── */
+.cs-body--slate .cs-hero-eyebrow,
+.cs-body--slate .cs-section-eyebrow     { color: var(--slate); }
+.cs-body--slate .cs-sub-heading         { color: var(--slate); }
+.cs-body--slate .cs-callout             { border-color: var(--slate); background: var(--slate-light); }
+.cs-body--slate .cs-callout p           { color: var(--slate); }
+.cs-body--slate .cs-info-card-label     { color: var(--slate); }
+.cs-body--slate .cs-atomic-example-key { color: var(--slate); }
+.cs-body--slate .cs-persona-avatar      { background: var(--slate); }
+.cs-body--slate .cs-persona-col-label   { color: var(--slate); }
+.cs-body--slate .cs-persona-quote       { background: var(--slate-light); }
+.cs-body--slate .cs-persona-quote blockquote { color: var(--slate); }
+.cs-body--slate .cs-loop-label          { color: var(--slate); }
+.cs-body--slate .cs-learnings-arrow     { color: var(--slate); }
+.cs-body--slate .cs-checklist-icon      { background: var(--slate-light); }
+.cs-body--slate .cs-checklist-icon i    { color: var(--slate); }
+
 .cs-section {
   padding: 4rem 0;
   border-bottom: 1px solid var(--border);
@@ -256,11 +275,12 @@
 }
 
 .cs-sub-heading {
-  font-family: var(--font-display);
-  font-size: clamp(1.125rem, 2vw, 1.375rem);
-  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
   color: var(--text-primary);
-  line-height: 1.25;
+  line-height: 1.3;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -293,6 +313,9 @@
 
 .cs-callout--terra   { border-color: var(--terracotta); background: var(--terracotta-light); }
 .cs-callout--terra p { color: #9A5040; }
+
+.cs-callout--slate   { border-color: var(--slate); background: var(--slate-light); }
+.cs-callout--slate p { color: var(--slate); }
 
 /* =============================================
    CASE STUDY — Tables
@@ -535,8 +558,18 @@
   background: #3d5a40;
 }
 
-/* Indigo theme variant (CS2) */
-.cs-atomic-table--indigo thead th:nth-child(1),
+/* Slate theme variant (CS4) */
+.cs-atomic-table--slate thead th:nth-child(1),
+.cs-atomic-table--slate thead th:nth-child(2),
+.cs-atomic-table--slate thead th:nth-child(3) {
+  background: var(--slate);
+}
+
+.cs-atomic-table--slate tbody td:nth-child(1),
+.cs-atomic-table--slate tbody td:nth-child(2),
+.cs-atomic-table--slate tbody td:nth-child(3) {
+  background: #3d4e5b;
+}
 .cs-atomic-table--indigo thead th:nth-child(2),
 .cs-atomic-table--indigo thead th:nth-child(3) {
   background: var(--indigo);
@@ -1536,6 +1569,7 @@
 .cs-nav-card-visual--sage   { background: var(--sage); }
 .cs-nav-card-visual--indigo { background: var(--indigo); }
 .cs-nav-card-visual--terra  { background: var(--terracotta); }
+.cs-nav-card-visual--slate  { background: var(--slate); }
 .cs-nav-card-visual--neutral {
   background: rgba(255,255,255,0.06);
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -1655,4 +1689,627 @@
 @media (max-width: 360px) {
   .cs-hero   { padding: calc(72px + 1.5rem) 0 2rem; }
   .cs-metric { flex: 1 1 100%; }
+}
+
+/* =============================================
+   CASE STUDY — Compare Grid: Slate "after" header
+   Overrides the terracotta default for CS4
+============================================= */
+.cs-body--slate .cs-compare-col--after .cs-compare-col-header {
+  background: var(--slate-light);
+  color: var(--slate);
+}
+
+/* =============================================
+   CASE STUDY — Voice Cards (CS4)
+   Research participant quotes with role attribution
+   and an outcome banner summarizing impact
+============================================= */
+.cs-voice-section {
+  margin: 2rem 0;
+}
+
+.cs-voice-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.cs-voice-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 700px) {
+  .cs-voice-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cs-voice-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--slate-mid);
+  border-radius: 0 6px 6px 0;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cs-voice-card blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.cs-voice-card cite {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.cs-voice-outcome {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--slate);
+  border-radius: 6px;
+  color: #fff;
+  font-size: var(--text-base);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.cs-voice-outcome strong {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.4rem;
+}
+
+/* =============================================
+   CASE STUDY — Image Pair (CS4)
+   Side-by-side figure grid for paired screenshots
+============================================= */
+.cs-img-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.cs-img-pair figure {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .cs-img-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================================
+   CASE STUDY — Sprint Artifact (CS4)
+   Rendered HTML design sprint walkaway document.
+   Uses slate tokens and pill-style concept tags.
+============================================= */
+.cs-sprint-artifact {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  font-family: var(--font-body);
+}
+
+.cs-sprint-section-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 0.625rem;
+}
+
+.cs-sprint-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cs-sprint-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 2rem;
+}
+
+.cs-sprint-flow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cs-sprint-node {
+  background: var(--slate-light);
+  border: 1px solid var(--slate-mid);
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  font-size: var(--text-xs);
+  color: var(--slate);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.cs-sprint-node--end {
+  background: var(--slate);
+  border-color: var(--slate);
+  color: #fff;
+}
+
+.cs-sprint-arrow {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+
+.cs-sprint-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cs-sprint-concept-pill {
+  background: var(--slate-light);
+  border: 1px solid var(--slate-mid);
+  border-radius: 20px;
+  padding: 0.3rem 0.875rem;
+  font-size: var(--text-sm);
+  color: var(--slate);
+  font-weight: 500;
+}
+
+.cs-sprint-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.cs-sprint-text-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cs-sprint-list {
+  list-style: none;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cs-sprint-list li {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.7;
+  list-style: disc;
+}
+
+.cs-sprint-caption {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cs-figure-caption {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-top: 0.625rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .cs-sprint-two-col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* =============================================
+   CASE STUDY — Validation Timeline (CS4)
+   Horizontal month-based milestone strip
+============================================= */
+.cs-validation-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.cs-validation-step {
+  background: var(--slate-light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+}
+
+.cs-validation-step--active {
+  background: var(--slate);
+  border-color: var(--slate);
+}
+
+.cs-validation-month {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 0.4rem;
+}
+
+.cs-validation-step--active .cs-validation-month {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.cs-validation-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.cs-validation-step--active .cs-validation-desc {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+@media (max-width: 600px) {
+  .cs-validation-timeline {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =============================================
+   CASE STUDY — Persona Grid (CS4)
+   3-up persona card grid variant.
+   Uses existing .cs-persona internals but
+   stacks them horizontally at wide viewports.
+============================================= */
+.cs-persona-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.cs-persona-grid .cs-persona {
+  margin: 0;
+}
+
+
+/* =============================================
+   CASE STUDY — State Grid: Slate theme overrides
+   Overrides terracotta defaults for CS4
+============================================= */
+.cs-body--slate .cs-state-col--after .cs-state-col-header {
+  background: var(--slate-light);
+  color: var(--slate);
+}
+
+.cs-body--slate .cs-state-check {
+  color: var(--slate);
+}
+
+/* =============================================
+   CASE STUDY — 3-Up Persona Cards (CS4)
+   Three equal-width cards, collapsing to 1 col on mobile
+============================================= */
+.cs-persona-3up {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.cs-persona-3up-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cs-persona-3up-header {
+  padding: 0.75rem 1.25rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--slate-light);
+  color: var(--slate);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.cs-persona-3up-header i {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.cs-persona-3up-card ul {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.cs-persona-3up-card li {
+  padding: 0.625rem 1.25rem;
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-persona-3up-card li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .cs-persona-3up {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =============================================
+   CASE STUDY — Figure image sizing
+   Images never scale UP beyond natural size.
+   Images always scale DOWN for reflow to 320px.
+   .cs-figure--constrained: widget screenshots (~600px natural)
+   .cs-figure--wide: full-width UI screenshots
+   .cs-img-pair img: pair images fill their column, no upscale
+============================================= */
+.cs-figure img,
+.cs-img-pair img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* Constrained: widget screenshots — cap at natural ~480px, center */
+.cs-figure--constrained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cs-figure--constrained img {
+  max-width: min(100%, 480px);
+}
+
+.cs-figure--constrained .cs-figure-caption {
+  text-align: center;
+  max-width: min(100%, 480px);
+}
+
+/* Wide: full-UI screenshots — fill container width, never upscale */
+.cs-figure--wide img {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Pair images: fill column, no upscale beyond natural size */
+.cs-img-pair img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* =============================================
+   PRINT / PDF EXPORT
+   Covers all case study themes: sage, indigo,
+   terra, slate. Tested pattern from CS3 work.
+============================================= */
+@media print {
+
+  /* ── Hide navigation chrome ── */
+  .site-nav,
+  .cs-nav-cta,
+  footer {
+    display: none !important;
+  }
+
+  /* ── Remove dark hero background, keep layout ── */
+  .cs-hero {
+    background: #fff !important;
+    min-height: auto !important;
+    padding: 2rem 0 1.5rem !important;
+  }
+
+  .cs-hero-blob { display: none !important; }
+
+  /* ── Strip all themed metrics bars to white ── */
+  .cs-metrics,
+  .cs-metrics--sage,
+  .cs-metrics--indigo,
+  .cs-metrics--terra,
+  .cs-metrics--slate {
+    background: #fff !important;
+    border-top: 2px solid #1C1C1C !important;
+    border-bottom: 2px solid #1C1C1C !important;
+  }
+
+  /* ── Dark-background components: flip to white bg + black text ── */
+  .cs-blockquote,
+  .cs-voice-outcome {
+    background: #f0f0f0 !important;
+    border: 1px solid #999 !important;
+    border-radius: 6px !important;
+  }
+
+  .cs-blockquote blockquote,
+  .cs-blockquote cite,
+  .cs-voice-outcome,
+  .cs-voice-outcome strong,
+  .cs-voice-outcome p {
+    color: #000 !important;
+  }
+
+  /* ── Sprint end nodes: flip dark to light ── */
+  .cs-sprint-node--end {
+    background: #dde3e7 !important;
+    color: #000 !important;
+    border-color: #999 !important;
+  }
+
+  /* ── Force ALL text to black ── */
+  *,
+  h1, h2, h3, h4, p, li, span, a,
+  .cs-hero-title,
+  .cs-hero-eyebrow,
+  .cs-hero-subtitle,
+  .cs-meta-label,
+  .cs-meta-value,
+  .cs-metric-value,
+  .cs-metric-label,
+  .cs-section-eyebrow,
+  .cs-section-heading,
+  .cs-section-subheading,
+  .cs-sub-heading,
+  .cs-prose p,
+  .cs-learnings-arrow,
+  .cs-closing p {
+    color: #000 !important;
+  }
+
+  /* ── Unhide all animate-on-scroll elements ── */
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* ── Keep colored backgrounds on components that need them ── */
+  .cs-compare-col--before,
+  .cs-compare-col--after,
+  .cs-state-col--before,
+  .cs-state-col--after,
+  .cs-callout,
+  .cs-voice-card,
+  .cs-persona-3up-header,
+  .cs-persona-3up-card,
+  .cs-sprint-artifact,
+  .cs-sprint-node,
+  .cs-sprint-concept-pill,
+  .cs-validation-step,
+  .cs-validation-step--active,
+  .cs-logic-diagram,
+  .cs-logic-branch,
+  .cs-logic-label {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ── Gantt chart bars: preserve color ── */
+  .cs-sprint-artifact table td div,
+  figure table td div,
+  figure table td [style*="background"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Force all inline-styled backgrounds inside figures to print ── */
+  figure * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ── Keep hero meta readable ── */
+  .cs-hero-meta {
+    border-top: 1px solid #ccc !important;
+  }
+
+  .cs-meta-item {
+    border-right: 1px solid #ccc !important;
+  }
+
+  /* ── Page breaks: only protect small components, not whole sections ── */
+  .cs-figure,
+  .cs-img-pair,
+  .cs-sprint-artifact,
+  .cs-voice-section,
+  .cs-persona-3up,
+  .cs-validation-timeline,
+  .cs-blockquote,
+  .cs-voice-card,
+  .cs-state-grid,
+  .cs-compare-grid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* ── Learnings: explicitly allow breaks so tall list is never dropped ── */
+  .cs-learnings {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  .cs-learnings li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .cs-closing {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  /* ── Images: ensure they print ── */
+  img {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    max-width: 100% !important;
+  }
+
+  /* ── Links: show URL after anchor text ── */
+  .cs-prose a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75rem;
+    color: #555;
+    font-style: italic;
+    word-break: break-all;
+  }
+
+  /* ── Suppress URL display for nav/decorative links ── */
+  .cs-cta::after,
+  .cs-nav-card::after,
+  .footer-link::after {
+    content: none !important;
+  }
+
+  /* ── Page setup ── */
+  @page {
+    margin: 1.5cm 1.75cm;
+    size: A4;
+  }
+
 }
