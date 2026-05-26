@@ -494,10 +494,10 @@
 ============================================= */
 .cs-atomic-table {
   width: 100%;
+  min-width: 700px;
   border-collapse: separate;
   border-spacing: 0.625rem;
   margin: 1.75rem 0;
-  table-layout: fixed;
 }
 
 .cs-atomic-table thead th {
@@ -570,6 +570,7 @@
 .cs-atomic-table--slate tbody td:nth-child(3) {
   background: #3d4e5b;
 }
+.cs-atomic-table--indigo thead th:nth-child(1),
 .cs-atomic-table--indigo thead th:nth-child(2),
 .cs-atomic-table--indigo thead th:nth-child(3) {
   background: var(--indigo);
