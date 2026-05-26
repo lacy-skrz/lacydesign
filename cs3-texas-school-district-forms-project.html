@@ -99,7 +99,7 @@
           <p class="cs-metric-label">Deal contingent on solving the forms problem</p>
         </div>
         <div class="cs-metric">
-          <p class="cs-metric-value"><span style="white-space:nowrap">10–15</span> → <span style="white-space:nowrap">4–6</span></p>
+          <p class="cs-metric-value">10–15 → 4–6</p>
           <p class="cs-metric-label">Form steps reduced through dynamic contextual scoping</p>
         </div>
         <div class="cs-metric">
@@ -296,7 +296,7 @@
           <p>As discovery findings accumulated, I used the Atomic UX Research framework to organize observations into actionable product direction — helping stakeholders move beyond isolated user comments toward structured decision-making grounded in patterns and operational impact.</p>
         </div>
 
-        <table class="cs-atomic-table cs-atomic-table--terra" aria-label="Atomic UX research framework examples">
+        <div style="overflow-x:auto;"><table class="cs-atomic-table cs-atomic-table--terra" aria-label="Atomic UX research framework examples">
           <thead>
             <tr>
               <th scope="col">Experiment</th>
@@ -325,7 +325,7 @@
               <td data-label="Recommendation">Build bulk move functionality for family transfer scenarios</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </section>
 
       <!-- 03 DEFINE -->
@@ -774,7 +774,7 @@
           </li>
           <li>
             <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
-            <span><span class="cs-checklist-item-title">Reduced cognitive load for families</span> — 10–15 steps collapsed to 4–6 context-aware steps, resulting in <a href="https://www.skyward.com/leaders/plano-independent-school-district" target="_blank" rel="noopener noreferrer">parents taking 30% less time</a> to complete online enrollment.</span>
+            <span><span class="cs-checklist-item-title">Reduced cognitive load for families</span> — 10–15 steps collapsed to 4–6 context-aware steps. The district was later recognized as a <a href="https://www.skyward.com/leaders/plano-independent-school-district" target="_blank" rel="noopener noreferrer">2026 Skyward Leader in Excellence</a>, citing parents taking 30% less time to complete online enrollment.</span>
           </li>
           <li>
             <span class="cs-checklist-icon" aria-hidden="true"><i class="ph ph-check"></i></span>
@@ -793,6 +793,16 @@
             <span><span class="cs-checklist-item-title">Cross-functional collaboration improved</span> — Design, engineering, product, and sales aligned around user outcomes</span>
           </li>
         </ul>
+
+        <h3 class="cs-sub-heading">Continuous UX Loop</h3>
+        <ol class="cs-loop" aria-label="Continuous UX loop">
+          <li class="cs-loop-step"><p class="cs-loop-label">Research</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Whiteboarding</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Prototype</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Testing</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Iteration</p></li>
+          <li class="cs-loop-step"><p class="cs-loop-label">Delivery</p></li>
+        </ol>
 
         <h3 class="cs-sub-heading">Key Learnings</h3>
         <ul class="cs-learnings" aria-label="Key learnings">
@@ -836,13 +846,13 @@
         </div>
 
         <nav class="cs-nav-cards" aria-label="Navigate between case studies">
-          <a href="cs4-dashboard-data-visualization.html" class="cs-nav-card">
-            <div class="cs-nav-card-visual cs-nav-card-visual--slate" aria-hidden="true">
-              <span class="cs-nav-card-num">04</span>
+          <a href="cs1-accessibility-program-architecture.html" class="cs-nav-card">
+            <div class="cs-nav-card-visual cs-nav-card-visual--sage" aria-hidden="true">
+              <span class="cs-nav-card-num">01</span>
             </div>
             <div class="cs-nav-card-body">
-              <p class="cs-nav-card-eyebrow">Next case study</p>
-              <p class="cs-nav-card-title">Dashboard Redesign</p>
+              <p class="cs-nav-card-eyebrow">Back to the beginning</p>
+              <p class="cs-nav-card-title">Accessibility Program Architecture</p>
               <span class="cs-nav-card-arrow" aria-hidden="true">Read the case study →</span>
             </div>
           </a>
@@ -883,16 +893,18 @@
           </a>
         </li>
         <li>
-          <a href="mailto:lacy.skrzeczkoski@gmail.com" class="footer-link" aria-label="Send an email to Lacy">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Email
-          </a>
+          <button class="footer-link" data-contact-trigger>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Contact
+          </button>
         </li>
       </ul>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
 
 </body>
 </html>
