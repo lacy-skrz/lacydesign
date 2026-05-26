@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UX Case Study: Dashboard Redesign — From Blank Screens to Data-Rich First Impressions for K–12 District Administrators." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Dashboard Redesign — Lacy, Lead UX Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/case-study.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name" aria-label="Lacy Skrzeczkoski — go to home page">Lacy Skrzeczkoski</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <line x1="2" y1="5"  x2="18" y2="5"/>
+          <line x1="2" y1="10" x2="18" y2="10"/>
+          <line x1="2" y1="15" x2="18" y2="15"/>
+        </svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/lacy-skrzeczkoski/" class="nav-external" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header class="cs-hero">
+      <div class="cs-hero-blob cs-hero-blob--1 cs-hero-blob--slate" aria-hidden="true"></div>
+      <div class="cs-hero-inner">
+        <p class="cs-hero-eyebrow">UX Case Study · K–12 Data Platform</p>
+        <h1 class="cs-hero-title">Dashboard Redesign</h1>
+        <p class="cs-hero-subtitle">From Blank Screens to Data-Rich First Impressions</p>
+        <dl class="cs-hero-meta">
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Product Type</dt>
+            <dd class="cs-meta-value">K–12 Analytics Platform</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Project Type</dt>
+            <dd class="cs-meta-value">Feature Redesign + New Capability</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Year</dt>
+            <dd class="cs-meta-value">2023</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt class="cs-meta-label">Role</dt>
+            <dd class="cs-meta-value">Senior UX Designer</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- METRICS BAR -->
+    <section class="cs-metrics cs-metrics--slate" aria-label="Project impact metrics">
+      <div class="cs-metrics-inner">
+        <div class="cs-metric">
+          <p class="cs-metric-value">Impersonation Eliminated</p>
+          <p class="cs-metric-label">Admins now build any user's dashboard securely from their own account</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">12 Widgets Designed</p>
+          <p class="cs-metric-label">From undefined OKR to a released widget library — built on a shared design vision</p>
+        </div>
+        <div class="cs-metric">
+          <p class="cs-metric-value">180+ Customer Requests</p>
+          <p class="cs-metric-label">Demand validated through the product ideas portal before a single widget was designed</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body cs-body--slate">
+
+      <!-- 01 OVERVIEW -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="overview-heading">
+        <p class="cs-section-eyebrow">01 — Overview</p>
+        <h2 class="cs-section-heading" id="overview-heading">When the Real Problem Was Hidden Behind the OKR</h2>
+        <p class="cs-section-subheading">A company-wide initiative, a deeper user problem, and a design sprint that changed the scope</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Starting Point</h3>
+          <p>A company-wide initiative launched with a clear deliverable: design 12 new dashboard widgets by year-end. The OKR was set. Executive expectations were aligned. The pressure was on to execute.</p>
+          <p>But when I entered the project, the scale of the problem became clear. Dashboards launched empty by default — admins or users had to manually add and configure everything themselves. Until they did, there was nothing to see. Without a way for admins to efficiently set up and push dashboards to their users, even the best-designed widgets would sit unused. The visible problem was a missing feature set. The real problem was that the system lacked the setup infrastructure to deliver value from day one.</p>
+          <p>The work that followed grew from an OKR into a system: a Dashboard Manager, a scalable admin workflow, and a widget library backed by <a href="https://www.skyward.com/blogs/skyward-insider/2025/december/qmlativ-spotlight-dashboard-manager" target="_blank" rel="noopener noreferrer">over 180 customer votes</a> across four product ideas.</p>
+
+          <h3 class="cs-sub-heading">Role &amp; Scope</h3>
+          <p>I led UX design from the discovery phase through concept validation and executive alignment — establishing the design vision, facilitating the sprint, defining the widget concept framework, and setting the patterns that guided the team through release. Once the foundation was established and leadership was aligned, I transitioned to embed UX on a newly forming product team, where I brought the same research-led approach to <a href="cs3-texas-school-district-forms-project.html">an entirely different class of user problem</a>. A second designer carried this work through pixel-perfect handoff and release with my support available throughout. The core patterns I established remained largely intact at launch.</p>
+
+          <div class="cs-callout cs-callout--slate">
+            <p>The challenge wasn't simply designing 12 widgets. It was creating the infrastructure — for both admins and end users — that made those widgets worth building in the first place.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 DISCOVER -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="discover-heading">
+        <p class="cs-section-eyebrow">02 — Discover</p>
+        <h2 class="cs-section-heading" id="discover-heading">Listening Before Designing</h2>
+        <p class="cs-section-subheading">15 user interviews and the setup problem hiding in plain sight</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">User Research</h3>
+          <p>Research was led by our Product Manager; I participated as a strategic observer and active collaborator — taking notes, asking follow-up questions in real time, helping reframe questions to surface user needs rather than validate assumptions, and identifying the themes and excerpts that would later shape how we communicated the problem to leadership. Three distinct user types emerged.</p>
+        </div>
+
+        <div class="cs-persona-3up" aria-label="User personas">
+          <div class="cs-persona-3up-card">
+            <p class="cs-persona-3up-header"><i class="ph ph-database" aria-hidden="true"></i>Power Users / Database Admins</p>
+            <ul>
+              <li>Deep understanding of the system, data, customization, and security</li>
+              <li>Confidently create reports, live tiles, and charts; trust the views and filters they apply</li>
+              <li>Want their staff to also leverage dashboard tools in their daily work</li>
+              <li>Often asked to build live and chart tiles for other users across the district</li>
+            </ul>
+          </div>
+          <div class="cs-persona-3up-card">
+            <p class="cs-persona-3up-header"><i class="ph ph-chart-bar" aria-hidden="true"></i>High-Proficiency Tech Users</p>
+            <ul>
+              <li>Comfortable using technology; will follow instructions to customize their dashboard</li>
+              <li>Use data to make decisions and want the dashboard to help them visualize it</li>
+            </ul>
+          </div>
+          <div class="cs-persona-3up-card">
+            <p class="cs-persona-3up-header"><i class="ph ph-user-circle" aria-hidden="true"></i>Low-Proficiency Tech Users</p>
+            <ul>
+              <li>Less comfortable with technology; struggle with technical setup instructions</li>
+              <li>A single failure or unexpected result typically leads to product abandonment</li>
+              <li>Expect their technology to be set up for them, and data to be intuitive on arrival</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Research Synthesis</h3>
+          <p>I synthesized findings across all 15 participants using a rainbow sheet — mapping themes against individual participants to surface patterns. The ranked output made the priorities undeniable: admin setup and impersonation topped the list by a wide margin, validating the decision to expand scope.</p>
+        </div>
+
+        <div class="cs-img-pair">
+          <figure aria-label="Rainbow sheet synthesis mapping themes across 15 research participants">
+            <img
+              src="images/dashboard_synthesis_rainbow.png"
+              alt="Rainbow sheet showing rows of themes including current experience, setup, district admin setup, individual setup, and wanted dashboard features, mapped against 15 color-coded participants"
+            />
+            <figcaption class="cs-figure-caption">Rainbow sheet: 15 participants mapped against themes — impersonation and admin setup emerged as the highest-frequency pain points</figcaption>
+          </figure>
+          <figure aria-label="Ranked synthesis themes table showing theme, category, and participant count">
+            <img
+              src="images/dashboard_synthesis_themes.png"
+              alt="Ranked table of synthesis themes with category and participant count, showing ability to set up and assign dashboards at top with 11 participants, followed by impersonate and set up for others with 8"
+            />
+            <figcaption class="cs-figure-caption">Themes ranked by frequency: district admin setup and impersonation drove the scope decision</figcaption>
+          </figure>
+        </div>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Real Cost of Setup</h3>
+          <p>Before this project, there were no pre-built widgets, no dashboard library, and no way to push dashboards to users by role or group. If an admin needed 20 employees to have the same dashboard, the process was entirely manual — repeated from scratch for every single person.</p>
+        </div>
+
+        <!-- HTML TASK FLOW — Before state: per-user impersonation loop -->
+        <div class="cs-logic-diagram" role="img" aria-label="Pre-redesign admin workflow: full impersonation loop repeated for every user">
+
+          <div class="cs-logic-row">
+            <div class="cs-logic-label" style="font-weight: 600; color: var(--text-primary);">Start: User 1 of N</div>
+            <div class="cs-logic-content">
+              <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: 0.75rem;">Admin logs in as another user — the only way to build their dashboard</p>
+              <div class="cs-logic-branches">
+                <div class="cs-logic-branch" style="background: var(--slate-light); border-color: var(--slate-mid);">
+                  <p class="cs-logic-branch-label" style="color: var(--slate);">Step 1</p>
+                  <p>Impersonate the user account</p>
+                </div>
+                <div class="cs-logic-branch" style="background: var(--slate-light); border-color: var(--slate-mid);">
+                  <p class="cs-logic-branch-label" style="color: var(--slate);">Step 2</p>
+                  <p>Navigate to the first relevant screen</p>
+                </div>
+                <div class="cs-logic-branch" style="background: var(--slate-light); border-color: var(--slate-mid);">
+                  <p class="cs-logic-branch-label" style="color: var(--slate);">Step 3</p>
+                  <p>Manually create a chart widget for that screen</p>
+                </div>
+                <div class="cs-logic-branch" style="background: var(--slate-light); border-color: var(--slate-mid);">
+                  <p class="cs-logic-branch-label" style="color: var(--slate);">Step 4</p>
+                  <p>Navigate to next screen → create another chart</p>
+                </div>
+                <div class="cs-logic-branch" style="background: var(--slate-light); border-color: var(--slate-mid);">
+                  <p class="cs-logic-branch-label" style="color: var(--slate);">Step 5</p>
+                  <p>Repeat for every chart needed on this user's dashboard</p>
+                </div>
+                <div class="cs-logic-branch" style="background: var(--slate-light); border-color: var(--slate-mid);">
+                  <p class="cs-logic-branch-label" style="color: var(--slate);">Step 6</p>
+                  <p>Stop impersonation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-logic-row">
+            <div class="cs-logic-label" style="font-weight: 600; color: var(--text-primary);">Repeat: User 2 of N</div>
+            <div class="cs-logic-content">
+              <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: 0.75rem;">No templates, no sharing, no group assignment. The entire process starts over.</p>
+              <div class="cs-logic-branches">
+                <div class="cs-logic-branch" style="background: #FDE8E8; border-color: #C97070;">
+                  <p class="cs-logic-branch-label" style="color: #8B1A1A;">Again</p>
+                  <p style="color: #8B1A1A;">Impersonate → navigate → create each chart manually → stop impersonation</p>
+                </div>
+                <div class="cs-logic-branch" style="background: #FDE8E8; border-color: #C97070;">
+                  <p class="cs-logic-branch-label" style="color: #8B1A1A;">Again</p>
+                  <p style="color: #8B1A1A;">Impersonate → navigate → create each chart manually → stop impersonation</p>
+                </div>
+                <div class="cs-logic-branch" style="background: #FDE8E8; border-color: #C97070;">
+                  <p class="cs-logic-branch-label" style="color: #8B1A1A;">Again</p>
+                  <p style="color: #8B1A1A;">Impersonate → navigate → create each chart manually → stop impersonation</p>
+                </div>
+                <div class="cs-logic-branch" style="background: #FDE8E8; border-color: #C97070;">
+                  <p class="cs-logic-branch-label" style="color: #8B1A1A;">× N users</p>
+                  <p style="color: #8B1A1A; font-weight: 600;">Repeated for every user who needed a dashboard</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cs-callout cs-callout--slate" style="margin-top: 1.25rem;">
+          <p>This wasn't a bug — it was the intended workflow. And it proved exactly why we needed pre-built widgets, a dashboard library, and an efficient way to assign by security role or group.</p>
+        </div>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Making the Pain Visible to Leadership</h3>
+          <p>A synthesis document alone wouldn't move an OKR. I needed executives to <em>feel</em> the problem, not just read about it. I carefully selected excerpts from our research sessions and edited them into a highlight video — district admins describing their daily reality in their own words. Our Product Manager shared the video with the executive team. Three pain points echoed across every participant:</p>
+        </div>
+
+        <div class="cs-voice-section" aria-label="Admin voices from user research">
+          <p class="cs-voice-label">Admin voices — composite of research participants</p>
+          <div class="cs-voice-cards">
+            <div class="cs-voice-card">
+              <blockquote>"I set up dashboards for all 29 employees we were onboarding — charts, tiles, everything. When I realized I'd configured one chart incorrectly, I had to open each person's dashboard and fix it. Manually. 29 times. The hours I wasted still hurts."</blockquote>
+              <cite>Business Manager — K–12 SIS Platform</cite>
+            </div>
+            <div class="cs-voice-card">
+              <blockquote>"I love that you want to give us pre-built dashboards. But how can you possibly know what to put on <em>our</em> dashboards? Give us a template we can actually customize and push out to our staff."</blockquote>
+              <cite>Head of IT — K–12 SIS Platform</cite>
+            </div>
+            <div class="cs-voice-card">
+              <blockquote>"I want one place where I can see everything available to add, and then assign it to everyone with the same job role at once. Right now I'm doing it screen by screen, dashboard by dashboard."</blockquote>
+              <cite>District Office Staff — K–12 SIS Platform</cite>
+            </div>
+          </div>
+          <div class="cs-voice-outcome">
+            <strong>What happened next</strong>
+            The video made the admin setup problem real for leadership. It shifted the conversation from "how do we build 12 widgets?" to "how do we make dashboards valuable the moment users arrive?" Admin setup — originally out of scope — was added to the project.
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 03 DEFINE -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="define-heading">
+        <p class="cs-section-eyebrow">03 — Define</p>
+        <h2 class="cs-section-heading" id="define-heading">Two Problems, One Root Cause</h2>
+        <p class="cs-section-subheading">Empty dashboards and an inefficient admin workflow were symptoms of the same missing capability</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">The Core Insight</h3>
+          <p>Admins are not just users of the dashboard; they are the critical enablers of every other user's experience. If admins can't efficiently configure and push dashboards at scale, no end user ever reaches the data value the product is capable of delivering. Solving the admin workflow wasn't a scope expansion — it was the opportunity to make all 12 widgets actually matter.</p>
+        </div>
+
+        <div class="cs-state-grid" aria-label="Current state versus future state">
+          <div class="cs-state-col cs-state-col--before">
+            <p class="cs-state-col-header">Current State</p>
+            <ul>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Dashboards launch empty by default with no path to value</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Admins use impersonation to configure each user's dashboard individually</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> No way to assign dashboards to groups, roles, or entities at scale</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> No widget library, no preview before adding</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> End users confused; admins overwhelmed</li>
+            </ul>
+          </div>
+          <div class="cs-state-col cs-state-col--after">
+            <p class="cs-state-col-header">Future State</p>
+            <ul>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Admins build any user's dashboard securely from their own account</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Dashboards pushed to groups, roles, or individuals from a single place</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Impersonation eliminated entirely</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> 12 data visualization widgets designed for insight, not just output</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Users explore data independently, without a data analyst in the room</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 DESIGN SPRINT -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="sprint-heading">
+        <p class="cs-section-eyebrow">04 — Design Sprint</p>
+        <h2 class="cs-section-heading" id="sprint-heading">Three Days to a Shared Direction</h2>
+        <p class="cs-section-subheading">A Design Sprint 2.0 to align stakeholders and generate something worth testing</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Why a Sprint</h3>
+          <p>Stakeholders agreed on the OKR but not on the solution. Without a structured session, the team risked months of iterating on the wrong framing. I co-facilitated a 3-day Design Sprint 2.0 to bring product, engineering, and leadership into a shared problem-solving space and to generate a prototype worth testing against real users.</p>
+          <p>The artifact below represents the key outputs: a shared long-term goal, sprint questions to constrain scope, user maps for both admin paths, concepts voted on to prototype, and lightning demo takeaways gathered from competitive products.</p>
+        </div>
+
+        <!-- SPRINT ARTIFACT -->
+        <div class="cs-sprint-artifact" aria-label="Design sprint walkaway artifact">
+
+          <div class="cs-sprint-two-col">
+            <div>
+              <p class="cs-sprint-section-label">Long-Term Goal</p>
+              <p class="cs-sprint-text"><em>In 2 years…</em><br>System Admins will have 12 plus default dashboard widgets to create, share, and assign to role-specific dashboards.</p>
+            </div>
+            <div>
+              <p class="cs-sprint-section-label">Sprint Questions</p>
+              <ul class="cs-sprint-list">
+                <li>Can we keep the end user process simple (adding / sharing)?</li>
+                <li>Can we keep all teams on the same page to avoid scope creep?</li>
+                <li>Can we build a useful dashboard without being everything to everyone?</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="cs-sprint-divider" />
+
+          <p class="cs-sprint-section-label">Admin User Maps</p>
+          <div class="cs-sprint-two-col" style="border: 1px solid var(--border); border-radius: 6px; overflow: hidden; gap: 0;">
+            <div style="padding: 1.25rem 1.5rem; border-right: 1px solid var(--border);">
+              <p class="cs-sprint-text-label">Dashboard not created yet</p>
+              <div class="cs-sprint-flow">
+                <span class="cs-sprint-node">District System Admin</span>
+                <span class="cs-sprint-arrow">→</span>
+                <span class="cs-sprint-node">Menu: Get Started</span>
+                <span class="cs-sprint-arrow">→</span>
+                <span class="cs-sprint-node">Select from library of 12 widgets</span>
+                <span class="cs-sprint-arrow">→</span>
+                <span class="cs-sprint-node">Customize, Group, Organize, Size</span>
+                <span class="cs-sprint-arrow">→</span>
+                <span class="cs-sprint-node cs-sprint-node--end">Apply to dashboard</span>
+              </div>
+            </div>
+            <div style="padding: 1.25rem 1.5rem;">
+              <p class="cs-sprint-text-label">Dashboard already created</p>
+              <div class="cs-sprint-flow">
+                <span class="cs-sprint-node">District System Admin</span>
+                <span class="cs-sprint-arrow">→</span>
+                <span class="cs-sprint-node">Navigate to Dashboard Manager</span>
+                <span class="cs-sprint-arrow">→</span>
+                <span class="cs-sprint-node">Dashboard Widgets / District Tiles</span>
+                <span class="cs-sprint-arrow">→</span>
+                <span class="cs-sprint-node">Create widget</span>
+                <span class="cs-sprint-arrow">→</span>
+                <span class="cs-sprint-node cs-sprint-node--end">Create, Share, Assign by role</span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="cs-sprint-divider" />
+
+          <div class="cs-sprint-two-col">
+            <div>
+              <p class="cs-sprint-section-label">Concepts Voted to Prototype</p>
+              <div class="cs-sprint-concepts">
+                <span class="cs-sprint-concept-pill">Get Started Tile</span>
+                <span class="cs-sprint-concept-pill">Library Selection</span>
+                <span class="cs-sprint-concept-pill">Preview of Widget</span>
+                <span class="cs-sprint-concept-pill">Drag &amp; Drop</span>
+                <span class="cs-sprint-concept-pill">Action-Based Widgets</span>
+                <span class="cs-sprint-concept-pill">Efficient Setup</span>
+                <span class="cs-sprint-concept-pill">Grouping of Widgets</span>
+                <span class="cs-sprint-concept-pill">Drill Down to More Info</span>
+                <span class="cs-sprint-concept-pill">Watermark (School Logo)</span>
+              </div>
+            </div>
+            <div>
+              <p class="cs-sprint-section-label">Lightning Demo Takeaways</p>
+              <ul class="cs-sprint-list">
+                <li>Use of space</li>
+                <li>Filters on the side</li>
+                <li>Group containers</li>
+                <li>Drill down data</li>
+                <li>Lots of graph options</li>
+                <li>Clean and simple</li>
+                <li>Data displayed in multiple ways</li>
+                <li>Switch views; binary data; fluid responsive layouts</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="cs-figure-caption">Design Sprint 2.0 walkaway artifact — cross-functional output from product, engineering, UX, and leadership</p>
+        </div>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Research &amp; Validation Timeline</h3>
+          <p>User research spanned four months and ran in phases — stakeholders first, then customers, then a design sprint to translate what we'd learned into something testable. Formal validation with Spring User Groups ran in March and April.</p>
+        </div>
+
+        <figure class="cs-figure" aria-label="Research and validation timeline as a Gantt chart">
+          <div style="background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; min-width: 520px;" aria-label="Research phases across January through April">
+              <caption style="font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-align: left; padding-bottom: 1rem;">Research &amp; Validation Timeline</caption>
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 180px; padding: 0.5rem 1rem 0.5rem 0; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); text-align: left; border-bottom: 1px solid var(--border);">Phase</th>
+                  <th scope="col" style="padding: 0.5rem 0.5rem; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); text-align: center; border-bottom: 1px solid var(--border); width: 20%;">January</th>
+                  <th scope="col" style="padding: 0.5rem 0.5rem; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); text-align: center; border-bottom: 1px solid var(--border); width: 20%;">February</th>
+                  <th scope="col" style="padding: 0.5rem 0.5rem; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); text-align: center; border-bottom: 1px solid var(--border); width: 20%;">March</th>
+                  <th scope="col" style="padding: 0.5rem 0.5rem; font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); text-align: center; border-bottom: 1px solid var(--border); width: 20%;">April</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" style="padding: 0.875rem 1rem 0.875rem 0; font-size: var(--text-sm); font-weight: 500; color: var(--text-primary); text-align: left; vertical-align: middle; border-bottom: 1px solid var(--border);">Stakeholder Research</th>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);">
+                    <div style="background: var(--slate); border-radius: 4px; height: 24px; width: 100%;" title="January: Stakeholder sessions"></div>
+                  </td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                </tr>
+                <tr>
+                  <th scope="row" style="padding: 0.875rem 1rem 0.875rem 0; font-size: var(--text-sm); font-weight: 500; color: var(--text-primary); text-align: left; vertical-align: middle; border-bottom: 1px solid var(--border);">Customer Research</th>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);">
+                    <div style="background: var(--slate); border-radius: 4px; height: 24px; width: 100%;" title="February: Customer conversations"></div>
+                  </td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                </tr>
+                <tr>
+                  <th scope="row" style="padding: 0.875rem 1rem 0.875rem 0; font-size: var(--text-sm); font-weight: 500; color: var(--text-primary); text-align: left; vertical-align: middle; border-bottom: 1px solid var(--border);">
+                    Design Sprint <span style="display: block; font-size: var(--text-xs); font-weight: 400; color: var(--text-muted);">3 days</span>
+                  </th>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);">
+                    <div style="background: var(--slate-mid); border-radius: 4px; height: 24px; width: 18%; min-width: 24px;" title="March: 3-day Design Sprint — a small but pivotal window"></div>
+                  </td>
+                  <td style="padding: 0.875rem 0.5rem; border-bottom: 1px solid var(--border);"></td>
+                </tr>
+                <tr>
+                  <th scope="row" style="padding: 0.875rem 1rem 0.875rem 0; font-size: var(--text-sm); font-weight: 500; color: var(--text-primary); text-align: left; vertical-align: middle;">
+                    Spring User Groups <span style="display: block; font-size: var(--text-xs); font-weight: 400; color: var(--text-muted);">Formal validation · 100+ contacts</span>
+                  </th>
+                  <td style="padding: 0.875rem 0.5rem;"></td>
+                  <td style="padding: 0.875rem 0.5rem;"></td>
+                  <td style="padding: 0.875rem 0.5rem;">
+                    <div style="background: var(--slate); border-radius: 4px 0 0 4px; height: 24px; width: 100%; position: relative;">
+                      <span style="position: absolute; right: -2px; top: 0; bottom: 0; width: 2px; background: var(--slate);"></span>
+                    </div>
+                  </td>
+                  <td style="padding: 0.875rem 0.5rem;">
+                    <div style="background: var(--slate); border-radius: 0 4px 4px 0; height: 24px; width: 100%;"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="cs-figure-caption">The Design Sprint was just 3 days in a 4-month arc — a small window with an outsized impact on alignment and direction.</p>
+          </div>
+        </figure>
+
+      </section>
+
+      <!-- 05 DESIGN -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="design-heading">
+        <p class="cs-section-eyebrow">05 — Design</p>
+        <h2 class="cs-section-heading" id="design-heading">Designing Data That Does Something</h2>
+        <p class="cs-section-subheading">From undefined OKR to a widget framework built on the right questions</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Defining What 12 Widgets Should Actually Be</h3>
+          <p>The OKR called for 12 widgets, but no one had defined what that meant. I drove that definition. Working with Product Line Managers across the student and business sides of the product, I facilitated whiteboarding sessions to identify what would genuinely be useful for district administrators and staff. I then wireframed initial concepts and brought them to a stakeholder group that included the sales team — who had a strong read on customer demand and what was being requested in the field.</p>
+          <p>A key principle guided all of it: the chart type should match what the data needs to communicate. Using four data story categories, I advocated for intentional chart selection rather than defaulting to whatever looked good. I also held firm against 3D charts — a pattern in our existing product — because 3D formatting distorts data values and makes accurate reading nearly impossible.</p>
+        </div>
+
+        <!-- CHART TYPE DECISION AID -->
+        <div class="cs-sprint-artifact" aria-label="Chart type decision framework" role="img">
+          <p class="cs-sprint-section-label">Choosing the Right Chart Type</p>
+          <p class="cs-sprint-text" style="margin-bottom: 1.5rem;">Each visualization type answers a different question. The goal is to start from the data story — then choose the chart that tells it honestly.</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+
+            <div style="background: var(--slate-light); border: 1px solid var(--slate-mid); border-radius: 6px; padding: 1.25rem;">
+              <div style="margin-bottom: 0.875rem;" aria-hidden="true">
+                <!-- Bar chart: terracotta-warm tones for comparison -->
+                <svg viewBox="0 0 80 48" width="80" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6"  y="10" width="12" height="34" rx="2" fill="#A05A4A"/>
+                  <rect x="24" y="22" width="12" height="22" rx="2" fill="#C07060"/>
+                  <rect x="42" y="16" width="12" height="28" rx="2" fill="#A05A4A"/>
+                  <rect x="60" y="28" width="12" height="16" rx="2" fill="#C07060"/>
+                  <line x1="4" y1="44" x2="76" y2="44" stroke="#A05A4A" stroke-width="1.5" opacity="0.4"/>
+                </svg>
+              </div>
+              <p style="font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.375rem;">Comparison</p>
+              <p style="font-size: var(--text-base); color: var(--text-secondary); font-weight: 300; line-height: 1.55; margin-bottom: 0.5rem;">How do values differ across categories or time?</p>
+              <p style="font-size: var(--text-base); font-weight: 600; color: var(--slate);">→ Bar chart, column chart, line chart</p>
+            </div>
+
+            <div style="background: var(--slate-light); border: 1px solid var(--slate-mid); border-radius: 6px; padding: 1.25rem;">
+              <div style="margin-bottom: 0.875rem;" aria-hidden="true">
+                <!-- Pie chart: sage-green tones for composition -->
+                <svg viewBox="0 0 80 48" width="80" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="24" r="18" fill="#6A8F6E" opacity="0.15"/>
+                  <path d="M40 24 L40 6 A18 18 0 0 1 55.6 33 Z" fill="#4A6B4E"/>
+                  <path d="M40 24 L55.6 33 A18 18 0 0 1 24.4 33 Z" fill="#6A8F6E"/>
+                  <path d="M40 24 L24.4 33 A18 18 0 0 1 40 6 Z" fill="#8FB090"/>
+                </svg>
+              </div>
+              <p style="font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.375rem;">Composition</p>
+              <p style="font-size: var(--text-base); color: var(--text-secondary); font-weight: 300; line-height: 1.55; margin-bottom: 0.5rem;">What is each part's share of a whole?</p>
+              <p style="font-size: var(--text-base); font-weight: 600; color: var(--slate);">→ Pie chart, stacked bar, area chart</p>
+            </div>
+
+            <div style="background: var(--slate-light); border: 1px solid var(--slate-mid); border-radius: 6px; padding: 1.25rem;">
+              <div style="margin-bottom: 0.875rem;" aria-hidden="true">
+                <!-- Histogram: warm amber for distribution -->
+                <svg viewBox="0 0 80 48" width="80" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6"  y="38" width="10" height="6"  rx="1" fill="#8A7040" opacity="0.4"/>
+                  <rect x="18" y="28" width="10" height="16" rx="1" fill="#8A7040" opacity="0.6"/>
+                  <rect x="30" y="14" width="10" height="30" rx="1" fill="#8A7040"/>
+                  <rect x="42" y="20" width="10" height="24" rx="1" fill="#8A7040" opacity="0.8"/>
+                  <rect x="54" y="32" width="10" height="12" rx="1" fill="#8A7040" opacity="0.55"/>
+                  <rect x="66" y="40" width="8"  height="4"  rx="1" fill="#8A7040" opacity="0.35"/>
+                  <line x1="4" y1="44" x2="76" y2="44" stroke="#8A7040" stroke-width="1.5" opacity="0.3"/>
+                </svg>
+              </div>
+              <p style="font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.375rem;">Distribution</p>
+              <p style="font-size: var(--text-base); color: var(--text-secondary); font-weight: 300; line-height: 1.55; margin-bottom: 0.5rem;">How are values spread across a range?</p>
+              <p style="font-size: var(--text-base); font-weight: 600; color: var(--slate);">→ Histogram, scatter chart</p>
+            </div>
+
+            <div style="background: var(--slate-light); border: 1px solid var(--slate-mid); border-radius: 6px; padding: 1.25rem;">
+              <div style="margin-bottom: 0.875rem;" aria-hidden="true">
+                <!-- Scatter: data blue for relationship -->
+                <svg viewBox="0 0 80 48" width="80" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="15" cy="38" r="4" fill="#4A90B8" opacity="0.45"/>
+                  <circle cx="25" cy="32" r="4" fill="#4A90B8" opacity="0.55"/>
+                  <circle cx="35" cy="24" r="4" fill="#4A90B8" opacity="0.7"/>
+                  <circle cx="47" cy="18" r="4" fill="#4A90B8" opacity="0.82"/>
+                  <circle cx="57" cy="12" r="4" fill="#4A90B8" opacity="0.9"/>
+                  <circle cx="67" cy="7"  r="4" fill="#4A90B8"/>
+                  <line x1="4" y1="44" x2="76" y2="44" stroke="#4A90B8" stroke-width="1.5" opacity="0.3"/>
+                  <line x1="4" y1="44" x2="4"  y2="4"  stroke="#4A90B8" stroke-width="1.5" opacity="0.3"/>
+                </svg>
+              </div>
+              <p style="font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.375rem;">Relationship</p>
+              <p style="font-size: var(--text-base); color: var(--text-secondary); font-weight: 300; line-height: 1.55; margin-bottom: 0.5rem;">How do two or more variables correlate?</p>
+              <p style="font-size: var(--text-base); font-weight: 600; color: var(--slate);">→ Scatter chart, bubble chart</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="cs-prose">
+          <p>Through multiple sessions with both student and business product line managers and sales stakeholders — visualizing concepts in real time, gathering feedback, refining — we landed on the core widget framework from which everything else was built. From there, three junior designers worked on focused design tasks under my direction. Through that collaboration, Group By emerged as a feature: the ability to slice the same dataset across multiple meaningful dimensions without rebuilding the chart.</p>
+
+          <h3 class="cs-sub-heading">Widget Use Cases</h3>
+          <p>The 12 widgets were scoped to real user needs: action items that needed surface-level visibility, charts for operational data, quick utilities for everyday tasks, and activity feeds.</p>
+        </div>
+
+        <ul class="cs-learnings" aria-label="Widget use cases" style="margin-bottom: 2rem;">
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Approval widgets</strong> for items waiting on a user's action: timesheets, purchase orders, time-off requests</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Chart widgets</strong> to represent district data visually, with configurable grouping, drill-down on data points, quick filters, and threshold settings</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Clock in/out widget</strong> for quick time entry without navigating away from the dashboard</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Mini-browse widgets</strong> such as Recent Logins, providing quick-access views without a full list screen</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Quick links widget</strong> surfacing a user's most recently visited pages for fast navigation</p>
+          </li>
+        </ul>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Bar Chart: Student Enrollment</h3>
+          <p>A bar chart is the right tool for comparing values across categories — in this case, enrollment counts across grade levels. The Student Enrollment widget lets users toggle between grouped and stacked bar views, apply quick filters, and navigate to a full backing screen for data-dense exploration. Selecting any bar opens a contextual navigation menu linked directly to the records behind that data point.</p>
+        </div>
+
+        <figure class="cs-figure cs-figure--constrained" aria-label="Student Enrollment bar chart widget">
+          <img
+            src="images/widget_bar_chart_enrollment.png"
+            alt="Student Enrollment bar chart grouped by Entity and Gender, showing stacked bars per entity with a tooltip revealing Female count of 350 and total count of 700 for Entity 1, alongside a contextual menu with options to View Student Enrollment, Show Grade Details, and Show Object Details"
+          />
+          <figcaption class="cs-figure-caption">Student Enrollment widget: Group By controls, hover tooltip showing breakdown and total count, and a contextual navigation menu linking directly to backing records</figcaption>
+        </figure>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Pie Chart: Portal Engagement</h3>
+          <p>A pie chart communicates simple share of a total — when there are two or a small number of parts to compare. The Portal Engagement widget uses this format to show the ratio of logged-in to not-logged-in users: an at-a-glance adoption metric that prompts action without requiring interpretation. It's filterable by display type, segmenting by Family Access or other role-based views.</p>
+        </div>
+
+        <figure class="cs-figure cs-figure--constrained" aria-label="Portal Engagement pie chart widget with tooltip and contextual menu">
+          <img
+            src="images/portal_tooltips_contextual_menu.png"
+            alt="Portal Engagement pie chart showing 60 percent Logged-In and 40 percent Not Logged-In for Family Access, with a tooltip revealing Logged-In count of 600 and total count of 1000, and a contextual menu option to View Family Access"
+          />
+          <figcaption class="cs-figure-caption">Portal Engagement widget: pie chart showing logged-in vs. not-logged-in split, with tooltip detail and contextual navigation to the backing record list</figcaption>
+        </figure>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Chart Features in Action: Discipline Incidents</h3>
+          <p>The Discipline Incidents widget shows how the chart interaction system works together. Each feature was designed to let users move from a summary view to the records behind it — without losing context at any step.</p>
+        </div>
+
+        <div class="cs-img-pair">
+          <figure aria-label="Discipline Incidents chart grouped by Entity — single dimension">
+            <img
+              src="images/discipline_incidents_grouping_1.png"
+              alt="Discipline Incidents bar chart grouped by Entity, showing six bars for Entities 1 through 6 with incident counts between 600 and 900"
+            />
+            <figcaption class="cs-figure-caption"><strong>One group:</strong> Discipline Incidents by Entity — a single dimension gives a district-wide summary</figcaption>
+          </figure>
+          <figure aria-label="Discipline Incidents chart grouped by Entity and Gender — two dimensions stacked">
+            <img
+              src="images/discipline_incidents_grouping_2.png"
+              alt="Discipline Incidents stacked bar chart grouped by Entity and Gender, showing male and female breakdown within each entity bar"
+            />
+            <figcaption class="cs-figure-caption"><strong>Add a group:</strong> Adding Gender as a second dimension instantly stacks the same bars — no chart rebuild required</figcaption>
+          </figure>
+        </div>
+
+        <div class="cs-prose">
+          <p>Selecting a bar opens a contextual menu with options to navigate to a filtered list screen or drill into a specific data subset. A tooltip on hover surfaces the breakdown and totals for that segment in context.</p>
+          <h3 class="cs-sub-heading">Tooltip and Contextual Navigation</h3>
+        </div>
+
+        <figure class="cs-figure cs-figure--constrained" aria-label="Discipline Incidents chart showing tooltip and contextual navigation menu">
+          <img
+            src="images/discipline_incidents_tooltips_contextual_menu.png"
+            alt="Discipline Incidents stacked bar chart with a tooltip open on Entity 1 showing Female count of 350 and total count of 700, alongside a contextual menu with options to View List Screen and Show Object Details"
+          />
+          <figcaption class="cs-figure-caption">Hover reveals data detail for that segment; selecting opens navigation options directly to the backing records or a deeper drill-down view</figcaption>
+        </figure>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Drill-Down: Moving Through the Data</h3>
+          <p>Selecting a data segment doesn't just show a tooltip — it re-renders the chart itself. The user drills into a specific entity and the chart rebuilds around that subset, with breadcrumb navigation showing exactly where in the data hierarchy they are. Each level is independently explorable, with the same Group By, filter, and tooltip interactions available throughout.</p>
+        </div>
+
+        <figure class="cs-figure cs-figure--constrained" aria-label="Discipline Incidents chart after drilling into Entity 4 showing grade-level breakdown">
+          <img
+            src="images/discipline_incidents_drilldown.png"
+            alt="Discipline Incidents chart re-rendered after drilling into Entity 4, now showing grade level breakdown from 1st through 6th with stacked bars for Male and Female, and breadcrumb navigation showing All Entities then Grade Details"
+          />
+          <figcaption class="cs-figure-caption">Drill-down: selecting a data segment re-renders the chart within its context — breadcrumb navigation shows exactly where the user is in the data hierarchy</figcaption>
+        </figure>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Configuration: Admin Control Before Publishing</h3>
+          <p>Before any widget reaches a user's dashboard, admins configure it. The configuration screen lets them set a display title, toggle hover effects and value labels, and choose tile size from a visual grid picker. A live preview panel on the right updates in real time — admins see exactly how the widget will appear before committing.</p>
+        </div>
+
+        <figure class="cs-figure cs-figure--wide" aria-label="Dashboard Item Configuration screen for a Discipline Actions widget">
+          <img
+            src="images/widget_dashboard_configuration.png"
+            alt="Dashboard Item Configuration screen showing fields for display title, hover effect, value display, label display, and tile size selector on the left, with a live preview of the Discipline Actions stacked bar chart on the right and options to toggle between Live Data and Sample Data"
+          />
+          <figcaption class="cs-figure-caption">Widget configuration: admins set display title, tile size, and preview the widget before publishing</figcaption>
+        </figure>
+
+      </section>
+
+      <!-- 06 IMPACT -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="impact-heading">
+        <p class="cs-section-eyebrow">06 — Impact</p>
+        <h2 class="cs-section-heading" id="impact-heading">Confidence at Scale</h2>
+        <p class="cs-section-subheading">High satisfaction, eliminated workarounds, and continued investment in what we built</p>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Measured Outcomes</h3>
+          <p>The core UX patterns I established were carried through to release, and post-launch satisfaction data confirmed the approach — you can read <a href="https://www.skyward.com/blogs/skyward-insider/2025/december/qmlativ-spotlight-dashboard-manager" target="_blank" rel="noopener noreferrer">how it shipped</a> in the product's own words.</p>
+        </div>
+
+        <div class="cs-state-grid" aria-label="Before and after outcomes">
+          <div class="cs-state-col cs-state-col--before">
+            <p class="cs-state-col-header">Before</p>
+            <ul>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Dashboards launched empty; admins manually configured each user's individually</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Impersonation required to build or verify any end user's dashboard</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> Hours of effort to replicate what a demo showed</li>
+              <li><span class="cs-state-x" aria-hidden="true">✕</span> No scalable way to push dashboards to roles or groups</li>
+            </ul>
+          </div>
+          <div class="cs-state-col cs-state-col--after">
+            <p class="cs-state-col-header">After</p>
+            <ul>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Dashboard Manager satisfaction: <strong>4.58 / 5</strong></li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Dashboard Library satisfaction: <strong>4.57 / 5</strong></li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Admins build dashboards securely from their own account — no impersonation</li>
+              <li><span class="cs-state-check" aria-hidden="true">✓</span> Three publication levels: add to library, add to dashboard, pin to dashboard</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-blockquote">
+          <blockquote>"Heck yes!! My dashboard looks so much better!!!"</blockquote>
+          <cite>— End user, post-release</cite>
+        </div>
+
+        <div class="cs-prose">
+          <h3 class="cs-sub-heading">Continued Investment</h3>
+          <p>The success of this visualization system created momentum. New widgets are in active research and early testing — a direct continuation of the design patterns and interaction model established in this project. The work didn't end at release. It became the foundation for ongoing product investment in K–12 data visualization.</p>
+        </div>
+      </section>
+
+      <!-- 07 LEARNINGS -->
+      <section class="cs-section animate-on-scroll" aria-labelledby="learnings-heading">
+        <p class="cs-section-eyebrow">07 — Learnings</p>
+        <h2 class="cs-section-heading" id="learnings-heading">What This Project Taught Me</h2>
+
+        <ul class="cs-learnings" aria-label="Key learnings">
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>An OKR is a starting point, not a problem statement.</strong> The directive to design 12 widgets was a business goal. The real design problem was why those widgets weren't reaching users in the first place. Separating the two was what made the solution actually work.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>The chart type should serve the data story, not the other way around.</strong> Every visualization type answers a specific question — comparison, distribution, composition, or relationship. Starting from that question, rather than from aesthetics or habit, is what keeps charts honest and useful.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>User voices are a stakeholder alignment tool.</strong> Synthesizing research into a document wasn't enough to move an OKR. Putting users' own words in front of executives in video changed what got prioritized. Admin setup went from out-of-scope to in-scope because of that decision.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>The admin experience unlocks the user experience.</strong> In enterprise K–12 software, administrators are the critical enablers of every end user's dashboard. The opportunity wasn't just making dashboards look better — it was giving admins the infrastructure to deliver value to their entire organization at scale.</p>
+          </li>
+          <li>
+            <span class="cs-learnings-arrow" aria-hidden="true">→</span>
+            <p><strong>Establishing a strong foundation is its own deliverable.</strong> When I transitioned to the next project, the direction was set, executive buy-in was secured, and the design patterns were in place. The second designer had what they needed, and I remained available for support throughout. The satisfaction scores at release reflect the quality of the foundation — not just the pixels.</p>
+          </li>
+        </ul>
+
+        <div class="cs-closing" aria-label="Closing statement">
+          <p>Data doesn't speak for itself. Someone has to design the experience of understanding it: choosing what to surface, how to let users explore, and when to get out of the way. That's the work.</p>
+        </div>
+      </section>
+
+    </div><!-- /cs-body -->
+
+    <!-- SEQUENTIAL NAV CTA -->
+    <section class="cs-nav-cta" aria-label="Case study navigation">
+      <div class="cs-nav-cta-inner">
+
+        <div class="cs-nav-top">
+          <a href="#main-content" class="cs-nav-top-link">
+            <span aria-hidden="true">↑</span> Back to top
+          </a>
+        </div>
+
+        <nav class="cs-nav-cards" aria-label="Navigate between case studies">
+          <a href="cs1-accessibility-program-architecture.html" class="cs-nav-card">
+            <div class="cs-nav-card-visual cs-nav-card-visual--sage" aria-hidden="true">
+              <span class="cs-nav-card-num">01</span>
+            </div>
+            <div class="cs-nav-card-body">
+              <p class="cs-nav-card-eyebrow">Next case study</p>
+              <p class="cs-nav-card-title">Accessibility Program Architecture</p>
+              <span class="cs-nav-card-arrow" aria-hidden="true">Read the case study →</span>
+            </div>
+          </a>
+
+          <a href="index.html#work" class="cs-nav-card">
+            <div class="cs-nav-card-visual cs-nav-card-visual--neutral" aria-hidden="true"></div>
+            <div class="cs-nav-card-body">
+              <p class="cs-nav-card-eyebrow">All projects</p>
+              <p class="cs-nav-card-title">Back to featured work</p>
+              <span class="cs-nav-card-arrow" aria-hidden="true">View all →</span>
+            </div>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-id">
+        <p class="footer-name">Lacy Skrzeczkoski</p>
+        <p class="footer-title">Lead UX Designer</p>
+      </div>
+      <ul class="footer-links">
+        <li><span class="footer-connect-label" aria-hidden="true">Let's connect</span></li>
+        <li>
+          <a href="https://www.linkedin.com/in/lacy-skrzeczkoski/" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <button class="footer-link" data-contact-trigger>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Contact
+          </button>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
+
+</body>
+</html>
